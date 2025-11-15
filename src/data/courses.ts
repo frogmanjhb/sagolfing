@@ -113,12 +113,26 @@ export const golfCourses: RegionData[] = [
         region: 'Johannesburg',
         location: 'Pretoria - Gauteng',
         nationalRanking: 24,
-        image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&h=600&fit=crop',
+        image: 'https://satop100courses.com/wp-content/uploads/2019/09/Pretoria-CC.jpg',
         highlights: [
-          'Traditional parkland course',
-          'Rich history and heritage',
-          'Mature tree-lined fairways',
-          'Excellent club facilities'
+          'Magnificent setting in upmarket Waterkloof suburb',
+          'Original site from 1910 founding',
+          'Greens restored in 2018 with Dominator bent grass',
+          'Strongly bunkered championship parkland course'
+        ],
+        description: 'Pretoria Country Club enjoys a magnificent setting in the upmarket Waterkloof suburb east of the city. The parkland course features gently undulating terrain and is strongly bunkered following modernisation by the Gary Player Group. The uphill par-5 18th has 13 bunkers, six guarding the green. All 18 greens were restored in 2018 to USGA specifications with quality Dominator bent grass putting surfaces.',
+        designer: 'Gary Player Design',
+        par: 72,
+        length: '6,398 metres',
+        travelTime: '55 minutes from OR Tambo Airport',
+        features: [
+          'Par-3 eighth with island green reached by bridge',
+          'Bobby Locke\'s signature 15th hole with water hazard',
+          'Outstanding dogleg par-4 10th (443m)',
+          'Four different par-3s ranging from 125m to 206m',
+          'Course record 61 by Hennie Otto',
+          'True country club with 1,800 members',
+          'Bowling greens, tennis courts, and squash facilities'
         ]
       },
       { 
