@@ -141,12 +141,27 @@ export const golfCourses: RegionData[] = [
         region: 'Johannesburg',
         location: 'Sandton - Gauteng',
         nationalRanking: 26,
-        image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&h=600&fit=crop',
+        image: 'https://www.golfdigest.com/content/dam/images/golfdigest/fullset/2023/1/7%20Woodmead%202.jpg',
         highlights: [
-          'Premium championship course',
-          'Woodmead estate setting',
-          'Challenging layout',
-          'Top-tier conditioning'
+          'Magnificent parkland championship layout',
+          'Tall mature trees defining the holes',
+          'Recently upgraded greens with new bent grass',
+          'Renowned for quick-paced putting surfaces'
+        ],
+        description: 'Woodmead is the premier course at Country Club\'s 36-hole facility, a magnificent parkland championship layout with tall, mature trees defining the holes. It\'s on undulating terrain providing interesting variety. The course has been significantly upgraded by Golf Data, particularly the greens replanted with new bent grass, and bunkering. Subtle slopes make for quick-paced putting surfaces for which the course is renowned.',
+        designer: 'Fred Hawtree',
+        par: 72,
+        length: '6,347 metres',
+        travelTime: '30 minutes from OR Tambo Airport',
+        features: [
+          'Par-5s built in hillier sections with loads of character',
+          'Memorable par-3 4th downhill over water',
+          'Swan Lake features on the wonderful 396m 17th',
+          'Course record 61 by Marc Cayeux',
+          'Hosted Telkom SA PGA Championship 2006-2014',
+          'Outstanding 9-hole Mashie Course (70-130m holes)',
+          'Spacious practice range with excellent short-game area',
+          'Large modern clubhouse with outstanding facilities'
         ]
       },
       { 
@@ -155,12 +170,27 @@ export const golfCourses: RegionData[] = [
         region: 'Johannesburg',
         location: 'Johannesburg - Gauteng',
         nationalRanking: 27,
-        image: 'https://images.unsplash.com/photo-1592919505780-303950717480?w=800&h=600&fit=crop',
+        image: 'https://golf-pass.brightspotcdn.com/c5/39/f6be2f69ddbc571d19e64488a1bf/111123.jpg',
         highlights: [
-          'Sister course to the East',
-          'Classic parkland design',
-          'Historic golf club',
-          'Excellent greens'
+          'Favourite among club members',
+          'Major upgrade completed in 2022',
+          'Greens resurfaced with 777 bent grass',
+          'No weak holes on the entire course'
+        ],
+        description: 'Royal\'s West Course, considerably shorter than the adjoining championship East Course, is a favourite among club members. It covers the same undulating tree-lined terrain with a similar quota of water hazards. The West underwent a major upgrade by Agrano Turf in 2022 to its greens and bunkers, with greens resurfaced with 777 bent grass. The two nines were reversed, creating a much tougher finishing stretch.',
+        designer: 'Colonel SV Hotchkin',
+        par: 72,
+        length: '6,255 metres',
+        travelTime: '35 minutes from OR Tambo Airport',
+        features: [
+          'One of SA\'s finest short par-3s at No 5 (95-111m over water)',
+          'Excellent par-3 8th from elevated tee',
+          'Natural stream impacts eight holes',
+          'Course record 61 by Charl Schwartzel',
+          'Clubhouse with impressive "Walkway of Fame"',
+          'Home to PGA of South Africa offices',
+          'Upgraded practice range with Pelz Target Greens',
+          'Golf tradition dating back to 1891'
         ]
       },
       { 
@@ -169,12 +199,27 @@ export const golfCourses: RegionData[] = [
         region: 'Johannesburg',
         location: 'Johannesburg - Gauteng',
         nationalRanking: 29,
-        image: 'https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?w=800&h=600&fit=crop',
+        image: 'https://golftimesa.co.za/storage/course-images/1153/53410f890f850209d3c782775364db05.jpg',
         highlights: [
-          'Historic Johannesburg club',
-          'Beautiful tree-lined course',
-          'Traditional layout',
-          'Premium member experience'
+          'Jack Nicklaus Signature course opened 2010',
+          'Recent DP World Tour Joburg Open venue',
+          'Modern state-of-the-art clubhouse',
+          'Stunningly beautiful design on undulating terrain'
+        ],
+        description: 'Houghton, celebrating its centenary, is a famous name in South African golf with a strong championship tradition. The new Jack Nicklaus Signature course, opened in 2010, replaced the old parkland layout with stunning ingenuity - reversing the direction of several holes and creating modern sloping greens with creative bunkering. Recently hosted the DP World Tour Joburg Open in 2022 and 2023.',
+        designer: 'Jack Nicklaus',
+        par: 72,
+        length: '6,403 metres',
+        travelTime: '30 minutes from OR Tambo Airport',
+        features: [
+          'Hosted 2022 & 2023 DP World Tour Joburg Open',
+          'Hosted 8 SA Opens including Gary Player (3), Ernie Els',
+          'Spectacular par-3 7th over water in amphitheatre',
+          'Dangerous par-4 12th with green built into water',
+          'Course record 62 by multiple players',
+          'Full-size practice range with short-game facility',
+          'Fun 9-hole putting course with bunkers and ponds',
+          'Modern one-storey clubhouse with basement parking'
         ]
       },
       { 
@@ -183,12 +228,27 @@ export const golfCourses: RegionData[] = [
         region: 'Johannesburg',
         location: 'Sandton - Gauteng',
         nationalRanking: 32,
-        image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&h=600&fit=crop',
+        image: 'https://www.golfdigest.com/content/dam/images/golfdigest/fullset/2023/1/Rocklands-7th-A.jpg',
         highlights: [
-          'Championship course',
-          'Sandton location',
-          'Challenging design',
-          'Excellent facilities'
+          'Rare bushveld-style course in Gauteng',
+          'Major upgrade by Sean Quinn in 2008',
+          'Spectacular views of Sandton and Magaliesberg',
+          'Outstanding quartet of challenging par-3s'
+        ],
+        description: 'The modern Rocklands layout is situated in a visibly contrasting setting to its parkland sibling Woodmead, being a rare bushveld-style course in the heart of Gauteng with rock formations and indigenous trees. Transformed in 2008 by Golf Data designer Sean Quinn, with magnificent bunkering and contoured bent grass greens as quick and challenging as the Woodmead. The last five holes are outstanding.',
+        designer: 'Sean Quinn (Golf Data)',
+        par: 72,
+        length: '6,326 metres',
+        travelTime: '30 minutes from OR Tambo Airport',
+        features: [
+          'Rock formations and natural grasslands',
+          'Spectacular views of Sandton skyscrapers',
+          'Hosted 2013 SA Amateur Championship',
+          'Course record 62 by Christiaan Burke',
+          'All four par-3s are outstanding and varied',
+          'Par-4 11th at 477m among Gauteng\'s most demanding',
+          'Water in play on last five holes',
+          'Shared facilities with premium Woodmead course'
         ]
       },
     ]
