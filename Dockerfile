@@ -22,6 +22,6 @@ RUN npm run build
 # Expose port
 EXPOSE $PORT
 
-# Start command
-CMD ["npx", "--yes", "serve", "dist", "-s", "-l", "$PORT"]
+# Start command - use shell form to interpolate $PORT
+CMD npx --yes serve dist -s -l ${PORT:-3000}
 
