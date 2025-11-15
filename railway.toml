@@ -1,9 +1,8 @@
 [build]
-builder = "nixpacks"
-buildCommand = "npm install --legacy-peer-deps && chmod -R +x node_modules/.bin && npm run build"
+builder = "dockerfile"
+dockerfilePath = "Dockerfile"
 
 [deploy]
-startCommand = "chmod -R +x node_modules/.bin && npx --yes serve dist -s -l $PORT"
 restartPolicyType = "on_failure"
 restartPolicyMaxRetries = 10
 
