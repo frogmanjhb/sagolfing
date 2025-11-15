@@ -22,7 +22,15 @@ const CourseDetailPage = () => {
         <div className="text-center">
           <h2 className="text-2xl font-bold text-corporate-900 mb-4">Course Not Found</h2>
           <button
-            onClick={() => navigate('/')}
+            onClick={() => {
+              navigate('/');
+              setTimeout(() => {
+                const coursesSection = document.getElementById('courses');
+                if (coursesSection) {
+                  coursesSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }, 100);
+            }}
             className="px-6 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
           >
             Back to Home
@@ -37,7 +45,16 @@ const CourseDetailPage = () => {
       <div className="container-custom">
         {/* Back Button */}
         <button
-          onClick={() => navigate('/')}
+          onClick={() => {
+            navigate('/');
+            // Wait for navigation to complete before scrolling
+            setTimeout(() => {
+              const coursesSection = document.getElementById('courses');
+              if (coursesSection) {
+                coursesSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }, 100);
+          }}
           className="mb-6 text-primary-600 hover:text-primary-700 font-medium flex items-center gap-2 transition-colors"
         >
           ← Back to Courses

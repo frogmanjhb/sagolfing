@@ -19,12 +19,12 @@ export const services: Service[] = [
   {
     title: 'Golf Club Hire',
     description: 'Premium golf club rentals for your perfect game.',
-    icon: '🏌️‍♂️'
+    icon: '/images/clubs.png'
   },
   {
-    title: 'Chauffeur Drive',
+    title: 'Chauffeur Driver',
     description: 'Luxury transportation to and from golf courses across South Africa.',
-    icon: '🚗'
+    icon: '/images/driver.png'
   },
   {
     title: 'Holidays',

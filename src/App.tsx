@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import ServicesSection from './components/ServicesSection';
 import CoursesSection from './components/CoursesSection';
+import ClientsSection from './components/ClientsSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import CourseDetailPage from './pages/CourseDetailPage';
@@ -13,6 +14,7 @@ function HomePage() {
       <Hero />
       <ServicesSection />
       <CoursesSection />
+      <ClientsSection />
       <ContactSection />
     </>
   );

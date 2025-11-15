@@ -17,15 +17,23 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white p-8 rounded-xl border border-corporate-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 group"
+              className="bg-white p-8 rounded-xl border border-corporate-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 group flex flex-col h-full min-h-[180px]"
             >
-              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                {service.icon}
+              <div className="mb-4 group-hover:scale-110 transition-transform duration-300 h-16 flex items-center">
+                {service.icon?.startsWith('http') || service.icon?.startsWith('/') ? (
+                  <img 
+                    src={service.icon} 
+                    alt={service.title}
+                    className="w-16 h-16 object-contain"
+                  />
+                ) : (
+                  <div className="text-4xl">{service.icon}</div>
+                )}
               </div>
               <h3 className="text-xl font-semibold text-corporate-900 mb-3">
                 {service.title}
               </h3>
-              <p className="text-corporate-600 leading-relaxed">
+              <p className="text-corporate-600 leading-relaxed flex-grow">
                 {service.description}
               </p>
             </div>
