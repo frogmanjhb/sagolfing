@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { services } from '../data/services';
 
 const ServicesSection = () => {
@@ -14,10 +15,11 @@ const ServicesSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-white p-8 rounded-xl border border-corporate-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 group flex flex-col h-full min-h-[180px]"
+          {services.map((service) => (
+            <Link
+              key={service.id}
+              to={`/service/${service.slug}`}
+              className="bg-white p-8 rounded-xl border border-corporate-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 group flex flex-col h-full min-h-[180px] cursor-pointer"
             >
               <div className="mb-4 h-16 flex items-center justify-start">
                 <div className="group-hover:scale-110 transition-transform duration-300">
@@ -38,7 +40,11 @@ const ServicesSection = () => {
               <p className="text-corporate-600 leading-relaxed flex-grow">
                 {service.description}
               </p>
+              <div className="mt-4 text-primary-600 font-medium flex items-center gap-2 group-hover:gap-3 transition-all">
+                Learn More 
+                <span className="group-hover:translate-x-1 transition-transform">→</span>
             </div>
+            </Link>
           ))}
         </div>
       </div>

@@ -256,7 +256,7 @@ export const golfCourses: RegionData[] = [
         name: 'Johannesburg Country Club',
         region: 'Johannesburg',
         location: 'Auckland Park - Gauteng',
-        image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&h=600&fit=crop',
+        image: 'https://static.wheretostay.co.za/locations/poi/0/0/006203/3832_xl.jpg',
         travelTime: '30 minutes from OR Tambo Airport',
         highlights: [
           'Historic parkland course',
@@ -278,7 +278,7 @@ export const golfCourses: RegionData[] = [
         name: 'Randpark Golf Club',
         region: 'Johannesburg',
         location: 'Randpark - Gauteng',
-        image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&h=600&fit=crop',
+        image: 'https://randpark.co.za/wp-content/uploads/2016/08/2.jpg',
         travelTime: '40 minutes from OR Tambo Airport',
         highlights: [
           '36-hole facility',
@@ -300,7 +300,7 @@ export const golfCourses: RegionData[] = [
         name: 'Wanderers Golf Club',
         region: 'Johannesburg',
         location: 'Illovo - Gauteng',
-        image: 'https://images.unsplash.com/photo-1592919505780-303950717480?w=800&h=600&fit=crop',
+        image: 'https://golftimesa.co.za/storage/course-images/358/dd56d2bae2a273a572082368fe772a5e.jpg',
         travelTime: '35 minutes from OR Tambo Airport',
         highlights: [
           'Prestigious city course',
@@ -323,7 +323,7 @@ export const golfCourses: RegionData[] = [
         region: 'Johannesburg',
         location: 'Sun City - North West',
         nationalRanking: 1,
-        image: 'https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?w=800&h=600&fit=crop',
+        image: 'https://satop100courses.com/wp-content/uploads/2022/03/DJI_0031_gpcc17thC.jpg',
         travelTime: '2 hours from OR Tambo Airport',
         highlights: [
           'Ranked #1 in South Africa',
@@ -349,7 +349,7 @@ export const golfCourses: RegionData[] = [
         region: 'Johannesburg',
         location: 'Sun City - North West',
         nationalRanking: 10,
-        image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&h=600&fit=crop',
+        image: 'https://www.golfandmore.com/wp-content/uploads/2022/06/lost-city-golf-course-picture.jpg',
         travelTime: '2 hours from OR Tambo Airport',
         highlights: [
           'Desert-style course',
@@ -373,7 +373,7 @@ export const golfCourses: RegionData[] = [
         name: 'Pecanwood Golf & Country Estate',
         region: 'Johannesburg',
         location: 'Hartbeespoort - North West',
-        image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&h=600&fit=crop',
+        image: 'https://nicklausdesign.com/wp-content/uploads/2019/11/pecanwood.jpg',
         travelTime: '1 hour from OR Tambo Airport',
         highlights: [
           'Jack Nicklaus Signature Design',
@@ -561,6 +561,7 @@ export const golfCourses: RegionData[] = [
         name: 'Killarney Golf Club',
         region: 'Johannesburg',
         location: 'Houghton - Gauteng',
+        nationalRanking: 47,
         image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&h=600&fit=crop',
         travelTime: '30 minutes from OR Tambo Airport',
         highlights: [
@@ -577,6 +578,533 @@ export const golfCourses: RegionData[] = [
           'Mature tree-lined fairways',
           'Prime city location',
           'Classic clubhouse'
+        ]
+      },
+      {
+        id: 'parkview',
+        name: 'Parkview Golf Club',
+        region: 'Johannesburg',
+        location: 'Johannesburg - Gauteng',
+        nationalRanking: 33,
+        image: 'https://parkviewgolf.co.za/wp-content/uploads/124710486_4046467645368259_342205945479960283_n-1.jpg',
+        travelTime: '30 minutes from OR Tambo Airport',
+        highlights: [
+          'Historic Johannesburg club',
+          'Ranked #33 nationally',
+          'Classic parkland layout',
+          'Central location'
+        ],
+        description: 'Parkview Golf Club is a historic Johannesburg course ranked #33 in South Africa. This classic parkland layout offers a traditional golfing experience in a central location with excellent facilities.',
+        par: 72,
+        features: [
+          'Historic club tradition',
+          'Mature parkland setting',
+          'Championship standard',
+          'Central Johannesburg',
+          'Well-maintained course'
+        ]
+      },
+      {
+        id: 'kyalami',
+        name: 'Kyalami Country Club',
+        region: 'Johannesburg',
+        location: 'Midrand - Gauteng',
+        nationalRanking: 35,
+        image: 'https://kyalamigolf.co.za/wp-content/uploads/2022/06/20220525_072839.jpg',
+        travelTime: '30 minutes from OR Tambo Airport',
+        highlights: [
+          'Ranked #35 nationally',
+          'Championship course',
+          'Midrand location',
+          'Excellent facilities'
+        ],
+        description: 'Kyalami Country Club is ranked #35 in South Africa and offers a championship golfing experience in Midrand. Known for its excellent conditioning and challenging layout, it\'s a favorite among serious golfers.',
+        par: 72,
+        features: [
+          'Championship layout',
+          'Strategic course design',
+          'Excellent greens',
+          'Modern facilities',
+          'Convenient Midrand location'
+        ]
+      },
+      {
+        id: 'eye-of-africa',
+        name: 'Eye of Africa Signature Golf Estate',
+        region: 'Johannesburg',
+        location: 'Johannesburg - Gauteng',
+        nationalRanking: 40,
+        image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&h=600&fit=crop',
+        travelTime: '45 minutes from OR Tambo Airport',
+        highlights: [
+          'Ranked #40 nationally',
+          'Ernie Els design',
+          'Signature golf estate',
+          'Dramatic landscape'
+        ],
+        description: 'Eye of Africa is ranked #40 in South Africa and features an Ernie Els signature design. This dramatic course winds through a spectacular estate with challenging holes and stunning vistas.',
+        designer: 'Ernie Els',
+        par: 72,
+        features: [
+          'Ernie Els signature design',
+          'Dramatic landscape features',
+          'Estate living',
+          'Championship standard',
+          'Modern golf facilities'
+        ]
+      },
+      {
+        id: 'wingate-park',
+        name: 'Wingate Park Country Club',
+        region: 'Johannesburg',
+        location: 'Pretoria - Gauteng',
+        nationalRanking: 44,
+        image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&h=600&fit=crop',
+        travelTime: '50 minutes from OR Tambo Airport',
+        highlights: [
+          'Ranked #44 nationally',
+          'Pretoria location',
+          'Championship venue',
+          'Traditional parkland'
+        ],
+        description: 'Wingate Park Country Club is ranked #44 in South Africa and is one of Pretoria\'s premier golf venues. This traditional parkland course offers a challenging test with excellent conditioning.',
+        par: 72,
+        features: [
+          'Championship parkland course',
+          'Hosted professional events',
+          'Excellent conditioning',
+          'Traditional club atmosphere',
+          'Pretoria location'
+        ]
+      },
+      {
+        id: 'woodhill',
+        name: 'Woodhill Golf Estate',
+        region: 'Johannesburg',
+        location: 'Pretoria - Gauteng',
+        nationalRanking: 50,
+        image: 'https://images.unsplash.com/photo-1592919505780-303950717480?w=800&h=600&fit=crop',
+        travelTime: '50 minutes from OR Tambo Airport',
+        highlights: [
+          'Ranked #50 nationally',
+          'Gary Player design',
+          'Golf estate',
+          'Championship layout'
+        ],
+        description: 'Woodhill Golf Estate is ranked #50 in South Africa and features a Gary Player design. This championship estate course combines challenging golf with upmarket residential living.',
+        designer: 'Gary Player',
+        par: 72,
+        features: [
+          'Gary Player design',
+          'Championship estate course',
+          'Excellent facilities',
+          'Residential estate',
+          'Pretoria location'
+        ]
+      },
+      {
+        id: 'els-club-copperleaf',
+        name: 'Els Club Copperleaf',
+        region: 'Johannesburg',
+        location: 'Midrand - Gauteng',
+        nationalRanking: 55,
+        image: 'https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?w=800&h=600&fit=crop',
+        travelTime: '35 minutes from OR Tambo Airport',
+        highlights: [
+          'Ranked #55 nationally',
+          'Ernie Els design',
+          'Modern estate course',
+          'Championship standard'
+        ],
+        description: 'Els Club Copperleaf is ranked #55 in South Africa and showcases Ernie Els\' design philosophy. This modern championship course offers an exceptional golfing experience in an upmarket estate setting.',
+        designer: 'Ernie Els',
+        par: 72,
+        features: [
+          'Ernie Els design',
+          'Modern championship layout',
+          'Estate living',
+          'Excellent conditioning',
+          'Midrand location'
+        ]
+      },
+      {
+        id: 'irene',
+        name: 'Irene Country Club',
+        region: 'Johannesburg',
+        location: 'Centurion - Gauteng',
+        nationalRanking: 59,
+        image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&h=600&fit=crop',
+        travelTime: '45 minutes from OR Tambo Airport',
+        highlights: [
+          'Ranked #59 nationally',
+          'Historic Centurion club',
+          'Traditional layout',
+          'Family-friendly'
+        ],
+        description: 'Irene Country Club is ranked #59 in South Africa and offers a traditional golfing experience in Centurion. This historic club is known for its friendly atmosphere and well-maintained course.',
+        par: 72,
+        features: [
+          'Historic club',
+          'Traditional parkland layout',
+          'Family-friendly atmosphere',
+          'Good conditioning',
+          'Centurion location'
+        ]
+      },
+      {
+        id: 'reading-cc',
+        name: 'Reading Country Club',
+        region: 'Johannesburg',
+        location: 'Alberton - Gauteng',
+        nationalRanking: 64,
+        image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&h=600&fit=crop',
+        travelTime: '30 minutes from OR Tambo Airport',
+        highlights: [
+          'Ranked #64 nationally',
+          'Alberton location',
+          'Championship layout',
+          'Good facilities'
+        ],
+        description: 'Reading Country Club is ranked #64 in South Africa and offers a solid championship test in Alberton. The course is known for its challenging layout and welcoming club atmosphere.',
+        par: 72,
+        features: [
+          'Championship course',
+          'Challenging layout',
+          'Good conditioning',
+          'Friendly club',
+          'Alberton location'
+        ]
+      },
+      {
+        id: 'waterkloof',
+        name: 'Waterkloof Golf Club',
+        region: 'Johannesburg',
+        location: 'Pretoria - Gauteng',
+        nationalRanking: 69,
+        image: 'https://images.unsplash.com/photo-1592919505780-303950717480?w=800&h=600&fit=crop',
+        travelTime: '50 minutes from OR Tambo Airport',
+        highlights: [
+          'Ranked #69 nationally',
+          'Pretoria location',
+          'Scenic course',
+          'Mountain views'
+        ],
+        description: 'Waterkloof Golf Club is ranked #69 in South Africa and offers a scenic golfing experience in Pretoria. The course features beautiful mountain views and a challenging layout.',
+        par: 72,
+        features: [
+          'Scenic setting',
+          'Mountain views',
+          'Challenging holes',
+          'Good facilities',
+          'Pretoria location'
+        ]
+      },
+      {
+        id: 'ruimsig',
+        name: 'Ruimsig Country Club',
+        region: 'Johannesburg',
+        location: 'Roodepoort - Gauteng',
+        nationalRanking: 70,
+        image: 'https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?w=800&h=600&fit=crop',
+        travelTime: '45 minutes from OR Tambo Airport',
+        highlights: [
+          'Ranked #70 nationally',
+          'West Rand location',
+          'Championship course',
+          'Good value'
+        ],
+        description: 'Ruimsig Country Club is ranked #70 in South Africa and offers an excellent golfing experience on the West Rand. The course is known for its good value and friendly atmosphere.',
+        par: 72,
+        features: [
+          'Championship layout',
+          'West Rand location',
+          'Good value for money',
+          'Friendly atmosphere',
+          'Well-maintained course'
+        ]
+      },
+      {
+        id: 'krugersdorp',
+        name: 'Krugersdorp Golf Club',
+        region: 'Johannesburg',
+        location: 'Krugersdorp - Gauteng',
+        nationalRanking: 71,
+        image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&h=600&fit=crop',
+        travelTime: '50 minutes from OR Tambo Airport',
+        highlights: [
+          'Ranked #71 nationally',
+          'West Rand location',
+          'Historic club',
+          'Traditional layout'
+        ],
+        description: 'Krugersdorp Golf Club is ranked #71 in South Africa and is a historic club on the West Rand. The traditional layout offers an enjoyable round of golf in a relaxed atmosphere.',
+        par: 72,
+        features: [
+          'Historic club',
+          'Traditional layout',
+          'West Rand location',
+          'Friendly atmosphere',
+          'Good conditioning'
+        ]
+      },
+      {
+        id: 'glenvista',
+        name: 'Glenvista Country Club',
+        region: 'Johannesburg',
+        location: 'Johannesburg - Gauteng',
+        nationalRanking: 76,
+        image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&h=600&fit=crop',
+        travelTime: '35 minutes from OR Tambo Airport',
+        highlights: [
+          'Ranked #76 nationally',
+          'Southgate location',
+          'Good facilities',
+          'Family-friendly'
+        ],
+        description: 'Glenvista Country Club is ranked #76 in South Africa and offers a family-friendly golfing experience in southern Johannesburg. The club is known for its welcoming atmosphere and good facilities.',
+        par: 72,
+        features: [
+          'Family-friendly club',
+          'Good facilities',
+          'Welcoming atmosphere',
+          'Southern Johannesburg',
+          'Multiple sporting codes'
+        ]
+      },
+      {
+        id: 'centurion',
+        name: 'Centurion Country Club',
+        region: 'Johannesburg',
+        location: 'Centurion - Gauteng',
+        nationalRanking: 77,
+        image: 'https://images.unsplash.com/photo-1592919505780-303950717480?w=800&h=600&fit=crop',
+        travelTime: '45 minutes from OR Tambo Airport',
+        highlights: [
+          'Ranked #77 nationally',
+          'Centurion location',
+          'Parkland course',
+          'Good conditioning'
+        ],
+        description: 'Centurion Country Club is ranked #77 in South Africa and offers a pleasant parkland experience. The course is well-maintained and provides good value for golfers.',
+        par: 72,
+        features: [
+          'Parkland layout',
+          'Good conditioning',
+          'Centurion location',
+          'Friendly club',
+          'Good facilities'
+        ]
+      },
+      {
+        id: 'emfuleni',
+        name: 'Emfuleni Golf Estate',
+        region: 'Johannesburg',
+        location: 'Vanderbijlpark - Gauteng',
+        nationalRanking: 90,
+        image: 'https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?w=800&h=600&fit=crop',
+        travelTime: '1 hour from OR Tambo Airport',
+        highlights: [
+          'Ranked #90 nationally',
+          'Vaal Triangle location',
+          'Estate course',
+          'Scenic setting'
+        ],
+        description: 'Emfuleni Golf Estate is ranked #90 in South Africa and offers a scenic golfing experience in the Vaal Triangle. The estate course provides a relaxed atmosphere with good facilities.',
+        par: 72,
+        features: [
+          'Estate course',
+          'Scenic setting',
+          'Vaal Triangle location',
+          'Good facilities',
+          'Residential estate'
+        ]
+      },
+      {
+        id: 'huddle-park',
+        name: 'Huddle Park Golf Club',
+        region: 'Johannesburg',
+        location: 'Johannesburg - Gauteng',
+        nationalRanking: 95,
+        image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&h=600&fit=crop',
+        travelTime: '30 minutes from OR Tambo Airport',
+        highlights: [
+          'Ranked #95 nationally',
+          'East Rand location',
+          'Accessible course',
+          'Good value'
+        ],
+        description: 'Huddle Park Golf Club is ranked #95 in South Africa and offers accessible golf on the East Rand. The course provides good value and a friendly atmosphere for golfers of all levels.',
+        par: 72,
+        features: [
+          'Accessible golf',
+          'East Rand location',
+          'Good value',
+          'Friendly atmosphere',
+          'Well-maintained'
+        ]
+      },
+      {
+        id: 'jackal-creek',
+        name: 'Jackal Creek Golf Estate',
+        region: 'Johannesburg',
+        location: 'Honeydew - Gauteng',
+        nationalRanking: 98,
+        image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&h=600&fit=crop',
+        travelTime: '45 minutes from OR Tambo Airport',
+        highlights: [
+          'Ranked #98 nationally',
+          'Golf estate',
+          'Wildlife',
+          'Challenging layout'
+        ],
+        description: 'Jackal Creek Golf Estate is ranked #98 in South Africa and offers a unique golfing experience with wildlife on the course. The challenging layout winds through a natural estate setting.',
+        par: 72,
+        features: [
+          'Wildlife on course',
+          'Estate setting',
+          'Challenging layout',
+          'Natural features',
+          'Good facilities'
+        ]
+      },
+      {
+        id: 'randpark-bushwillow',
+        name: 'Randpark Bushwillow',
+        region: 'Johannesburg',
+        location: 'Randburg - Gauteng',
+        nationalRanking: 100,
+        image: 'https://images.unsplash.com/photo-1592919505780-303950717480?w=800&h=600&fit=crop',
+        travelTime: '40 minutes from OR Tambo Airport',
+        highlights: [
+          'Ranked #100 nationally',
+          'Part of Randpark facility',
+          'Championship course',
+          'Good conditioning'
+        ],
+        description: 'Randpark Bushwillow is ranked #100 in South Africa and is the companion course to the Firethorn at Randpark Golf Club. This championship course offers a different but equally challenging test.',
+        par: 72,
+        features: [
+          'Championship layout',
+          'Part of 36-hole facility',
+          'Good conditioning',
+          'Professional tournament venue',
+          'Excellent practice facilities'
+        ]
+      },
+      {
+        id: 'benoni-cc',
+        name: 'Benoni Country Club',
+        region: 'Johannesburg',
+        location: 'Benoni - Gauteng',
+        image: 'https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?w=800&h=600&fit=crop',
+        travelTime: '35 minutes from OR Tambo Airport',
+        highlights: [
+          'East Rand course',
+          'Historic club',
+          'Traditional layout',
+          'Good facilities'
+        ],
+        description: 'Benoni Country Club is a historic East Rand course offering traditional parkland golf. The club has a rich heritage and provides a welcoming atmosphere for members and visitors.',
+        par: 72,
+        features: [
+          'Historic East Rand club',
+          'Traditional parkland',
+          'Good facilities',
+          'Friendly atmosphere',
+          'Well-established'
+        ]
+      },
+      {
+        id: 'state-mines',
+        name: 'State Mines Country Club',
+        region: 'Johannesburg',
+        location: 'Brakpan - Gauteng',
+        image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&h=600&fit=crop',
+        travelTime: '40 minutes from OR Tambo Airport',
+        highlights: [
+          'East Rand location',
+          'Mining heritage',
+          'Good value',
+          'Friendly club'
+        ],
+        description: 'State Mines Country Club is an East Rand course with a rich mining heritage. The club offers good value golf in a friendly atmosphere.',
+        par: 72,
+        features: [
+          'Mining heritage',
+          'East Rand location',
+          'Good value',
+          'Friendly club',
+          'Traditional atmosphere'
+        ]
+      },
+      {
+        id: 'erpm',
+        name: 'ERPM Golf Club',
+        region: 'Johannesburg',
+        location: 'Boksburg - Gauteng',
+        image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&h=600&fit=crop',
+        travelTime: '30 minutes from OR Tambo Airport',
+        highlights: [
+          'East Rand course',
+          'Mining heritage',
+          'Traditional club',
+          'Good facilities'
+        ],
+        description: 'ERPM Golf Club is an East Rand course with mining heritage roots. The club offers a traditional golfing experience with good facilities and a welcoming atmosphere.',
+        par: 72,
+        features: [
+          'Mining heritage',
+          'Traditional layout',
+          'East Rand location',
+          'Good facilities',
+          'Welcoming club'
+        ]
+      },
+      {
+        id: 'soweto-cc',
+        name: 'Soweto Country Club',
+        region: 'Johannesburg',
+        location: 'Johannesburg - Gauteng',
+        image: 'https://images.unsplash.com/photo-1592919505780-303950717480?w=800&h=600&fit=crop',
+        travelTime: '35 minutes from OR Tambo Airport',
+        highlights: [
+          'Historic Soweto course',
+          'Community golf',
+          'Cultural significance',
+          'Accessible golf'
+        ],
+        description: 'Soweto Country Club is a historically significant course that has played an important role in making golf accessible to the Soweto community. The club offers a welcoming atmosphere and good facilities.',
+        par: 72,
+        features: [
+          'Historic significance',
+          'Community golf',
+          'Soweto location',
+          'Accessible to all',
+          'Growing membership'
+        ]
+      },
+      {
+        id: 'goldfields-west',
+        name: 'Goldfields West Golf Club',
+        region: 'Johannesburg',
+        location: 'Carletonville - North West Province',
+        nationalRanking: 68,
+        image: 'https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?w=800&h=600&fit=crop',
+        travelTime: '1.5 hours from OR Tambo Airport',
+        highlights: [
+          'Ranked #68 nationally',
+          'Mining town course',
+          'Championship layout',
+          'Well-maintained'
+        ],
+        description: 'Goldfields West Golf Club is ranked #68 in South Africa and offers a championship golfing experience in the mining town of Carletonville. The course is well-maintained and provides a challenging test.',
+        par: 72,
+        features: [
+          'Championship layout',
+          'Mining heritage',
+          'Well-maintained course',
+          'Good facilities',
+          'West Rand location'
         ]
       },
     ]

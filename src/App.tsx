@@ -7,6 +7,7 @@ import ClientsSection from './components/ClientsSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import CourseDetailPage from './pages/CourseDetailPage';
+import ServiceDetailPage from './pages/ServiceDetailPage';
 import SEOHelmet from './components/SEOHelmet';
 import StructuredData, { createOrganizationSchema, createLocalBusinessSchema } from './components/StructuredData';
 
@@ -39,6 +40,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/course/:courseId" element={<CourseDetailPage />} />
+            <Route path="/service/:serviceSlug" element={<ServiceDetailPage />} />
           </Routes>
         </main>
         <Footer />

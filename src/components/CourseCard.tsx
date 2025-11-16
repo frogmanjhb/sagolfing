@@ -29,13 +29,6 @@ const CourseCard = ({ course }: CourseCardProps) => {
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         />
         
-        {/* National Ranking Badge */}
-        {course.nationalRanking && (
-          <div className="absolute top-3 right-3 bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
-            #{course.nationalRanking}
-          </div>
-        )}
-        
         {/* Hover Overlay with Highlights */}
         <div
           className={`absolute inset-0 bg-gradient-to-t from-corporate-900 via-corporate-900/80 to-transparent transition-opacity duration-300 ${

@@ -9,16 +9,22 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center pt-20"
-      style={{
-        backgroundImage: 'url(https://cdn.sanity.io/images/03mhssoh/production/631d48fcccdb3e93c90944ebe50fc9e061038891-1832x1222.jpg)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
+      className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden"
       role="banner"
       aria-label="Hero section showcasing South African golf courses"
     >
+      {/* Animated background with Ken Burns effect */}
+      <div 
+        className="absolute inset-0 ken-burns-bg"
+        style={{
+          backgroundImage: 'url(https://cdn.sanity.io/images/03mhssoh/production/631d48fcccdb3e93c90944ebe50fc9e061038891-1832x1222.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+        aria-hidden="true"
+      ></div>
+      
       {/* Overlay for better text readability */}
       <div className="absolute inset-0 bg-white/60" aria-hidden="true"></div>
       

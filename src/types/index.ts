@@ -15,9 +15,22 @@ export interface GolfCourse {
 }
 
 export interface Service {
+  id: string;
+  slug: string;
   title: string;
   description: string;
   icon?: string;
+  detailedDescription?: string;
+  features?: string[];
+  benefits?: string[];
+  pricing?: string;
+  testimonial?: {
+    quote: string;
+    author: string;
+    role: string;
+  };
+  gallery?: string[];
+  callToAction?: string;
 }
 
 export type Region = 'Johannesburg' | 'Garden Route' | 'Cape Town' | 'Durban' | 'Kruger';
