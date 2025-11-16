@@ -3,7 +3,7 @@ import { Service } from '../types';
 export const services: Service[] = [
   {
     title: 'Corporate Golf Days',
-    description: 'Organize memorable corporate golf events tailored to your business needs.',
+    description: 'Organise memorable corporate golf events tailored to your business needs.',
     icon: '🏢'
   },
   {
