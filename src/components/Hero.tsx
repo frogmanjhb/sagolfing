@@ -16,14 +16,16 @@ const Hero = () => {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
       }}
+      role="banner"
+      aria-label="Hero section showcasing South African golf courses"
     >
       {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-white/60"></div>
+      <div className="absolute inset-0 bg-white/60" aria-hidden="true"></div>
       
       <div className="container-custom text-center relative z-10">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-corporate-900 mb-6 leading-tight">
           Discover the Best Golf Courses
-          <span className="block text-primary-600 mt-2">in South Africa 🏌️</span>
+          <span className="block text-primary-600 mt-2">in South Africa</span>
         </h1>
         <p className="text-lg md:text-xl text-corporate-600 mb-8 max-w-2xl mx-auto">
           Your preferred golfing partner away from home. Experience world-class courses,
