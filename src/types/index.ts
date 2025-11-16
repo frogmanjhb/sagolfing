@@ -20,7 +20,7 @@ export interface Service {
   icon?: string;
 }
 
-export type Region = 'Johannesburg' | 'Garden Route' | 'Cape Town' | 'Durban';
+export type Region = 'Johannesburg' | 'Garden Route' | 'Cape Town' | 'Durban' | 'Kruger';
 
 export interface RegionData {
   name: Region;

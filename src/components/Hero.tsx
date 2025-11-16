@@ -24,8 +24,22 @@ const Hero = () => {
       
       <div className="container-custom text-center relative z-10">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-corporate-900 mb-6 leading-tight">
-          Discover the Best Golf Courses
-          <span className="block text-primary-600 mt-2">in South Africa</span>
+          <span className="inline-block bounce-text" style={{ animationDelay: '0s' }}>Discover</span>
+          {' '}
+          <span className="inline-block bounce-text" style={{ animationDelay: '0.1s' }}>the</span>
+          {' '}
+          <span className="inline-block bounce-text" style={{ animationDelay: '0.2s' }}>Best</span>
+          {' '}
+          <span className="inline-block bounce-text" style={{ animationDelay: '0.3s' }}>Golf</span>
+          {' '}
+          <span className="inline-block bounce-text" style={{ animationDelay: '0.4s' }}>Courses</span>
+          <span className="block text-primary-600 mt-2">
+            <span className="inline-block bounce-text" style={{ animationDelay: '0.5s' }}>in</span>
+            {' '}
+            <span className="inline-block bounce-text" style={{ animationDelay: '0.6s' }}>South</span>
+            {' '}
+            <span className="inline-block bounce-text" style={{ animationDelay: '0.7s' }}>Africa</span>
+          </span>
         </h1>
         <p className="text-lg md:text-xl text-corporate-600 mb-8 max-w-2xl mx-auto">
           Your preferred golfing partner away from home. Experience world-class courses,

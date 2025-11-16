@@ -251,6 +251,334 @@ export const golfCourses: RegionData[] = [
           'Shared facilities with premium Woodmead course'
         ]
       },
+      {
+        id: 'johannesburg-cc',
+        name: 'Johannesburg Country Club',
+        region: 'Johannesburg',
+        location: 'Auckland Park - Gauteng',
+        image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&h=600&fit=crop',
+        travelTime: '30 minutes from OR Tambo Airport',
+        highlights: [
+          'Historic parkland course',
+          'Well-established club',
+          'Traditional layout',
+          'Central Johannesburg location'
+        ],
+        description: 'Johannesburg Country Club is a well-established parkland course with a rich history in South African golf. The traditional layout offers a challenging round of golf in the heart of Johannesburg.',
+        par: 72,
+        features: [
+          'Traditional parkland design',
+          'Mature trees and well-manicured fairways',
+          'Historic clubhouse',
+          'Excellent member facilities'
+        ]
+      },
+      {
+        id: 'randpark',
+        name: 'Randpark Golf Club',
+        region: 'Johannesburg',
+        location: 'Randpark - Gauteng',
+        image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&h=600&fit=crop',
+        travelTime: '40 minutes from OR Tambo Airport',
+        highlights: [
+          '36-hole facility',
+          'Bushwillow and Firethorn courses',
+          'Hosted professional tournaments',
+          'Championship standard'
+        ],
+        description: 'Randpark Golf Club features two championship courses - the Bushwillow and Firethorn. Both courses offer different challenges and have hosted numerous professional tournaments, maintaining excellent conditioning year-round.',
+        par: 72,
+        features: [
+          'Two championship courses',
+          'Hosted European Tour events',
+          'Excellent practice facilities',
+          'Top-quality conditioning'
+        ]
+      },
+      {
+        id: 'wanderers',
+        name: 'Wanderers Golf Club',
+        region: 'Johannesburg',
+        location: 'Illovo - Gauteng',
+        image: 'https://images.unsplash.com/photo-1592919505780-303950717480?w=800&h=600&fit=crop',
+        travelTime: '35 minutes from OR Tambo Airport',
+        highlights: [
+          'Prestigious city course',
+          'Historic club founded 1890s',
+          'Hosted major championships',
+          'Prime Sandton location'
+        ],
+        description: 'Wanderers Golf Club is one of Johannesburg\'s most prestigious clubs, with a rich history dating back to the 1890s. Located in the heart of Sandton, it offers a classic parkland experience with excellent facilities.',
+        par: 72,
+        features: [
+          'Historic club with strong tradition',
+          'Championship layout',
+          'Outstanding clubhouse',
+          'Premier city location'
+        ]
+      },
+      {
+        id: 'gary-player-cc',
+        name: 'Gary Player Country Club',
+        region: 'Johannesburg',
+        location: 'Sun City - North West',
+        nationalRanking: 1,
+        image: 'https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?w=800&h=600&fit=crop',
+        travelTime: '2 hours from OR Tambo Airport',
+        highlights: [
+          'Ranked #1 in South Africa',
+          'Hosted Nedbank Golf Challenge',
+          'Gary Player design masterpiece',
+          'Africa\'s premier course'
+        ],
+        description: 'The Gary Player Country Club at Sun City is widely regarded as South Africa\'s #1 golf course. Home to the prestigious Nedbank Golf Challenge, this Gary Player masterpiece offers an unforgettable championship experience in a stunning bushveld setting.',
+        designer: 'Gary Player',
+        par: 72,
+        length: '7,831 metres',
+        features: [
+          'Hosted Nedbank Golf Challenge since 1981',
+          'Signature island green 9th hole',
+          'Crocodile Creek water feature',
+          'World-class conditioning',
+          'Sun City resort amenities'
+        ]
+      },
+      {
+        id: 'lost-city',
+        name: 'The Lost City Golf Course',
+        region: 'Johannesburg',
+        location: 'Sun City - North West',
+        nationalRanking: 10,
+        image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&h=600&fit=crop',
+        travelTime: '2 hours from OR Tambo Airport',
+        highlights: [
+          'Desert-style course',
+          'Dramatic rocky terrain',
+          'Crocodile-filled water hazards',
+          'Unique African experience'
+        ],
+        description: 'The Lost City Golf Course at Sun City is a dramatic desert-style course featuring rocky outcrops, indigenous vegetation, and water hazards inhabited by crocodiles. This Gary Player design offers one of the most unique golfing experiences in Africa.',
+        designer: 'Gary Player',
+        par: 72,
+        features: [
+          'Genuine crocodiles in water hazards',
+          'Desert-links style design',
+          'Spectacular rock formations',
+          'Challenging elevation changes',
+          'Sun City entertainment complex'
+        ]
+      },
+      {
+        id: 'pecanwood',
+        name: 'Pecanwood Golf & Country Estate',
+        region: 'Johannesburg',
+        location: 'Hartbeespoort - North West',
+        image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&h=600&fit=crop',
+        travelTime: '1 hour from OR Tambo Airport',
+        highlights: [
+          'Jack Nicklaus Signature Design',
+          'Hartbeespoort Dam views',
+          'Residential golf estate',
+          'Championship layout'
+        ],
+        description: 'Pecanwood Golf & Country Estate features a stunning Jack Nicklaus Signature course on the shores of Hartbeespoort Dam. With spectacular views of the Magaliesberg mountains, this course offers both beauty and challenge.',
+        designer: 'Jack Nicklaus',
+        par: 72,
+        features: [
+          'Jack Nicklaus Signature course',
+          'Hartbeespoort Dam setting',
+          'Mountain views',
+          'Estate living',
+          'Marina and water sports'
+        ]
+      },
+      {
+        id: 'ebotse',
+        name: 'Ebotse Links',
+        region: 'Johannesburg',
+        location: 'Benoni - Gauteng',
+        nationalRanking: 12,
+        image: 'https://images.unsplash.com/photo-1592919505780-303950717480?w=800&h=600&fit=crop',
+        travelTime: '35 minutes from OR Tambo Airport',
+        highlights: [
+          'Links-style course in Gauteng',
+          'Heathland design by Jack Nicklaus',
+          'Ranked in top 15 nationally',
+          'Unique links experience'
+        ],
+        description: 'Ebotse Links is a remarkable links-style course designed by Jack Nicklaus. Built on reclaimed mining land, it offers an authentic links experience rare in South Africa, with undulating fairways and challenging pot bunkers.',
+        designer: 'Jack Nicklaus',
+        par: 72,
+        features: [
+          'True links-style layout',
+          'Built on reclaimed mining land',
+          'Heathland vegetation',
+          'Strategic bunkering',
+          'Fast-running fairways'
+        ]
+      },
+      {
+        id: 'eagle-canyon',
+        name: 'Eagle Canyon Golf Estate',
+        region: 'Johannesburg',
+        location: 'Honeydew - Gauteng',
+        image: 'https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?w=800&h=600&fit=crop',
+        travelTime: '45 minutes from OR Tambo Airport',
+        highlights: [
+          'Three championship courses',
+          'Eagle, Flamingo, and Falcon nines',
+          'Extensive water features',
+          'Estate living'
+        ],
+        description: 'Eagle Canyon Golf Estate offers 27 holes of championship golf with three distinct nines - Eagle, Flamingo, and Falcon. The courses feature dramatic water features, well-bunkered fairways, and challenging greens.',
+        par: 72,
+        features: [
+          '27 holes of championship golf',
+          'Dramatic water features',
+          'Residential estate',
+          'Excellent practice facilities',
+          'Family-friendly environment'
+        ]
+      },
+      {
+        id: 'blue-valley',
+        name: 'Blue Valley Golf Estate',
+        region: 'Johannesburg',
+        location: 'Centurion - Gauteng',
+        image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&h=600&fit=crop',
+        travelTime: '40 minutes from OR Tambo Airport',
+        highlights: [
+          'Championship course',
+          'Beautiful estate setting',
+          'Excellent conditioning',
+          'Strategic design'
+        ],
+        description: 'Blue Valley Golf Estate is a championship golf course in Centurion, offering a challenging layout through a secure residential estate. The course is known for its excellent conditioning and strategic hole design.',
+        par: 72,
+        features: [
+          'Championship estate course',
+          'Strategic water placement',
+          'Excellent greens',
+          'Secure estate living',
+          'Modern facilities'
+        ]
+      },
+      {
+        id: 'dainfern',
+        name: 'Dainfern Golf Estate',
+        region: 'Johannesburg',
+        location: 'Fourways - Gauteng',
+        image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&h=600&fit=crop',
+        travelTime: '40 minutes from OR Tambo Airport',
+        highlights: [
+          'Premier estate course',
+          'Gary Player design',
+          'Fourways location',
+          'Championship standard'
+        ],
+        description: 'Dainfern Golf Estate features a Gary Player-designed championship course through one of Johannesburg\'s most sought-after residential estates. The course offers a challenging test with beautiful landscaping and excellent facilities.',
+        designer: 'Gary Player',
+        par: 72,
+        features: [
+          'Gary Player design',
+          'Premier estate location',
+          'Challenging layout',
+          'Water features on multiple holes',
+          'Upmarket residential community'
+        ]
+      },
+      {
+        id: 'modderfontein',
+        name: 'Modderfontein Golf Club',
+        region: 'Johannesburg',
+        location: 'Modderfontein - Gauteng',
+        image: 'https://images.unsplash.com/photo-1592919505780-303950717480?w=800&h=600&fit=crop',
+        travelTime: '25 minutes from OR Tambo Airport',
+        highlights: [
+          'Close to OR Tambo Airport',
+          'Parkland layout',
+          'Friendly atmosphere',
+          'Good value'
+        ],
+        description: 'Modderfontein Golf Club is a friendly parkland course conveniently located near OR Tambo Airport. The course offers a pleasant round of golf with mature trees and well-maintained fairways.',
+        par: 72,
+        features: [
+          'Convenient airport location',
+          'Mature parkland setting',
+          'Welcoming club atmosphere',
+          'Good practice facilities'
+        ]
+      },
+      {
+        id: 'bryanston-cc',
+        name: 'Bryanston Country Club',
+        region: 'Johannesburg',
+        location: 'Bryanston - Gauteng',
+        image: 'https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?w=800&h=600&fit=crop',
+        travelTime: '35 minutes from OR Tambo Airport',
+        highlights: [
+          'Sandton area course',
+          'Parkland setting',
+          'Family-oriented club',
+          'Multiple sporting facilities'
+        ],
+        description: 'Bryanston Country Club is a family-friendly club in the heart of Sandton, offering not just golf but tennis, bowls, and other sporting facilities. The parkland course provides an enjoyable round in a relaxed atmosphere.',
+        par: 72,
+        features: [
+          'Multi-sport country club',
+          'Parkland course design',
+          'Family-friendly environment',
+          'Social club atmosphere',
+          'Tennis and bowls facilities'
+        ]
+      },
+      {
+        id: 'serengeti',
+        name: 'Serengeti Golf & Wildlife Estate',
+        region: 'Johannesburg',
+        location: 'Kempton Park - Gauteng',
+        image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&h=600&fit=crop',
+        travelTime: '25 minutes from OR Tambo Airport',
+        highlights: [
+          'Wildlife estate setting',
+          'Close to airport',
+          'Peter Matkovich design',
+          'Unique bushveld experience'
+        ],
+        description: 'Serengeti Golf & Wildlife Estate offers a unique combination of championship golf and wildlife viewing. Located near OR Tambo Airport, this Peter Matkovich-designed course winds through a wildlife estate with roaming antelope and indigenous vegetation.',
+        designer: 'Peter Matkovich',
+        par: 72,
+        features: [
+          'Wildlife estate with roaming game',
+          'Bushveld-style course',
+          'Convenient airport location',
+          'Indigenous landscaping',
+          'Secure estate living'
+        ]
+      },
+      {
+        id: 'killarney',
+        name: 'Killarney Golf Club',
+        region: 'Johannesburg',
+        location: 'Houghton - Gauteng',
+        image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&h=600&fit=crop',
+        travelTime: '30 minutes from OR Tambo Airport',
+        highlights: [
+          'Historic city course',
+          'Houghton location',
+          'Traditional layout',
+          'Well-established club'
+        ],
+        description: 'Killarney Golf Club is a historic course in the prestigious Houghton area of Johannesburg. With its traditional parkland layout and mature trees, it offers a classic golfing experience in the heart of the city.',
+        par: 72,
+        features: [
+          'Historic club',
+          'Traditional parkland design',
+          'Mature tree-lined fairways',
+          'Prime city location',
+          'Classic clubhouse'
+        ]
+      },
     ]
   },
   {
@@ -270,15 +598,479 @@ export const golfCourses: RegionData[] = [
   {
     name: 'Cape Town',
     courses: [
-      { id: 'hermanus', name: 'Hermanus', region: 'Cape Town', image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&h=600&fit=crop', travelTime: '2 hour flight from OR Tambo', highlights: ['Whale watching from the course', 'Coastal beauty', 'Championship layout'] },
-      { id: 'durbanville', name: 'Durbanville', region: 'Cape Town', image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&h=600&fit=crop', travelTime: '2 hour flight from OR Tambo', highlights: ['Table Mountain views', 'Premier Cape course', 'Excellent conditioning'] },
-      { id: 'westlake', name: 'Westlake Golf Club', region: 'Cape Town', image: 'https://images.unsplash.com/photo-1592919505780-303950717480?w=800&h=600&fit=crop', travelTime: '2 hour flight from OR Tambo', highlights: ['Historic parkland', 'Mature trees', 'Classic design'] },
-      { id: 'atlantic-beach', name: 'Atlantic Beach', region: 'Cape Town', image: 'https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?w=800&h=600&fit=crop', travelTime: '2 hour flight from OR Tambo', highlights: ['Links-style course', 'Ocean adjacent', 'Challenging layout'] },
-      { id: 'royal-cape', name: 'Royal Cape', region: 'Cape Town', image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&h=600&fit=crop', travelTime: '2 hour flight from OR Tambo', highlights: ['Oldest golf club in Africa', 'Rich heritage', 'Championship venue'] },
-      { id: 'strand', name: 'Strand Golf Club', region: 'Cape Town', image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&h=600&fit=crop', travelTime: '2 hour flight from OR Tambo', highlights: ['False Bay views', 'Mountain backdrop', 'Family-friendly'] },
-      { id: 'erinvale', name: 'Erinvale Golf Club', region: 'Cape Town', image: 'https://images.unsplash.com/photo-1592919505780-303950717480?w=800&h=600&fit=crop', travelTime: '2 hour flight from OR Tambo', highlights: ['Gary Player design', 'Helderberg setting', 'Championship course'] },
-      { id: 'de-zalze', name: 'De Zalze Golf Estate', region: 'Cape Town', image: 'https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?w=800&h=600&fit=crop', travelTime: '2 hour flight from OR Tambo', highlights: ['Winelands setting', 'Peter Matkovich design', 'Estate course'] },
-      { id: 'mowbray', name: 'Mowbray Golf Club', region: 'Cape Town', image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&h=600&fit=crop', travelTime: '2 hour flight from OR Tambo', highlights: ['Historic city course', 'Table Mountain views', 'Traditional layout'] },
+      { 
+        id: 'hermanus',
+        name: 'Hermanus Golf Club',
+        region: 'Cape Town',
+        location: 'Hermanus - Western Cape',
+        image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&h=600&fit=crop',
+        travelTime: '1.5 hours drive from Cape Town',
+        highlights: [
+          'Whale watching from the course',
+          'Coastal beauty',
+          'Championship layout',
+          'Spectacular ocean views'
+        ],
+        description: 'Hermanus Golf Club offers one of the most unique golfing experiences in South Africa, with whales visible from the course during the whale watching season. The championship course features stunning coastal views and challenging seaside conditions.',
+        par: 72,
+        features: [
+          'Whale watching season (June-November)',
+          'Coastal links-style holes',
+          'Mountain backdrop',
+          'Walker Bay views',
+          'Championship course'
+        ]
+      },
+      { 
+        id: 'durbanville',
+        name: 'Durbanville Golf Club',
+        region: 'Cape Town',
+        location: 'Durbanville - Western Cape',
+        nationalRanking: 11,
+        image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&h=600&fit=crop',
+        travelTime: '30 minutes from Cape Town CBD',
+        highlights: [
+          'Table Mountain views',
+          'Premier Cape course',
+          'Excellent conditioning',
+          'Championship venue'
+        ],
+        description: 'Durbanville Golf Club is one of the Cape\'s finest championship courses, ranked #11 in South Africa. With spectacular Table Mountain views and world-class conditioning, it has hosted numerous professional tournaments.',
+        par: 72,
+        features: [
+          'Panoramic Table Mountain views',
+          'Championship standard',
+          'Hosted professional tournaments',
+          'Excellent practice facilities',
+          'Premium wine region location'
+        ]
+      },
+      { 
+        id: 'westlake',
+        name: 'Westlake Golf Club',
+        region: 'Cape Town',
+        location: 'Muizenberg - Western Cape',
+        image: 'https://images.unsplash.com/photo-1592919505780-303950717480?w=800&h=600&fit=crop',
+        travelTime: '25 minutes from Cape Town CBD',
+        highlights: [
+          'Historic parkland course',
+          'Mature trees',
+          'Classic design',
+          'Table Mountain views'
+        ],
+        description: 'Westlake Golf Club is a historic parkland course established in the early 1900s. Set in a beautiful natural wetland area with mature trees, it offers a classic golfing experience with stunning mountain views.',
+        par: 72,
+        features: [
+          'Historic course dating back to 1920s',
+          'Mature parkland setting',
+          'Natural wetland features',
+          'Traditional clubhouse',
+          'Close to False Bay beaches'
+        ]
+      },
+      { 
+        id: 'atlantic-beach',
+        name: 'Atlantic Beach Golf Club',
+        region: 'Cape Town',
+        location: 'Melkbosstrand - Western Cape',
+        image: 'https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?w=800&h=600&fit=crop',
+        travelTime: '30 minutes from Cape Town CBD',
+        highlights: [
+          'Links-style course',
+          'Ocean adjacent',
+          'Challenging layout',
+          'West Coast location'
+        ],
+        description: 'Atlantic Beach Golf Club is a links-style course on the Cape\'s West Coast, offering challenging seaside golf. The course borders the Atlantic Ocean and features undulating fairways and strategic bunkering.',
+        par: 72,
+        features: [
+          'Links-style seaside golf',
+          'Atlantic Ocean views',
+          'Wind-challenged layout',
+          'Estate location',
+          'Coastal wildlife'
+        ]
+      },
+      { 
+        id: 'royal-cape',
+        name: 'Royal Cape Golf Club',
+        region: 'Cape Town',
+        location: 'Wynberg - Western Cape',
+        nationalRanking: 15,
+        image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&h=600&fit=crop',
+        travelTime: '20 minutes from Cape Town CBD',
+        highlights: [
+          'Oldest golf club in Africa',
+          'Rich heritage since 1885',
+          'Championship venue',
+          'Historic tradition'
+        ],
+        description: 'Royal Cape Golf Club is the oldest golf club in Africa, founded in 1885. This prestigious championship course has a rich history and tradition, having hosted numerous national and international tournaments.',
+        par: 72,
+        features: [
+          'Established 1885 - oldest in Africa',
+          'Rich golfing heritage',
+          'Championship parkland layout',
+          'Historic clubhouse',
+          'Hosted SA Open Championships'
+        ]
+      },
+      { 
+        id: 'strand',
+        name: 'Strand Golf Club',
+        region: 'Cape Town',
+        location: 'Strand - Western Cape',
+        image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&h=600&fit=crop',
+        travelTime: '45 minutes from Cape Town CBD',
+        highlights: [
+          'False Bay views',
+          'Mountain backdrop',
+          'Family-friendly',
+          'Coastal setting'
+        ],
+        description: 'Strand Golf Club is a family-friendly course with spectacular views of False Bay and the surrounding mountains. The course offers an enjoyable round of golf in a stunning coastal setting.',
+        par: 72,
+        features: [
+          'False Bay panoramic views',
+          'Helderberg mountain backdrop',
+          'Welcoming atmosphere',
+          'Good value for money',
+          'Beachside location'
+        ]
+      },
+      { 
+        id: 'erinvale',
+        name: 'Erinvale Golf Club',
+        region: 'Cape Town',
+        location: 'Somerset West - Western Cape',
+        nationalRanking: 18,
+        image: 'https://images.unsplash.com/photo-1592919505780-303950717480?w=800&h=600&fit=crop',
+        travelTime: '45 minutes from Cape Town CBD',
+        highlights: [
+          'Gary Player design',
+          'Helderberg setting',
+          'Championship course',
+          'Estate location'
+        ],
+        description: 'Erinvale Golf Club is a Gary Player-designed championship course set against the Helderberg Mountains. Ranked in South Africa\'s top 20, it offers a world-class golfing experience with spectacular mountain views.',
+        designer: 'Gary Player',
+        par: 72,
+        features: [
+          'Gary Player signature design',
+          'Helderberg mountain views',
+          'Championship standard',
+          'Estate course with accommodation',
+          'Hosted professional tournaments'
+        ]
+      },
+      { 
+        id: 'de-zalze',
+        name: 'De Zalze Golf Estate',
+        region: 'Cape Town',
+        location: 'Stellenbosch - Western Cape',
+        image: 'https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?w=800&h=600&fit=crop',
+        travelTime: '45 minutes from Cape Town CBD',
+        highlights: [
+          'Winelands setting',
+          'Peter Matkovich design',
+          'Estate course',
+          'Mountain views'
+        ],
+        description: 'De Zalze Golf Estate is beautifully situated in the Stellenbosch Winelands. Designed by Peter Matkovich, this championship course winds through vineyards and offers stunning mountain views.',
+        designer: 'Peter Matkovich',
+        par: 72,
+        features: [
+          'Winelands estate setting',
+          'Peter Matkovich design',
+          'Vineyards and mountain views',
+          'Luxury estate living',
+          'Wine estate amenities'
+        ]
+      },
+      { 
+        id: 'mowbray',
+        name: 'Mowbray Golf Club',
+        region: 'Cape Town',
+        location: 'Mowbray - Western Cape',
+        nationalRanking: 20,
+        image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&h=600&fit=crop',
+        travelTime: '15 minutes from Cape Town CBD',
+        highlights: [
+          'Historic city course',
+          'Table Mountain views',
+          'Traditional layout',
+          'Central location'
+        ],
+        description: 'Mowbray Golf Club is a historic city course with spectacular Table Mountain views. Founded in 1910, it offers a traditional parkland experience in the heart of Cape Town\'s southern suburbs.',
+        par: 72,
+        features: [
+          'Iconic Table Mountain backdrop',
+          'Historic club tradition',
+          'Parkland layout with mature trees',
+          'Central Cape Town location',
+          'University of Cape Town adjacent'
+        ]
+      },
+      {
+        id: 'stellenbosch',
+        name: 'Stellenbosch Golf Club',
+        region: 'Cape Town',
+        location: 'Stellenbosch - Western Cape',
+        image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&h=600&fit=crop',
+        travelTime: '45 minutes from Cape Town CBD',
+        highlights: [
+          'Winelands location',
+          'Historic club founded 1903',
+          'Beautiful mountain setting',
+          'Traditional parkland'
+        ],
+        description: 'Stellenbosch Golf Club is a historic course in the heart of the Cape Winelands. Founded in 1903, it offers a traditional parkland experience with stunning mountain views and easy access to world-class wine estates.',
+        par: 72,
+        features: [
+          'Historic Winelands club',
+          'Mountain and vineyard views',
+          'Traditional parkland layout',
+          'Wine route location',
+          'Mature tree-lined fairways'
+        ]
+      },
+      {
+        id: 'arabella',
+        name: 'Arabella Golf Estate',
+        region: 'Cape Town',
+        location: 'Kleinmond - Western Cape',
+        nationalRanking: 5,
+        image: 'https://images.unsplash.com/photo-1592919505780-303950717480?w=800&h=600&fit=crop',
+        travelTime: '1.5 hours from Cape Town',
+        highlights: [
+          'Ranked #5 in South Africa',
+          'Bot River lagoon setting',
+          'Peter Matkovich design',
+          'Championship course'
+        ],
+        description: 'Arabella Golf Estate is ranked #5 in South Africa and offers one of the country\'s finest golfing experiences. Set on the Bot River lagoon with mountain views, this Peter Matkovich masterpiece is a must-play championship course.',
+        designer: 'Peter Matkovich',
+        par: 72,
+        features: [
+          'Ranked #5 nationally',
+          'Bot River lagoon backdrop',
+          'Peter Matkovich signature design',
+          'Spa and hotel facilities',
+          'World-class conditioning'
+        ]
+      },
+      {
+        id: 'rondebosch',
+        name: 'Rondebosch Golf Club',
+        region: 'Cape Town',
+        location: 'Rondebosch - Western Cape',
+        image: 'https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?w=800&h=600&fit=crop',
+        travelTime: '15 minutes from Cape Town CBD',
+        highlights: [
+          'Historic city course',
+          'Table Mountain backdrop',
+          'Parkland layout',
+          'Central location'
+        ],
+        description: 'Rondebosch Golf Club is a historic parkland course with spectacular Table Mountain views. Located in Cape Town\'s leafy southern suburbs, it offers a classic golfing experience close to the city center.',
+        par: 72,
+        features: [
+          'Table Mountain views',
+          'Historic club atmosphere',
+          'Parkland setting',
+          'Convenient city location',
+          'Traditional clubhouse'
+        ]
+      },
+      {
+        id: 'langebaan',
+        name: 'Langebaan Golf Club',
+        region: 'Cape Town',
+        location: 'Langebaan - Western Cape',
+        image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&h=600&fit=crop',
+        travelTime: '1.5 hours from Cape Town',
+        highlights: [
+          'West Coast links',
+          'Lagoon views',
+          'Wind-challenged course',
+          'Coastal setting'
+        ],
+        description: 'Langebaan Golf Club is a links-style course on the West Coast, offering challenging golf with stunning lagoon views. The course is renowned for its coastal setting and challenging wind conditions.',
+        par: 72,
+        features: [
+          'West Coast links-style',
+          'Langebaan lagoon views',
+          'Challenging wind conditions',
+          'Coastal wildlife',
+          'Seaside atmosphere'
+        ]
+      },
+      {
+        id: 'steenberg',
+        name: 'Steenberg Golf Club',
+        region: 'Cape Town',
+        location: 'Constantia - Western Cape',
+        image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&h=600&fit=crop',
+        travelTime: '20 minutes from Cape Town CBD',
+        highlights: [
+          'Historic wine estate',
+          'Peter Matkovich design',
+          '18th-century farm setting',
+          'Mountain backdrop'
+        ],
+        description: 'Steenberg Golf Club is set on a historic 18th-century wine estate in Constantia. Designed by Peter Matkovich, the course offers a beautiful blend of golfing excellence and Cape wine heritage.',
+        designer: 'Peter Matkovich',
+        par: 72,
+        features: [
+          'Historic wine estate (1682)',
+          'Peter Matkovich design',
+          'Mountain and vineyard views',
+          '5-star hotel facilities',
+          'Award-winning wine estate'
+        ]
+      },
+      {
+        id: 'king-david',
+        name: 'King David Golf Club',
+        region: 'Cape Town',
+        location: 'Wynberg - Western Cape',
+        image: 'https://images.unsplash.com/photo-1592919505780-303950717480?w=800&h=600&fit=crop',
+        travelTime: '20 minutes from Cape Town CBD',
+        highlights: [
+          'Mowbray Ridge location',
+          'City views',
+          'Challenging layout',
+          'Historic club'
+        ],
+        description: 'King David Golf Club is situated on Mowbray Ridge with excellent views over Cape Town. This challenging course offers a unique layout with elevation changes and strategic hole design.',
+        par: 72,
+        features: [
+          'Elevated city views',
+          'Strategic layout',
+          'Challenging terrain',
+          'Historic club',
+          'Southern suburbs location'
+        ]
+      },
+      {
+        id: 'clovelly',
+        name: 'Clovelly Golf Club',
+        region: 'Cape Town',
+        location: 'Fish Hoek - Western Cape',
+        image: 'https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?w=800&h=600&fit=crop',
+        travelTime: '35 minutes from Cape Town CBD',
+        highlights: [
+          'Clifftop course',
+          'Ocean views',
+          'Links-style layout',
+          'False Bay setting'
+        ],
+        description: 'Clovelly Golf Club is a spectacular clifftop course overlooking False Bay. This links-style course offers dramatic ocean views and challenging coastal conditions in a stunning seaside setting.',
+        par: 72,
+        features: [
+          'Dramatic clifftop holes',
+          'False Bay ocean views',
+          'Links-style seaside golf',
+          'Challenging wind conditions',
+          'Coastal beauty'
+        ]
+      },
+      {
+        id: 'pearl-valley',
+        name: 'Pearl Valley Golf Estate',
+        region: 'Cape Town',
+        location: 'Paarl - Western Cape',
+        nationalRanking: 3,
+        image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&h=600&fit=crop',
+        travelTime: '1 hour from Cape Town',
+        highlights: [
+          'Ranked #3 in South Africa',
+          'Jack Nicklaus Signature Design',
+          'Winelands estate',
+          'Championship venue'
+        ],
+        description: 'Pearl Valley Golf Estate is ranked #3 in South Africa and features a stunning Jack Nicklaus Signature course. Set in the Paarl Winelands with magnificent mountain views, it\'s one of the country\'s premier golf destinations.',
+        designer: 'Jack Nicklaus',
+        par: 72,
+        features: [
+          'Ranked #3 nationally',
+          'Jack Nicklaus Signature course',
+          'Winelands mountain setting',
+          'Hosted Dimension Data Pro-Am',
+          'Luxury estate amenities'
+        ]
+      },
+      {
+        id: 'devonvale',
+        name: 'Devonvale Golf Estate',
+        region: 'Cape Town',
+        location: 'Stellenbosch - Western Cape',
+        image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&h=600&fit=crop',
+        travelTime: '45 minutes from Cape Town CBD',
+        highlights: [
+          'Gary Player design',
+          'Winelands setting',
+          'Championship course',
+          'Estate living'
+        ],
+        description: 'Devonvale Golf Estate is a Gary Player-designed championship course in the Stellenbosch Winelands. The course offers challenging golf through vineyards with spectacular mountain backdrops.',
+        designer: 'Gary Player',
+        par: 72,
+        features: [
+          'Gary Player championship design',
+          'Stellenbosch Winelands location',
+          'Mountain and vineyard views',
+          'Residential golf estate',
+          'Wine route access'
+        ]
+      },
+      {
+        id: 'paarl',
+        name: 'Paarl Golf Club',
+        region: 'Cape Town',
+        location: 'Paarl - Western Cape',
+        image: 'https://images.unsplash.com/photo-1592919505780-303950717480?w=800&h=600&fit=crop',
+        travelTime: '1 hour from Cape Town',
+        highlights: [
+          'Historic Winelands club',
+          'Mountain setting',
+          'Traditional layout',
+          'Founded 1905'
+        ],
+        description: 'Paarl Golf Club is a historic course founded in 1905, beautifully situated in the Paarl Winelands. The traditional parkland layout offers challenging golf with magnificent mountain views.',
+        par: 72,
+        features: [
+          'Historic club since 1905',
+          'Paarl mountain backdrop',
+          'Traditional parkland course',
+          'Winelands location',
+          'Mature tree-lined fairways'
+        ]
+      },
+      {
+        id: 'milnerton',
+        name: 'Milnerton Golf Club',
+        region: 'Cape Town',
+        location: 'Milnerton - Western Cape',
+        nationalRanking: 21,
+        image: 'https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?w=800&h=600&fit=crop',
+        travelTime: '20 minutes from Cape Town CBD',
+        highlights: [
+          'Links-style course',
+          'Table Mountain views',
+          'Coastal setting',
+          'Championship venue'
+        ],
+        description: 'Milnerton Golf Club is a classic links-style course with spectacular Table Mountain views. Founded in 1905, it offers authentic links golf with challenging coastal winds and fast-running fairways.',
+        par: 72,
+        features: [
+          'True links-style layout',
+          'Iconic Table Mountain backdrop',
+          'Coastal wind challenges',
+          'Historic club tradition',
+          'Fast-running fairways'
+        ]
+      },
     ]
   },
   {
@@ -293,6 +1085,147 @@ export const golfCourses: RegionData[] = [
       { id: 'umdoni', name: 'Umdoni', region: 'Durban', image: 'https://images.unsplash.com/photo-1592919505780-303950717480?w=800&h=600&fit=crop', travelTime: '1 hour flight or 6 hours drive from OR Tambo', highlights: ['South Coast favourite', 'Ocean backdrop', 'Traditional layout'] },
       { id: 'san-lemeer', name: 'San Lemeer', region: 'Durban', image: 'https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?w=800&h=600&fit=crop', travelTime: '1 hour flight or 6 hours drive from OR Tambo', highlights: ['Gary Player design', 'South Coast location', 'Estate course'] },
       { id: 'wild-coast', name: 'Wild Coast', region: 'Durban', image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&h=600&fit=crop', travelTime: '1 hour flight or 6 hours drive from OR Tambo', highlights: ['Coastal beauty', 'Resort setting', 'Spectacular views'] },
+    ]
+  },
+  {
+    name: 'Kruger',
+    courses: [
+      { 
+        id: 'leopard-creek',
+        name: 'Leopard Creek Country Club',
+        region: 'Kruger',
+        location: 'Malelane - Mpumalanga',
+        image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&h=600&fit=crop',
+        travelTime: '4.5 hours drive or 1 hour flight from OR Tambo',
+        highlights: [
+          'Prestigious championship course',
+          'Adjacent to Kruger National Park',
+          'Wildlife viewing from the course',
+          'Hosted Alfred Dunhill Championship'
+        ],
+        description: 'Leopard Creek Country Club is one of South Africa\'s most exclusive and prestigious golf courses. Located on the edge of Kruger National Park, this Gary Player masterpiece offers an unforgettable golfing experience with wildlife sightings and world-class conditioning.',
+        designer: 'Gary Player',
+        par: 72,
+        features: [
+          'Borders Kruger National Park',
+          'Regular wildlife sightings including hippos and crocodiles',
+          'European Tour venue',
+          'Exceptional course conditioning'
+        ]
+      },
+      { 
+        id: 'skukuza',
+        name: 'Skukuza Golf Course',
+        region: 'Kruger',
+        location: 'Skukuza - Kruger National Park',
+        image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&h=600&fit=crop',
+        travelTime: '5 hours drive from OR Tambo',
+        highlights: [
+          'Inside Kruger National Park',
+          '9-hole course',
+          'Famous for wildlife encounters',
+          'Unique bushveld experience'
+        ],
+        description: 'Skukuza Golf Course offers a truly unique golfing experience inside Kruger National Park. This 9-hole course is famous for wildlife encounters during play, with hippos, elephants, and various antelope species regularly visiting the fairways.',
+        par: 35,
+        features: [
+          'Only golf course inside Kruger National Park',
+          'Wildlife sightings guaranteed',
+          'Unfenced course with roaming animals',
+          'Sand greens (browns)',
+          'Casual and adventurous atmosphere'
+        ]
+      },
+      { 
+        id: 'white-river',
+        name: 'White River Country Club',
+        region: 'Kruger',
+        location: 'White River - Mpumalanga',
+        image: 'https://images.unsplash.com/photo-1592919505780-303950717480?w=800&h=600&fit=crop',
+        travelTime: '4 hours drive from OR Tambo',
+        highlights: [
+          'Well-established parkland course',
+          'Beautiful mountain views',
+          'Lowveld setting',
+          'Excellent facilities'
+        ],
+        description: 'White River Country Club is a well-known championship course in the Lowveld region. Set among beautiful indigenous trees with stunning mountain views, the course offers a challenging yet enjoyable round of golf in a pristine environment.',
+        par: 72,
+        features: [
+          'Mature parkland layout',
+          'Mountain and valley views',
+          'Close to tourist attractions',
+          'Full clubhouse facilities'
+        ]
+      },
+      { 
+        id: 'hans-merensky',
+        name: 'Hans Merensky Golf Estate',
+        region: 'Kruger',
+        location: 'Phalaborwa - Limpopo',
+        image: 'https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?w=800&h=600&fit=crop',
+        travelTime: '5 hours drive or 1 hour flight from OR Tambo',
+        highlights: [
+          'Championship golf estate',
+          'Near Kruger National Park',
+          'Wildlife on course',
+          'Resort amenities'
+        ],
+        description: 'Hans Merensky Golf Estate is a premier golf destination near Kruger National Park. This championship course winds through indigenous bushveld with resident wildlife, offering an authentic African golf experience combined with luxury estate living.',
+        designer: 'Peter Matkovich',
+        par: 72,
+        features: [
+          'Bushveld setting with indigenous trees',
+          'Wildlife including warthogs and buck',
+          'Estate accommodation available',
+          'Spa and leisure facilities',
+          'Gateway to Kruger National Park'
+        ]
+      },
+      { 
+        id: 'olivers',
+        name: 'Oliver\'s',
+        region: 'Kruger',
+        location: 'Near Kruger - Mpumalanga',
+        image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&h=600&fit=crop',
+        travelTime: '4.5 hours drive from OR Tambo',
+        highlights: [
+          'Scenic bushveld course',
+          'Near Kruger region',
+          'Natural setting',
+          'Relaxed atmosphere'
+        ],
+        description: 'Oliver\'s is a scenic golf course in the Kruger region, offering golfers a natural bushveld experience. The course provides a relaxed golfing atmosphere while being conveniently located near Kruger National Park and other regional attractions.',
+        features: [
+          'Natural bushveld terrain',
+          'Convenient location near Kruger',
+          'Friendly and welcoming club',
+          'Good value for money'
+        ]
+      },
+      { 
+        id: 'kambaku',
+        name: 'Kambaku Golf Course',
+        region: 'Kruger',
+        location: 'Komatipoort - Mpumalanga',
+        image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&h=600&fit=crop',
+        travelTime: '4.5 hours drive from OR Tambo',
+        highlights: [
+          'Bushveld golf experience',
+          'Near Mozambique border',
+          'Wildlife viewing',
+          'Tranquil setting'
+        ],
+        description: 'Kambaku Golf Course, also known as Kambaku Golf Club, offers a unique bushveld golfing experience near the Mozambique border. The course is known for its natural setting, wildlife sightings, and proximity to Kruger National Park.',
+        par: 72,
+        features: [
+          'Authentic bushveld course',
+          'Wildlife on and around course',
+          'Strategic location near Kruger',
+          'Natural water features',
+          'Peaceful atmosphere'
+        ]
+      },
     ]
   }
 ];

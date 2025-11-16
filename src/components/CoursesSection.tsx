@@ -5,8 +5,20 @@ import CourseCard from './CourseCard';
 
 const CoursesSection = () => {
   const [activeRegion, setActiveRegion] = useState<Region>('Johannesburg');
+  const [showAll, setShowAll] = useState(false);
 
   const activeRegionData = golfCourses.find((r) => r.name === activeRegion);
+  
+  const handleRegionChange = (region: Region) => {
+    setActiveRegion(region);
+    setShowAll(false); // Reset to showing only 9 when switching regions
+  };
+
+  const COURSES_PER_PAGE = 9;
+  const coursesToDisplay = activeRegionData?.courses 
+    ? (showAll ? activeRegionData.courses : activeRegionData.courses.slice(0, COURSES_PER_PAGE))
+    : [];
+  const hasMoreCourses = activeRegionData && activeRegionData.courses.length > COURSES_PER_PAGE;
 
   return (
     <section id="courses" className="section-padding bg-corporate-50">
@@ -25,7 +37,7 @@ const CoursesSection = () => {
           {golfCourses.map((region) => (
             <button
               key={region.name}
-              onClick={() => setActiveRegion(region.name as Region)}
+              onClick={() => handleRegionChange(region.name as Region)}
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
                 activeRegion === region.name
                   ? 'bg-primary-600 text-white shadow-lg'
@@ -41,13 +53,25 @@ const CoursesSection = () => {
         {activeRegionData && (
           <div>
             <h3 className="text-2xl font-bold text-corporate-900 mb-6 text-center">
-              {activeRegionData.name} - Top {activeRegionData.courses.length} Courses
+              {activeRegionData.name} - {activeRegionData.courses.length} Courses
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {activeRegionData.courses.map((course) => (
+              {coursesToDisplay.map((course) => (
                 <CourseCard key={course.id} course={course} />
               ))}
             </div>
+            
+            {/* See More / See Less Button */}
+            {hasMoreCourses && (
+              <div className="flex justify-center mt-8">
+                <button
+                  onClick={() => setShowAll(!showAll)}
+                  className="px-8 py-3 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-all duration-200 shadow-md hover:shadow-lg"
+                >
+                  {showAll ? 'Show Less' : `See More (${activeRegionData.courses.length - COURSES_PER_PAGE} more)`}
+                </button>
+              </div>
+            )}
           </div>
         )}
       </div>
