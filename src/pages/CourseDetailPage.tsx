@@ -1,6 +1,8 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { golfCourses } from '../data/courses';
+import SEOHelmet from '../components/SEOHelmet';
+import StructuredData, { createGolfCourseSchema, createBreadcrumbSchema } from '../components/StructuredData';
 
 const CourseDetailPage = () => {
   const { courseId } = useParams<{ courseId: string }>();
@@ -40,8 +42,32 @@ const CourseDetailPage = () => {
     );
   }
 
+  // Generate SEO meta description
+  const metaDescription = course.description 
+    ? `${course.description.substring(0, 150)}...` 
+    : `Discover ${course.name}, ${course.nationalRanking ? `ranked #${course.nationalRanking} in South Africa` : `a premier golf course in ${course.region}`}. Book your tee time today with SA Golfing.`;
+
+  // Generate keywords
+  const courseKeywords = `${course.name}, ${course.region} golf, ${course.location || course.region}, ${course.designer || ''}, golf course south africa, book golf ${course.region}`.toLowerCase();
+
   return (
-    <div className="min-h-screen bg-corporate-50 pt-24 pb-16">
+    <>
+      <SEOHelmet
+        title={`${course.name} Golf Course - ${course.region}`}
+        description={metaDescription}
+        canonical={`https://sagolfing-production.up.railway.app/course/${course.id}`}
+        image={course.image || 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=1200&h=600&fit=crop'}
+        keywords={courseKeywords}
+        type="article"
+      />
+      <StructuredData data={createGolfCourseSchema(course)} />
+      <StructuredData data={createBreadcrumbSchema([
+        { name: 'Home', url: 'https://sagolfing-production.up.railway.app/' },
+        { name: 'Golf Courses', url: 'https://sagolfing-production.up.railway.app/#courses' },
+        { name: course.name, url: `https://sagolfing-production.up.railway.app/course/${course.id}` },
+      ])} />
+      
+      <div className="min-h-screen bg-corporate-50 pt-24 pb-16">
       <div className="container-custom">
         {/* Back Button */}
         <button
@@ -186,7 +212,8 @@ const CourseDetailPage = () => {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 

@@ -7,10 +7,20 @@ import ClientsSection from './components/ClientsSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import CourseDetailPage from './pages/CourseDetailPage';
+import SEOHelmet from './components/SEOHelmet';
+import StructuredData, { createOrganizationSchema, createLocalBusinessSchema } from './components/StructuredData';
 
 function HomePage() {
   return (
     <>
+      <SEOHelmet
+        title="SA Golfing - Discover South Africa's Best Golf Courses"
+        description="Your preferred golfing partner away from home. Book tee times at South Africa's premier golf courses including Blair Atholl, Glendower, Fancourt, and more. Expert golf tours and experiences across Johannesburg, Cape Town, Garden Route, and Durban."
+        canonical="https://sagolfing-production.up.railway.app/"
+        keywords="south africa golf courses, golf booking south africa, golf tours south africa, johannesburg golf, cape town golf, garden route golf, durban golf, blair atholl, glendower, fancourt, golf holidays south africa"
+      />
+      <StructuredData data={createOrganizationSchema()} />
+      <StructuredData data={createLocalBusinessSchema()} />
       <Hero />
       <ServicesSection />
       <CoursesSection />
