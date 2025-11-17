@@ -48,12 +48,32 @@ const ServiceDetailPage = () => {
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-primary-600 to-primary-700 text-white py-20">
           <div className="container-custom">
-            <Link 
-              to="/#services" 
-              className="inline-flex items-center gap-2 text-white/90 hover:text-white mb-8 transition-colors"
+            <button
+              onClick={() => {
+                navigate('/');
+                setTimeout(() => {
+                  const servicesSection = document.getElementById('services');
+                  if (servicesSection) {
+                    servicesSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }, 100);
+              }}
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 shadow-md hover:shadow-xl transform hover:scale-105 mb-8"
             >
-              <span>←</span> Back to Services
-            </Link>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              Back to Services
+            </button>
             
             <div className="flex items-start gap-6">
               <div className="flex-shrink-0">
@@ -106,25 +126,6 @@ const ServiceDetailPage = () => {
                   </div>
                 ))}
               </div>
-            </div>
-
-            {/* Pricing Card */}
-            <div className="bg-gradient-to-br from-primary-600 to-primary-700 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow text-white">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">💰</span>
-                </div>
-                <h2 className="text-2xl font-bold">Pricing</h2>
-              </div>
-              <p className="text-white/90 text-lg leading-relaxed">
-                {service.pricing}
-              </p>
-              <button 
-                onClick={scrollToContact}
-                className="mt-6 w-full bg-white text-primary-600 px-6 py-3 rounded-xl font-semibold hover:bg-corporate-50 transition-colors"
-              >
-                Get a Quote
-              </button>
             </div>
 
             {/* Benefits Card */}
@@ -197,34 +198,6 @@ const ServiceDetailPage = () => {
               >
                 Contact Us Now
               </button>
-            </div>
-
-            {/* Quick Info Card */}
-            <div className="lg:col-span-3 bg-gradient-to-r from-primary-50 to-corporate-50 rounded-2xl p-8 shadow-lg border border-primary-100">
-              <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-                <div className="text-center md:text-left">
-                  <h3 className="text-2xl font-bold text-corporate-900 mb-2">
-                    Have Questions?
-                  </h3>
-                  <p className="text-corporate-600 text-lg">
-                    Our team is ready to help you plan the perfect golf experience
-                  </p>
-                </div>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <button 
-                    onClick={scrollToContact}
-                    className="bg-primary-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-primary-700 transition-colors whitespace-nowrap"
-                  >
-                    Get in Touch
-                  </button>
-                  <Link 
-                    to="/#services"
-                    className="bg-white text-corporate-900 px-8 py-4 rounded-xl font-semibold hover:bg-corporate-50 transition-colors border border-corporate-200 text-center"
-                  >
-                    View All Services
-                  </Link>
-                </div>
-              </div>
             </div>
 
           </div>
