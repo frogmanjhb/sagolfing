@@ -16,7 +16,7 @@ const CourseCard = ({ course }: CourseCardProps) => {
 
   return (
     <div
-      className="relative rounded-lg overflow-hidden cursor-pointer group shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+      className="relative rounded-xl overflow-hidden cursor-pointer group shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-corporate-100 hover:border-primary-200"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onClick={handleClick}
@@ -50,17 +50,18 @@ const CourseCard = ({ course }: CourseCardProps) => {
       </div>
 
       {/* Course Info */}
-      <div className="p-4 bg-white">
-        <h3 className="font-bold text-corporate-900 text-lg mb-1">
+      <div className="p-5 bg-white">
+        <h3 className="font-bold text-corporate-900 text-lg mb-2">
           {course.name}
         </h3>
         {course.location && (
-          <p className="text-sm text-corporate-600 mb-2">{course.location}</p>
+          <p className="text-sm text-corporate-600 mb-3">{course.location}</p>
         )}
         <div className="flex items-center justify-between">
-          <span className="text-xs text-corporate-500">{course.region}</span>
-          <span className="text-primary-600 text-sm font-medium group-hover:underline">
-            View Details →
+          <span className="text-xs text-corporate-500 font-medium">{course.region}</span>
+          <span className="text-primary-600 text-sm font-bold group-hover:underline flex items-center gap-1">
+            View Details 
+            <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
           </span>
         </div>
       </div>

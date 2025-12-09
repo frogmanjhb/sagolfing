@@ -58,7 +58,7 @@ const ServiceDetailPage = () => {
                   }
                 }, 100);
               }}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 shadow-md hover:shadow-xl transform hover:scale-105 mb-8"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 text-white font-bold rounded-xl hover:bg-white/20 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 mb-8"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -194,9 +194,9 @@ const ServiceDetailPage = () => {
               </div>
               <button 
                 onClick={scrollToContact}
-                className="w-full bg-white text-green-600 px-6 py-4 rounded-xl font-bold text-lg hover:bg-green-50 transition-colors"
+                className="w-full bg-white text-green-600 px-6 py-4 rounded-xl font-bold text-lg hover:bg-green-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
               >
-                Contact Us Now
+                Enquire Now
               </button>
             </div>
 

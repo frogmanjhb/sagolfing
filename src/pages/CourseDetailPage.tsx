@@ -33,7 +33,7 @@ const CourseDetailPage = () => {
                 }
               }, 100);
             }}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-all duration-300 shadow-md hover:shadow-xl transform hover:scale-105"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 text-white font-bold rounded-xl hover:bg-primary-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -80,6 +80,26 @@ const CourseDetailPage = () => {
       ])} />
       
       <div className="min-h-screen bg-corporate-50 pt-24 pb-16">
+      {/* Sticky CTA Button - Mobile & Tablet */}
+      <div className="fixed bottom-6 right-6 z-40 lg:hidden">
+        <button
+          onClick={() => {
+            navigate('/');
+            setTimeout(() => {
+              const contactSection = document.getElementById('contact');
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }, 100);
+          }}
+          className="bg-primary-600 text-white font-bold py-4 px-8 rounded-full hover:bg-primary-700 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:scale-110 flex items-center gap-2"
+        >
+          <span>Enquire Now</span>
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </button>
+      </div>
       <div className="container-custom">
         {/* Back Button */}
         <button
@@ -93,7 +113,7 @@ const CourseDetailPage = () => {
               }
             }, 100);
           }}
-          className="mb-8 inline-flex items-center gap-2 px-6 py-3 bg-white border-2 border-primary-600 text-primary-600 font-semibold rounded-lg hover:bg-primary-600 hover:text-white transition-all duration-300 shadow-md hover:shadow-xl transform hover:scale-105"
+          className="mb-8 inline-flex items-center gap-2 px-6 py-3 bg-white border-2 border-primary-600 text-primary-600 font-bold rounded-xl hover:bg-primary-600 hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -179,37 +199,65 @@ const CourseDetailPage = () => {
           {/* Sidebar */}
           <div className="space-y-6">
             {/* Course Stats */}
-            <div className="bg-white rounded-xl p-6 shadow-lg">
-              <h3 className="text-xl font-bold text-corporate-900 mb-4">Course Information</h3>
-              <div className="space-y-4">
+            <div className="bg-white rounded-xl p-6 shadow-lg border-2 border-corporate-100">
+              <h3 className="text-xl font-bold text-corporate-900 mb-6">Course Information</h3>
+              <div className="space-y-5">
                 {course.designer && (
-                  <div>
-                    <div className="text-sm text-corporate-600 mb-1">Designer</div>
-                    <div className="font-semibold text-corporate-900">{course.designer}</div>
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
+                      <svg className="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                      </svg>
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-sm text-corporate-600 mb-1">Designer</div>
+                      <div className="font-semibold text-corporate-900">{course.designer}</div>
+                    </div>
                   </div>
                 )}
                 {course.par && (
-                  <div>
-                    <div className="text-sm text-corporate-600 mb-1">Par</div>
-                    <div className="font-semibold text-corporate-900">{course.par}</div>
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
+                      <svg className="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
+                      </svg>
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-sm text-corporate-600 mb-1">Par</div>
+                      <div className="font-semibold text-corporate-900">{course.par}</div>
+                    </div>
                   </div>
                 )}
                 {course.length && (
-                  <div>
-                    <div className="text-sm text-corporate-600 mb-1">Length</div>
-                    <div className="font-semibold text-corporate-900">{course.length}</div>
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
+                      <svg className="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-sm text-corporate-600 mb-1">Length</div>
+                      <div className="font-semibold text-corporate-900">{course.length}</div>
+                    </div>
                   </div>
                 )}
                 {course.travelTime && (
-                  <div>
-                    <div className="text-sm text-corporate-600 mb-1">Travel Time</div>
-                    <div className="font-semibold text-primary-600">{course.travelTime}</div>
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
+                      <svg className="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-sm text-corporate-600 mb-1">Travel Time from OR Tambo</div>
+                      <div className="font-semibold text-primary-600">{course.travelTime}</div>
+                    </div>
                   </div>
                 )}
               </div>
             </div>
 
-            {/* Book Now Button */}
+            {/* Enquire Now Button */}
             <button
               onClick={() => {
                 navigate('/');
@@ -221,9 +269,9 @@ const CourseDetailPage = () => {
                   }
                 }, 100);
               }}
-              className="w-full bg-primary-600 text-white font-semibold py-4 px-6 rounded-xl hover:bg-primary-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="w-full bg-primary-600 text-white font-bold py-5 px-6 rounded-xl hover:bg-primary-700 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105"
             >
-              Book Now
+              Enquire Now
             </button>
 
             {/* Region Badge */}

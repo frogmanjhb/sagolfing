@@ -7,19 +7,21 @@ const ServicesSection = () => {
       <div className="container-custom">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-corporate-900 mb-4">
-            Our Services
+            Premium Golf Experiences & Services
           </h2>
-          <p className="text-lg text-corporate-600 max-w-2xl mx-auto">
-            Comprehensive golfing solutions tailored to your needs
+          <p className="text-lg text-corporate-700 max-w-3xl mx-auto leading-relaxed">
+            From corporate golf days to complete holiday packages – we deliver exceptional golf experiences across South Africa
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service) => (
+          {services.map((service, index) => (
             <Link
               key={service.id}
               to={`/service/${service.slug}`}
-              className="bg-white p-8 rounded-xl border border-corporate-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 group flex flex-col h-full min-h-[180px] cursor-pointer"
+              className={`bg-white p-8 rounded-xl border-2 hover:border-primary-400 hover:shadow-2xl transition-all duration-300 group flex flex-col h-full min-h-[180px] cursor-pointer transform hover:scale-105 ${
+                index === 0 ? 'border-primary-300 shadow-lg' : 'border-corporate-200 shadow-md'
+              }`}
             >
               <div className="mb-4 h-16 flex items-center justify-start">
                 <div className="group-hover:scale-110 transition-transform duration-300">

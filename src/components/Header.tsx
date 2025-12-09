@@ -49,12 +49,12 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1 lg:space-x-2">
+          <div className="hidden md:flex items-center space-x-0.5 lg:space-x-1">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="relative px-4 py-2 text-corporate-800 font-medium text-sm lg:text-base tracking-wide transition-all duration-300 group"
+                className="relative px-4 py-2 text-corporate-800 font-semibold text-sm lg:text-base tracking-normal transition-all duration-300 group"
               >
                 <span className="relative z-10">{item.label}</span>
                 <span className="absolute inset-0 bg-primary-50 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></span>
@@ -67,9 +67,9 @@ const Header = () => {
           <div className="hidden md:block">
             <button
               onClick={() => scrollToSection('contact')}
-              className="px-6 py-2.5 bg-gradient-to-r from-primary-600 to-primary-700 text-white font-semibold text-sm rounded-full hover:from-primary-700 hover:to-primary-800 transition-all duration-300 shadow-md hover:shadow-xl transform hover:scale-105"
+              className="px-7 py-3 bg-gradient-to-r from-primary-600 to-primary-700 text-white font-bold text-sm rounded-xl hover:from-primary-700 hover:to-primary-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
-              Book Now
+              Enquire Now
             </button>
           </div>
 
@@ -108,7 +108,7 @@ const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left px-4 py-3 text-corporate-800 hover:bg-primary-50 hover:text-primary-700 font-medium rounded-lg transition-all duration-300 transform hover:translate-x-2"
+                className="block w-full text-left px-4 py-3 text-corporate-800 hover:bg-primary-50 hover:text-primary-700 font-semibold rounded-lg transition-all duration-300 transform hover:translate-x-2"
                 style={{ transitionDelay: `${index * 50}ms` }}
               >
                 {item.label}
@@ -116,9 +116,9 @@ const Header = () => {
             ))}
             <button
               onClick={() => scrollToSection('contact')}
-              className="w-full mt-3 px-4 py-3 bg-gradient-to-r from-primary-600 to-primary-700 text-white font-semibold rounded-lg hover:from-primary-700 hover:to-primary-800 transition-all duration-300 shadow-md"
+              className="w-full mt-3 px-4 py-3 bg-gradient-to-r from-primary-600 to-primary-700 text-white font-bold rounded-xl hover:from-primary-700 hover:to-primary-800 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
-              Book Now
+              Enquire Now
             </button>
           </div>
         </div>
