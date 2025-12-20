@@ -1,10 +1,16 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ViewModeProvider, useViewMode } from './contexts/ViewModeContext';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import ServicesSection from './components/ServicesSection';
 import CoursesSection from './components/CoursesSection';
 import ClientsSection from './components/ClientsSection';
 import ContactSection from './components/ContactSection';
+import HeroBento from './components/bento/HeroBento';
+import ServicesSectionBento from './components/bento/ServicesSectionBento';
+import CoursesSectionBento from './components/bento/CoursesSectionBento';
+import ClientsSectionBento from './components/bento/ClientsSectionBento';
+import ContactSectionBento from './components/bento/ContactSectionBento';
 import Footer from './components/Footer';
 import CourseDetailPage from './pages/CourseDetailPage';
 import ServiceDetailPage from './pages/ServiceDetailPage';
@@ -12,6 +18,8 @@ import SEOHelmet from './components/SEOHelmet';
 import StructuredData, { createOrganizationSchema, createLocalBusinessSchema } from './components/StructuredData';
 
 function HomePage() {
+  const { viewMode } = useViewMode();
+
   return (
     <>
       <SEOHelmet
@@ -22,30 +30,44 @@ function HomePage() {
       />
       <StructuredData data={createOrganizationSchema()} />
       <StructuredData data={createLocalBusinessSchema()} />
-      <Hero />
-      <ServicesSection />
-      <CoursesSection />
-      <ClientsSection />
-      <ContactSection />
+      {viewMode === 'bento' ? (
+        <>
+          <HeroBento />
+          <ServicesSectionBento />
+          <CoursesSectionBento />
+          <ClientsSectionBento />
+          <ContactSectionBento />
+        </>
+      ) : (
+        <>
+          <Hero />
+          <ServicesSection />
+          <CoursesSection />
+          <ClientsSection />
+          <ContactSection />
+        </>
+      )}
     </>
   );
 }
 
 function App() {
   return (
-    <Router>
-      <div className="min-h-screen">
-        <Header />
-        <main>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/course/:courseId" element={<CourseDetailPage />} />
-            <Route path="/service/:serviceSlug" element={<ServiceDetailPage />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+    <ViewModeProvider>
+      <Router>
+        <div className="min-h-screen">
+          <Header />
+          <main>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/course/:courseId" element={<CourseDetailPage />} />
+              <Route path="/service/:serviceSlug" element={<ServiceDetailPage />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </Router>
+    </ViewModeProvider>
   );
 }
 

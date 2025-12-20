@@ -4,7 +4,7 @@ export const services: Service[] = [
   {
     id: '1',
     slug: 'corporate-golf-days',
-    title: 'Corporate Golf Days',
+    title: 'Shuttle Corporate Transport and Events',
     description: 'Organise memorable corporate golf events tailored to your business needs.',
     icon: '🏢',
     detailedDescription: 'SA Golfing offers a complete packaged day to suit the needs of your company and to ensure your guests enjoy a well organized and fun filled day. We handle everything from course booking to prize giving, ensuring a seamless experience for up to 144 golfers.',
@@ -72,7 +72,7 @@ export const services: Service[] = [
   {
     id: '3',
     slug: 'day-golf-excursions',
-    title: 'Day Golf Excursions',
+    title: 'Golf in Johannesburg',
     description: 'Experience world-class golf courses on convenient day trips.',
     icon: '⛳',
     detailedDescription: 'One phone call is all that is needed! SA Golfing offers a complete packaged day out to South Africa\'s top golf courses. The package includes return transport from your hotel/B&B to the golf course, confirmed tee-off times, and golf club hire if required.',
@@ -136,7 +136,7 @@ export const services: Service[] = [
   {
     id: '5',
     slug: 'chauffeur-driver',
-    title: 'Chauffeur Driver',
+    title: 'Chauffeur Drive',
     description: 'Luxury transportation to and from golf courses across South Africa.',
     icon: '/images/driver.png',
     detailedDescription: 'SA Golfing provides you and your business with an exclusive, dedicated vehicle and chauffeur to cater for your precise wants and needs. Your chauffeur will be on call 24 hours a day, 7 days a week.',
@@ -170,7 +170,7 @@ export const services: Service[] = [
   {
     id: '6',
     slug: 'holidays',
-    title: 'Holidays',
+    title: 'Golf Holidays',
     description: 'Complete golf holiday packages in South Africa\'s most beautiful destinations.',
     icon: '/images/holiday.png',
     detailedDescription: 'Immerse yourself in the ultimate golf holiday experience. SA Golfing creates comprehensive packages combining world-class golf courses with South Africa\'s incredible attractions, accommodations, and experiences.',
