@@ -62,15 +62,15 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <a
-              href="mailto:tim@sagolfing.com"
+              href="mailto:info@sagolfing.com"
               className="text-corporate-300 hover:text-white transition-colors duration-200"
             >
-              tim@sagolfing.com
+              info@sagolfing.com
             </a>
           </div>
         </div>
         <div className="border-t border-corporate-700 pt-8 text-center text-corporate-300">
-          <p>© {currentYear} SAGolfing.com - Your preferred golfing partner away from home! | Mail us: tim@sagolfing.com</p>
+          <p>© {currentYear} SAGolfing.com - Your preferred golfing partner away from home! | Mail us: info@sagolfing.com</p>
         </div>
       </div>
     </footer>

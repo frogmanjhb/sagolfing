@@ -68,16 +68,9 @@ const Hero = () => {
           {/* Secondary CTA - Book your Golf Clubs */}
           <button
             onClick={() => setIsGolfClubHireModalOpen(true)}
-            className="px-8 py-4 w-full sm:w-auto bg-white/95 text-primary-700 font-semibold rounded-xl border-2 border-primary-600 hover:bg-primary-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+            className="px-10 py-4 w-full sm:w-auto bg-white/95 text-primary-700 font-bold rounded-xl border-2 border-primary-600 hover:bg-primary-50 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105"
           >
             Book your Golf Clubs
-          </button>
-          {/* Tertiary CTA - View Courses */}
-          <button
-            onClick={() => scrollToSection('courses')}
-            className="px-8 py-4 w-full sm:w-auto bg-corporate-100/80 text-corporate-800 font-semibold rounded-xl hover:bg-corporate-200 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105"
-          >
-            View Courses
           </button>
         </div>
       </div>

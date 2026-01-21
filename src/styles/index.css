@@ -85,7 +85,7 @@ p {
 /* Golf ball bounce animation */
 @keyframes golf-ball-bounce {
   0% {
-    transform: translateY(-100px);
+    transform: translateY(-28px);
     animation-timing-function: ease-in;
     opacity: 0;
   }
@@ -97,7 +97,7 @@ p {
     animation-timing-function: ease-out;
   }
   40% {
-    transform: translateY(-60px);
+    transform: translateY(-14px);
     animation-timing-function: ease-in;
   }
   50% {
@@ -105,7 +105,7 @@ p {
     animation-timing-function: ease-out;
   }
   60% {
-    transform: translateY(-30px);
+    transform: translateY(-7px);
     animation-timing-function: ease-in;
   }
   70% {
@@ -113,7 +113,7 @@ p {
     animation-timing-function: ease-out;
   }
   80% {
-    transform: translateY(-15px);
+    transform: translateY(-3px);
     animation-timing-function: ease-in;
   }
   90% {
@@ -121,7 +121,7 @@ p {
     animation-timing-function: ease-out;
   }
   95% {
-    transform: translateY(-5px);
+    transform: translateY(-1px);
     animation-timing-function: ease-in;
   }
   100% {
@@ -130,7 +130,14 @@ p {
 }
 
 .bounce-text {
-  animation: golf-ball-bounce 2s ease-out;
+  animation: golf-ball-bounce 1.35s ease-out;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bounce-text {
+    animation: none;
+  }
 }
 
 /* Ken Burns effect for hero background */

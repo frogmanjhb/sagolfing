@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useViewMode } from '../contexts/ViewModeContext';
+import EnquiryModal from './EnquiryModal';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isEnquiryModalOpen, setIsEnquiryModalOpen] = useState(false);
   const { viewMode, toggleViewMode } = useViewMode();
 
   useEffect(() => {
@@ -82,7 +84,7 @@ const Header = () => {
               <span>{viewMode === 'standard' ? 'Bento' : 'Standard'}</span>
             </button>
             <button
-              onClick={() => scrollToSection('contact')}
+              onClick={() => setIsEnquiryModalOpen(true)}
               className="px-7 py-3 bg-gradient-to-r from-primary-600 to-primary-700 text-white font-bold text-sm rounded-xl hover:from-primary-700 hover:to-primary-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Enquire Now
@@ -149,7 +151,10 @@ const Header = () => {
               <span>Switch to {viewMode === 'standard' ? 'Bento' : 'Standard'} View</span>
             </button>
             <button
-              onClick={() => scrollToSection('contact')}
+              onClick={() => {
+                setIsEnquiryModalOpen(true);
+                setIsMenuOpen(false);
+              }}
               className="w-full mt-3 px-4 py-3 bg-gradient-to-r from-primary-600 to-primary-700 text-white font-bold rounded-xl hover:from-primary-700 hover:to-primary-800 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Enquire Now
@@ -164,6 +169,7 @@ const Header = () => {
           </div>
         </div>
       </nav>
+      <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
     </header>
   );
 };

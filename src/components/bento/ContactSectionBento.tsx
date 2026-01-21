@@ -25,10 +25,10 @@ const ContactSectionBento = () => {
                   Email Us
                 </h3>
                 <a
-                  href="mailto:tim@sagolfing.com"
+                  href="mailto:info@sagolfing.com"
                   className="text-primary-600 hover:text-primary-700 font-bold text-lg transition-colors duration-200"
                 >
-                  tim@sagolfing.com
+                  info@sagolfing.com
                 </a>
               </div>
             </div>

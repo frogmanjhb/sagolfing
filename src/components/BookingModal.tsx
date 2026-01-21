@@ -7,6 +7,7 @@ interface BookingModalProps {
 }
 
 const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
+  const [needsClubs, setNeedsClubs] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     surname: '',
@@ -14,6 +15,15 @@ const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
     golfCourse: '',
     phoneNumber: '',
     email: '',
+    // Golf club hire fields
+    startDate: '',
+    endDate: '',
+    clubType: '',
+    handedness: '',
+    numberOfSets: '1',
+    preferredBrand: '',
+    deliveryLocation: '',
+    specialRequirements: '',
   });
 
   // Get all unique course names from the data
@@ -23,7 +33,7 @@ const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
     return [...new Set(courses)].sort();
   }, []);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -45,13 +55,22 @@ const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
       golfCourse: '',
       phoneNumber: '',
       email: '',
+      startDate: '',
+      endDate: '',
+      clubType: '',
+      handedness: '',
+      numberOfSets: '1',
+      preferredBrand: '',
+      deliveryLocation: '',
+      specialRequirements: '',
     });
+    setNeedsClubs(false);
   };
 
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
       <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
         <div className="sticky top-0 bg-white border-b border-corporate-200 px-6 py-4 flex items-center justify-between">
           <h2 className="text-2xl font-bold text-corporate-900">Book Your Tee Off Time</h2>
@@ -172,6 +191,183 @@ const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
               />
             </div>
           </div>
+
+          {/* Do you need clubs? Button */}
+          <div className="pt-2 pb-4">
+            <button
+              type="button"
+              onClick={() => setNeedsClubs(!needsClubs)}
+              className="w-full px-6 py-3 bg-corporate-100 hover:bg-corporate-200 text-corporate-700 font-semibold rounded-lg transition-all duration-300 flex items-center justify-between border-2 border-corporate-300"
+            >
+              <span>Do you need clubs?</span>
+              <svg
+                className={`w-5 h-5 transition-transform duration-300 ${needsClubs ? 'rotate-180' : ''}`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+          </div>
+
+          {/* Golf Club Hire Section - Expandable */}
+          {needsClubs && (
+            <div className="space-y-6 pt-4 border-t-2 border-corporate-200 animate-in slide-in-from-top-2">
+              <h3 className="text-lg font-bold text-corporate-900">Golf Club Hire Details</h3>
+              
+              {/* Rental Period */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="startDate" className="block text-sm font-semibold text-corporate-700 mb-2">
+                    Rental Start Date *
+                  </label>
+                  <input
+                    type="date"
+                    id="startDate"
+                    name="startDate"
+                    required={needsClubs}
+                    value={formData.startDate}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border-2 border-corporate-300 rounded-lg focus:outline-none focus:border-primary-500 transition-colors duration-200"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="endDate" className="block text-sm font-semibold text-corporate-700 mb-2">
+                    Rental End Date *
+                  </label>
+                  <input
+                    type="date"
+                    id="endDate"
+                    name="endDate"
+                    required={needsClubs}
+                    value={formData.endDate}
+                    onChange={handleChange}
+                    min={formData.startDate}
+                    className="w-full px-4 py-3 border-2 border-corporate-300 rounded-lg focus:outline-none focus:border-primary-500 transition-colors duration-200"
+                  />
+                </div>
+              </div>
+
+              {/* Club Specifications */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="clubType" className="block text-sm font-semibold text-corporate-700 mb-2">
+                    Club Type *
+                  </label>
+                  <select
+                    id="clubType"
+                    name="clubType"
+                    required={needsClubs}
+                    value={formData.clubType}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border-2 border-corporate-300 rounded-lg focus:outline-none focus:border-primary-500 transition-colors duration-200"
+                  >
+                    <option value="">Select club type</option>
+                    <option value="mens">Men's Clubs</option>
+                    <option value="ladies">Ladies' Clubs</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label htmlFor="handedness" className="block text-sm font-semibold text-corporate-700 mb-2">
+                    Handedness *
+                  </label>
+                  <select
+                    id="handedness"
+                    name="handedness"
+                    required={needsClubs}
+                    value={formData.handedness}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border-2 border-corporate-300 rounded-lg focus:outline-none focus:border-primary-500 transition-colors duration-200"
+                  >
+                    <option value="">Select handedness</option>
+                    <option value="right">Right-handed</option>
+                    <option value="left">Left-handed</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="numberOfSets" className="block text-sm font-semibold text-corporate-700 mb-2">
+                    Number of Sets *
+                  </label>
+                  <select
+                    id="numberOfSets"
+                    name="numberOfSets"
+                    required={needsClubs}
+                    value={formData.numberOfSets}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border-2 border-corporate-300 rounded-lg focus:outline-none focus:border-primary-500 transition-colors duration-200"
+                  >
+                    <option value="1">1 Set</option>
+                    <option value="2">2 Sets</option>
+                    <option value="3">3 Sets</option>
+                    <option value="4">4 Sets</option>
+                    <option value="5+">5+ Sets</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label htmlFor="preferredBrand" className="block text-sm font-semibold text-corporate-700 mb-2">
+                    Preferred Brand (Optional)
+                  </label>
+                  <select
+                    id="preferredBrand"
+                    name="preferredBrand"
+                    value={formData.preferredBrand}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border-2 border-corporate-300 rounded-lg focus:outline-none focus:border-primary-500 transition-colors duration-200"
+                  >
+                    <option value="">No preference</option>
+                    <option value="cobra">Cobra</option>
+                    <option value="ping">Ping</option>
+                    <option value="adams">Adams</option>
+                    <option value="king-cobra">King Cobra</option>
+                    <option value="titleist">Titleist</option>
+                    <option value="taylormade">TaylorMade</option>
+                    <option value="wilson">Wilson</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+              </div>
+
+              {/* Delivery Information */}
+              <div>
+                <label htmlFor="deliveryLocation" className="block text-sm font-semibold text-corporate-700 mb-2">
+                  Delivery/Pickup Location *
+                </label>
+                <input
+                  type="text"
+                  id="deliveryLocation"
+                  name="deliveryLocation"
+                  required={needsClubs}
+                  value={formData.deliveryLocation}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border-2 border-corporate-300 rounded-lg focus:outline-none focus:border-primary-500 transition-colors duration-200"
+                  placeholder="Hotel name, address, or pickup location"
+                />
+              </div>
+
+              {/* Special Requirements */}
+              <div>
+                <label htmlFor="specialRequirements" className="block text-sm font-semibold text-corporate-700 mb-2">
+                  Special Requirements or Notes (Optional)
+                </label>
+                <textarea
+                  id="specialRequirements"
+                  name="specialRequirements"
+                  rows={3}
+                  value={formData.specialRequirements}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border-2 border-corporate-300 rounded-lg focus:outline-none focus:border-primary-500 transition-colors duration-200 resize-none"
+                  placeholder="Any specific requirements, handicap information, or additional notes..."
+                />
+              </div>
+            </div>
+          )}
 
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <button

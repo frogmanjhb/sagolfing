@@ -4,7 +4,7 @@ export const services: Service[] = [
   {
     id: '1',
     slug: 'corporate-golf-days',
-    title: 'Shuttle Corporate Transport and Events',
+    title: 'Corporate Transport and Events',
     description: 'Organise memorable corporate golf events tailored to your business needs.',
     icon: '🏢',
     detailedDescription: 'SA Golfing offers a complete packaged day to suit the needs of your company and to ensure your guests enjoy a well organized and fun filled day. We handle everything from course booking to prize giving, ensuring a seamless experience for up to 144 golfers.',
@@ -105,7 +105,7 @@ export const services: Service[] = [
     slug: 'golf-club-hire',
     title: 'Golf Club Hire',
     description: 'Premium golf club rentals for your perfect game.',
-    icon: '/images/clubs.png',
+    icon: '/images/golf-club-sets.webp',
     detailedDescription: 'SA Golfing has 50 sets of 5-star golf clubs available to our clients. We provide clubs that best suit your game and handicap, with a wide selection of premium brands to choose from.',
     features: [
       '50 sets of 5-star golf clubs',
