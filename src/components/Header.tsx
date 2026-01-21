@@ -1,12 +1,10 @@
 import { useState, useEffect } from 'react';
-import { useViewMode } from '../contexts/ViewModeContext';
 import EnquiryModal from './EnquiryModal';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isEnquiryModalOpen, setIsEnquiryModalOpen] = useState(false);
-  const { viewMode, toggleViewMode } = useViewMode();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,22 +65,8 @@ const Header = () => {
             ))}
           </div>
 
-          {/* View Mode Toggle and CTA Button for Desktop */}
+          {/* CTA Button for Desktop */}
           <div className="hidden md:flex items-center gap-3">
-            <button
-              onClick={toggleViewMode}
-              className="px-4 py-2 bg-corporate-100 hover:bg-corporate-200 text-corporate-700 font-semibold text-sm rounded-lg transition-all duration-300 flex items-center gap-2"
-              title={`Switch to ${viewMode === 'standard' ? 'Bento' : 'Standard'} view`}
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                {viewMode === 'standard' ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-                ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 14a1 1 0 011-1h4a1 1 0 011 1v5a1 1 0 01-1 1H5a1 1 0 01-1-1v-5zM14 14a1 1 0 011-1h4a1 1 0 011 1v5a1 1 0 01-1 1h-4a1 1 0 01-1-1v-5z" />
-                )}
-              </svg>
-              <span>{viewMode === 'standard' ? 'Bento' : 'Standard'}</span>
-            </button>
             <button
               onClick={() => setIsEnquiryModalOpen(true)}
               className="px-7 py-3 bg-gradient-to-r from-primary-600 to-primary-700 text-white font-bold text-sm rounded-xl hover:from-primary-700 hover:to-primary-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
@@ -137,19 +121,6 @@ const Header = () => {
                 {item.label}
               </button>
             ))}
-            <button
-              onClick={toggleViewMode}
-              className="w-full px-4 py-3 bg-corporate-100 hover:bg-corporate-200 text-corporate-700 font-semibold rounded-lg transition-all duration-300 flex items-center justify-center gap-2"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                {viewMode === 'standard' ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-                ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 14a1 1 0 011-1h4a1 1 0 011 1v5a1 1 0 01-1 1H5a1 1 0 01-1-1v-5zM14 14a1 1 0 011-1h4a1 1 0 011 1v5a1 1 0 01-1 1h-4a1 1 0 01-1-1v-5z" />
-                )}
-              </svg>
-              <span>Switch to {viewMode === 'standard' ? 'Bento' : 'Standard'} View</span>
-            </button>
             <button
               onClick={() => {
                 setIsEnquiryModalOpen(true);
