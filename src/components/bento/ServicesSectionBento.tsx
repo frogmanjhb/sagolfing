@@ -43,14 +43,15 @@ const ServicesSectionBento = () => {
           {orderedServices.map((service) => (
             service.slug === 'day-golf-excursions' ||
             service.slug === 'golf-club-hire' ||
+            service.slug === 'golf-tours' ||
             service.slug === 'chauffeur-driver' ? (
               <Link
                 key={service.id}
                 to={`/service/${service.slug}`}
-                className="rounded-xl border-2 border-corporate-200 hover:border-primary-400 hover:shadow-lg transition-all duration-300 group cursor-pointer shadow-sm bg-white min-h-[120px] [perspective:900px]"
+                className="flex h-full min-h-[120px] flex-col rounded-xl border-2 border-corporate-200 hover:border-primary-400 hover:shadow-lg transition-all duration-300 group cursor-pointer shadow-sm bg-white [perspective:900px]"
                 aria-label={`${service.title} - Learn more`}
               >
-                <div className="relative h-full w-full p-4 transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                <div className="relative min-h-[120px] flex-1 w-full p-4 transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                   {/* Front */}
                   <div className="absolute inset-0 rounded-xl overflow-hidden [backface-visibility:hidden]">
                     <div
@@ -61,7 +62,9 @@ const ServicesSectionBento = () => {
                             ? "url('/images/jhbskyline.png')"
                             : service.slug === 'golf-club-hire'
                               ? "url('/images/golf-club-sets.webp')"
-                              : "url('/images/chaffeur.jpg')",
+                              : service.slug === 'golf-tours'
+                                ? "url('/images/golftour.jpg')"
+                                : "url('/images/chaffeur.png')",
                         backgroundPosition: 'center',
                       }}
                       aria-hidden="true"

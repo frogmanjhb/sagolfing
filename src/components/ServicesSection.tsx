@@ -39,20 +39,21 @@ const ServicesSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:[grid-auto-rows:320px]">
           {orderedServices.map((service, index) => (
             service.slug === 'day-golf-excursions' ||
             service.slug === 'golf-club-hire' ||
+            service.slug === 'golf-tours' ||
             service.slug === 'chauffeur-driver' ? (
               <Link
                 key={service.id}
                 to={`/service/${service.slug}`}
-                className={`rounded-xl border-2 hover:border-primary-400 hover:shadow-2xl transition-all duration-300 group cursor-pointer transform hover:scale-105 bg-white min-h-[180px] [perspective:1000px] ${
+                className={`flex h-full flex-col rounded-xl border-2 hover:border-primary-400 hover:shadow-2xl transition-all duration-300 group cursor-pointer transform hover:scale-105 bg-white [perspective:1000px] ${
                   index === 0 ? 'border-primary-300 shadow-lg' : 'border-corporate-200 shadow-md'
                 }`}
                 aria-label={`${service.title} - Learn more`}
               >
-                <div className="relative h-full w-full p-8 transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                <div className="relative h-full flex-1 w-full p-8 transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                   {/* Front */}
                   <div className="absolute inset-0 rounded-xl overflow-hidden [backface-visibility:hidden]">
                     <div
@@ -63,7 +64,9 @@ const ServicesSection = () => {
                             ? "url('/images/jhbskyline.png')"
                             : service.slug === 'golf-club-hire'
                               ? "url('/images/golf-club-sets.webp')"
-                              : "url('/images/chaffeur.jpg')",
+                              : service.slug === 'golf-tours'
+                                ? "url('/images/golftour.jpg')"
+                                : "url('/images/chaffeur.png')",
                         backgroundPosition: 'center',
                       }}
                       aria-hidden="true"
@@ -95,6 +98,12 @@ const ServicesSection = () => {
                           <li>• Men’s &amp; ladies options</li>
                           <li>• Left &amp; right-handed available</li>
                         </ul>
+                      ) : service.slug === 'golf-tours' ? (
+                        <ul className="mt-4 space-y-2 text-sm text-white/90">
+                          <li>• Customized tours across South Africa</li>
+                          <li>• Tee-time bookings at premium courses</li>
+                          <li>• All transportation coordination</li>
+                        </ul>
                       ) : (
                         <ul className="mt-4 space-y-2 text-sm text-white/90">
                           <li>• Dedicated vehicle and chauffeur</li>
@@ -117,7 +126,7 @@ const ServicesSection = () => {
               <Link
                 key={service.id}
                 to={`/service/${service.slug}`}
-                className={`bg-white p-8 rounded-xl border-2 hover:border-primary-400 hover:shadow-2xl transition-all duration-300 group flex flex-col h-full min-h-[180px] cursor-pointer transform hover:scale-105 ${
+                className={`bg-white p-8 rounded-xl border-2 hover:border-primary-400 hover:shadow-2xl transition-all duration-300 group flex flex-col h-full cursor-pointer transform hover:scale-105 ${
                   index === 0 ? 'border-primary-300 shadow-lg' : 'border-corporate-200 shadow-md'
                 }`}
               >

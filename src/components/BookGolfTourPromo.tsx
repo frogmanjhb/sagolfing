@@ -38,6 +38,10 @@ const FEATURES = [
   { icon: 'chauffeur' as const, lines: ['24 hour', 'chauffeur driven'] },
 ];
 
+/** Scales with the hero text column so headlines stay large but fit on one line */
+const TOUR_HEADLINE_LINE =
+  'block font-extrabold uppercase leading-[0.92] tracking-tight text-[clamp(2rem,11cqi,3.15rem)]';
+
 const selectRegionAndScroll = (region: Region) => {
   window.dispatchEvent(new CustomEvent<Region>('sagolfing:select-region', { detail: region }));
   document.getElementById('courses')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -107,27 +111,32 @@ const BookGolfTourPromo = () => {
       <div className="container-custom">
         <article className="overflow-hidden rounded-3xl bg-white shadow-[0_20px_50px_-12px_rgba(26,53,87,0.18)] ring-1 ring-corporate-200/80">
           {/* Hero: headline + course image */}
-          <div className="grid lg:grid-cols-[1fr_1.05fr] lg:min-h-[340px]">
-            <div className="flex flex-col justify-center px-6 py-8 sm:px-10 sm:py-10 lg:py-12">
-              <header className="mb-8">
+          <div className="grid lg:grid-cols-[1.18fr_0.88fr] lg:min-h-[360px]">
+            <div className="@container/hero flex flex-col justify-center px-6 py-8 sm:px-10 sm:py-10 lg:py-12">
+              <header className="mb-6 sm:mb-8">
                 <img
                   src={LOGO_URL}
                   alt="SA Golfing.com"
-                  className="h-14 w-auto sm:h-16"
+                  className="h-12 w-auto sm:h-14"
                 />
-                <p className="mt-2 font-serif text-sm italic tracking-wide text-tour-navy/80">
+                <p className="mt-1.5 font-serif text-sm italic tracking-wide text-tour-navy/80">
                   Golf Info and Booking Line CC
                 </p>
               </header>
 
-              <div id="golf-tour-heading" className="space-y-1">
-                <h2 className="text-3xl font-extrabold uppercase leading-[0.95] tracking-tight text-tour-navy sm:text-4xl lg:text-[2.75rem]">
+              <h2
+                id="golf-tour-heading"
+                className="m-0 max-w-full space-y-0.5 p-0 font-sans sm:space-y-1"
+              >
+                <span className={`${TOUR_HEADLINE_LINE} text-tour-navy`}>
                   Book Your
-                </h2>
-                <p className="text-2xl font-extrabold uppercase leading-tight tracking-tight text-tour-green sm:text-3xl lg:text-[2.35rem]">
+                </span>
+                <span
+                  className={`${TOUR_HEADLINE_LINE} whitespace-nowrap text-tour-green [letter-spacing:-0.02em]`}
+                >
                   Annual Golf Tour
-                </p>
-              </div>
+                </span>
+              </h2>
             </div>
 
             <div className="relative min-h-[220px] lg:min-h-full">
@@ -193,10 +202,10 @@ const BookGolfTourPromo = () => {
           </div>
 
           {/* Footer */}
-          <footer className="flex flex-col gap-4 bg-tour-navy px-5 py-5 text-white sm:flex-row sm:items-center sm:justify-between sm:gap-6 sm:px-8 sm:py-6">
+          <footer className="flex flex-col gap-4 bg-tour-navy px-5 py-5 text-white sm:flex-row sm:flex-nowrap sm:items-center sm:justify-between sm:gap-4 sm:px-6 sm:py-5 lg:gap-6 lg:px-8">
             <a
               href="mailto:tim@sagolfing.com"
-              className="flex items-center gap-3 transition-opacity hover:opacity-90"
+              className="flex shrink-0 items-center gap-3 transition-opacity hover:opacity-90"
             >
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-tour-lime text-tour-navy shadow-md">
                 <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
@@ -208,11 +217,11 @@ const BookGolfTourPromo = () => {
               </span>
             </a>
 
-            <p className="text-center text-sm leading-relaxed sm:max-w-xs sm:flex-1 lg:max-w-md">
+            <p className="m-0 text-center text-sm leading-normal sm:shrink-0 sm:whitespace-nowrap sm:px-1">
               <span className="hidden text-white/30 sm:inline" aria-hidden>
                 |
               </span>
-              <span className="sm:mx-3">
+              <span className="sm:mx-2 lg:mx-3">
                 We take care of everything, so you can{' '}
                 <span className="font-semibold text-tour-lime">enjoy the game.</span>
               </span>
@@ -225,7 +234,7 @@ const BookGolfTourPromo = () => {
               href="https://www.sagolfing.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 transition-opacity hover:opacity-90 sm:justify-end"
+              className="flex shrink-0 items-center gap-3 transition-opacity hover:opacity-90 sm:justify-end"
             >
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-tour-lime text-tour-navy shadow-md">
                 <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>

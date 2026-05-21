@@ -72,7 +72,7 @@ export const services: Service[] = [
   {
     id: '3',
     slug: 'day-golf-excursions',
-    title: 'Golf in Johannesburg',
+    title: 'Day Golf Excursions',
     description: 'Experience world-class golf courses on convenient day trips.',
     icon: '⛳',
     detailedDescription: 'One phone call is all that is needed! SA Golfing offers a complete packaged day out to South Africa\'s top golf courses. The package includes return transport from your hotel/B&B to the golf course, confirmed tee-off times, and golf club hire if required.',
