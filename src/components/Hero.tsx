@@ -1,17 +1,8 @@
 import { useState } from 'react';
 import BookingModal from './BookingModal';
-import GolfClubHireModal from './GolfClubHireModal';
 
 const Hero = () => {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
-  const [isGolfClubHireModalOpen, setIsGolfClubHireModalOpen] = useState(false);
-
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <section
@@ -58,27 +49,25 @@ const Hero = () => {
           Your preferred golfing partner away from home.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          {/* Primary CTA - Book Tee Off Time */}
           <button
+            type="button"
             onClick={() => setIsBookingModalOpen(true)}
             className="px-10 py-4 w-full sm:w-auto bg-primary-600 text-white font-bold rounded-xl hover:bg-primary-700 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105"
           >
-            Book Your Tee Off Time
+            Book Your Golf Day In Johannesburg
           </button>
-          {/* Secondary CTA - Book your Golf Clubs */}
           <button
-            onClick={() => setIsGolfClubHireModalOpen(true)}
+            type="button"
+            onClick={() => setIsBookingModalOpen(true)}
             className="px-10 py-4 w-full sm:w-auto bg-white/95 text-primary-700 font-bold rounded-xl border-2 border-primary-600 hover:bg-primary-50 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105"
           >
-            Book your Golf Clubs
+            Book Your Golf Day In Cape Town
           </button>
         </div>
       </div>
       <BookingModal isOpen={isBookingModalOpen} onClose={() => setIsBookingModalOpen(false)} />
-      <GolfClubHireModal isOpen={isGolfClubHireModalOpen} onClose={() => setIsGolfClubHireModalOpen(false)} />
     </section>
   );
 };
 
 export default Hero;
-

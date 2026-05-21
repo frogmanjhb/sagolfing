@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { golfCourses } from '../../data/courses';
 import { Region } from '../../types';
@@ -14,6 +14,15 @@ const CoursesSectionBento = () => {
 
   // Show first 6 courses in bento grid
   const coursesToDisplay = activeRegionData?.courses.slice(0, 6) || [];
+
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const region = (e as CustomEvent<Region>).detail;
+      if (region) setActiveRegion(region);
+    };
+    window.addEventListener('sagolfing:select-region', handler);
+    return () => window.removeEventListener('sagolfing:select-region', handler);
+  }, []);
 
   return (
     <section id="courses" className="py-8 bg-corporate-50">

@@ -1112,15 +1112,15 @@ export const golfCourses: RegionData[] = [
   {
     name: 'Garden Route',
     courses: [
-      { id: 'fancourt', name: 'Fancourt', region: 'Garden Route', image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&h=600&fit=crop', travelTime: '5.5 hours drive or 1 hour flight from OR Tambo', highlights: ['World-class championship courses', 'Hosted Presidents Cup', 'Gary Player & Ernie Els designs'] },
-      { id: 'pezula', name: 'Pezula', region: 'Garden Route', image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&h=600&fit=crop', travelTime: '6 hours drive or 1 hour flight from OR Tambo', highlights: ['Spectacular ocean views', 'Clifftop setting', 'Championship layout'] },
-      { id: 'goose-valley', name: 'Goose Valley', region: 'Garden Route', image: 'https://images.unsplash.com/photo-1592919505780-303950717480?w=800&h=600&fit=crop', travelTime: '6 hours drive or 1 hour flight from OR Tambo', highlights: ['Gary Player design', 'Plettenberg Bay location', 'Pristine conditioning'] },
-      { id: 'simola', name: 'Simola', region: 'Garden Route', image: 'https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?w=800&h=600&fit=crop', travelTime: '5.5 hours drive or 1 hour flight from OR Tambo', highlights: ['Jack Nicklaus Signature Course', 'Knysna estate', 'Stunning views'] },
-      { id: 'george', name: 'George', region: 'Garden Route', image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&h=600&fit=crop', travelTime: '5 hours drive or 1 hour flight from OR Tambo', highlights: ['Historic parkland course', 'Outeniqua Mountains backdrop', 'Classic layout'] },
-      { id: 'kingswood', name: 'Kingswood', region: 'Garden Route', image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&h=600&fit=crop', travelTime: '5 hours drive or 1 hour flight from OR Tambo', highlights: ['Championship course', 'Garden Route beauty', 'Excellent facilities'] },
-      { id: 'pinnacle-point', name: 'Pinnacle Point', region: 'Garden Route', image: 'https://images.unsplash.com/photo-1592919505780-303950717480?w=800&h=600&fit=crop', travelTime: '5 hours drive or 1 hour flight from OR Tambo', highlights: ['Dramatic ocean cliffs', 'World-renowned views', 'Unforgettable experience'] },
-      { id: 'oubaai', name: 'Oubaai', region: 'Garden Route', image: 'https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?w=800&h=600&fit=crop', travelTime: '5 hours drive or 1 hour flight from OR Tambo', highlights: ['Ernie Els design', 'George location', 'Championship standard'] },
-      { id: 'mossel-bay', name: 'Mossel Bay', region: 'Garden Route', image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&h=600&fit=crop', travelTime: '5 hours drive or 1 hour flight from OR Tambo', highlights: ['Coastal links', 'Ocean views', 'Historic club'] },
+      { id: 'fancourt', name: 'Fancourt', region: 'Garden Route', image: 'https://www.golfinthegardenroute.com/wp-content/uploads/2009/06/links15par4_courtesy_of_Fancourtresized_700_470_90_s_c1_c_c.jpg', travelTime: '5.5 hours drive or 1 hour flight from OR Tambo', highlights: ['World-class championship courses', 'Hosted Presidents Cup', 'Gary Player & Ernie Els designs'] },
+      { id: 'pezula', name: 'Pezula', region: 'Garden Route', image: 'https://www.pezulagolfestate.com/wp-content/uploads/2022/12/Hole-2-14-1536x1024.jpg', travelTime: '6 hours drive or 1 hour flight from OR Tambo', highlights: ['Spectacular ocean views', 'Clifftop setting', 'Championship layout'] },
+      { id: 'goose-valley', name: 'Goose Valley', region: 'Garden Route', image: '/images/courses/goose-valley.jpg', travelTime: '6 hours drive or 1 hour flight from OR Tambo', highlights: ['Gary Player design', 'Plettenberg Bay location', 'Pristine conditioning'] },
+      { id: 'simola', name: 'Simola', region: 'Garden Route', image: 'https://www.golfinthegardenroute.com/wp-content/uploads/2023/06/Simola-Golf-Course-003-scaled.jpg', travelTime: '5.5 hours drive or 1 hour flight from OR Tambo', highlights: ['Jack Nicklaus Signature Course', 'Knysna estate', 'Stunning views'] },
+      { id: 'george', name: 'George', region: 'Garden Route', image: 'https://www.georgegolfclub.co.za/images/bagallery/original/70-2.jpg', travelTime: '5 hours drive or 1 hour flight from OR Tambo', highlights: ['Historic parkland course', 'Outeniqua Mountains backdrop', 'Classic layout'] },
+      { id: 'kingswood', name: 'Kingswood', region: 'Garden Route', image: 'https://www.kingswood.co.za/wp-content/uploads/2025/10/0011-Pano-0842-to-45-X2-e1761142776882.jpg', travelTime: '5 hours drive or 1 hour flight from OR Tambo', highlights: ['Championship course', 'Garden Route beauty', 'Excellent facilities'] },
+      { id: 'pinnacle-point', name: 'Pinnacle Point', region: 'Garden Route', image: 'https://pinnaclepointestate.co.za/wp-content/uploads/2024/02/Pinnacle-Point-Pano-SMALL-scaled.webp', travelTime: '5 hours drive or 1 hour flight from OR Tambo', highlights: ['Dramatic ocean cliffs', 'World-renowned views', 'Unforgettable experience'] },
+      { id: 'oubaai', name: 'Oubaai', region: 'Garden Route', image: 'https://www.golfinthegardenroute.com/wp-content/uploads/2009/06/Oubaai17th.jpg', travelTime: '5 hours drive or 1 hour flight from OR Tambo', highlights: ['Ernie Els design', 'George location', 'Championship standard'] },
+      { id: 'mossel-bay', name: 'Mossel Bay', region: 'Garden Route', image: 'https://mosselbaygolfclub.co.za/wp-content/uploads/2025/07/mossel_bay_golf_club_cover_picture.jpg', travelTime: '5 hours drive or 1 hour flight from OR Tambo', highlights: ['Coastal links', 'Ocean views', 'Historic club'] },
     ]
   },
   {
@@ -1131,7 +1131,7 @@ export const golfCourses: RegionData[] = [
         name: 'Hermanus Golf Club',
         region: 'Cape Town',
         location: 'Hermanus - Western Cape',
-        image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&h=600&fit=crop',
+        image: 'https://cdn.sanity.io/images/03mhssoh/production/e92e1744c8484633f5f6e48262a31965790e4324-600x345.jpg?w=800&h=600&fit=crop',
         travelTime: '1.5 hours drive from Cape Town',
         highlights: [
           'Whale watching from the course',
@@ -1155,7 +1155,7 @@ export const golfCourses: RegionData[] = [
         region: 'Cape Town',
         location: 'Durbanville - Western Cape',
         nationalRanking: 11,
-        image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&h=600&fit=crop',
+        image: 'https://cdn.sanity.io/images/03mhssoh/production/65c7a0e4dcc4230be3d7f5a223c8f127b41f3ae1-306x176.jpg?w=800&h=600&fit=crop',
         travelTime: '30 minutes from Cape Town CBD',
         highlights: [
           'Table Mountain views',
@@ -1178,7 +1178,7 @@ export const golfCourses: RegionData[] = [
         name: 'Westlake Golf Club',
         region: 'Cape Town',
         location: 'Muizenberg - Western Cape',
-        image: 'https://images.unsplash.com/photo-1592919505780-303950717480?w=800&h=600&fit=crop',
+        image: 'https://cdn.sanity.io/images/03mhssoh/production/37d530d0a34f698dd677b70cf37fd22b7ddf0729-269x155.jpg?w=800&h=600&fit=crop',
         travelTime: '25 minutes from Cape Town CBD',
         highlights: [
           'Historic parkland course',
@@ -1201,7 +1201,7 @@ export const golfCourses: RegionData[] = [
         name: 'Atlantic Beach Golf Club',
         region: 'Cape Town',
         location: 'Melkbosstrand - Western Cape',
-        image: 'https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?w=800&h=600&fit=crop',
+        image: 'https://cdn.sanity.io/images/03mhssoh/production/fddf9c08f966850be91d9cf10c05066de4e37c43-269x155.jpg?w=800&h=600&fit=crop',
         travelTime: '30 minutes from Cape Town CBD',
         highlights: [
           'Links-style course',
@@ -1225,7 +1225,7 @@ export const golfCourses: RegionData[] = [
         region: 'Cape Town',
         location: 'Wynberg - Western Cape',
         nationalRanking: 15,
-        image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&h=600&fit=crop',
+        image: 'https://cdn.sanity.io/images/03mhssoh/production/1998a5e780aec2122f5e91717c11eec24188dbf0-269x155.jpg?w=800&h=600&fit=crop',
         travelTime: '20 minutes from Cape Town CBD',
         highlights: [
           'Oldest golf club in Africa',
@@ -1248,7 +1248,7 @@ export const golfCourses: RegionData[] = [
         name: 'Strand Golf Club',
         region: 'Cape Town',
         location: 'Strand - Western Cape',
-        image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&h=600&fit=crop',
+        image: 'https://cdn.sanity.io/images/03mhssoh/production/52a68bf02ab65fa869bf2b6ef8c1ebe75f287ca6-600x345.jpg?w=800&h=600&fit=crop',
         travelTime: '45 minutes from Cape Town CBD',
         highlights: [
           'False Bay views',
@@ -1272,7 +1272,7 @@ export const golfCourses: RegionData[] = [
         region: 'Cape Town',
         location: 'Somerset West - Western Cape',
         nationalRanking: 18,
-        image: 'https://images.unsplash.com/photo-1592919505780-303950717480?w=800&h=600&fit=crop',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Erinvale_Estate_and_Golf_Club%2C_Somerset_West%2C_South_Africa.JPG/1280px-Erinvale_Estate_and_Golf_Club%2C_Somerset_West%2C_South_Africa.JPG',
         travelTime: '45 minutes from Cape Town CBD',
         highlights: [
           'Gary Player design',
@@ -1296,7 +1296,7 @@ export const golfCourses: RegionData[] = [
         name: 'De Zalze Golf Estate',
         region: 'Cape Town',
         location: 'Stellenbosch - Western Cape',
-        image: 'https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?w=800&h=600&fit=crop',
+        image: 'https://cdn.sanity.io/images/03mhssoh/production/73baac19c9c3c9322f99d37c14db3cfe1bfe8d00-1600x1067.jpg?w=800&h=600&fit=crop',
         travelTime: '45 minutes from Cape Town CBD',
         highlights: [
           'Winelands setting',
@@ -1321,7 +1321,7 @@ export const golfCourses: RegionData[] = [
         region: 'Cape Town',
         location: 'Mowbray - Western Cape',
         nationalRanking: 20,
-        image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&h=600&fit=crop',
+        image: 'https://cdn.sanity.io/images/03mhssoh/production/6b0a1232f38e5c682f1393ea0da4dde96245ebc0-600x345.jpg?w=800&h=600&fit=crop',
         travelTime: '15 minutes from Cape Town CBD',
         highlights: [
           'Historic city course',
@@ -1344,7 +1344,7 @@ export const golfCourses: RegionData[] = [
         name: 'Stellenbosch Golf Club',
         region: 'Cape Town',
         location: 'Stellenbosch - Western Cape',
-        image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&h=600&fit=crop',
+        image: 'https://cdn.sanity.io/images/03mhssoh/production/6b56ecb5e448b58f11f71c975b0953a88ce76d7e-269x155.jpg?w=800&h=600&fit=crop',
         travelTime: '45 minutes from Cape Town CBD',
         highlights: [
           'Winelands location',
@@ -1368,7 +1368,7 @@ export const golfCourses: RegionData[] = [
         region: 'Cape Town',
         location: 'Kleinmond - Western Cape',
         nationalRanking: 5,
-        image: 'https://images.unsplash.com/photo-1592919505780-303950717480?w=800&h=600&fit=crop',
+        image: 'https://cdn.sanity.io/images/03mhssoh/production/c982801dfb108595f3786d494f1882cccda21a3e-1600x1067.jpg?w=800&h=600&fit=crop',
         travelTime: '1.5 hours from Cape Town',
         highlights: [
           'Ranked #5 in South Africa',
@@ -1392,7 +1392,7 @@ export const golfCourses: RegionData[] = [
         name: 'Rondebosch Golf Club',
         region: 'Cape Town',
         location: 'Rondebosch - Western Cape',
-        image: 'https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?w=800&h=600&fit=crop',
+        image: 'https://cdn.sanity.io/images/03mhssoh/production/853ff149e2729f6ff1759c5db12e87bb19c55bb8-306x176.jpg?w=800&h=600&fit=crop',
         travelTime: '15 minutes from Cape Town CBD',
         highlights: [
           'Historic city course',
@@ -1415,7 +1415,7 @@ export const golfCourses: RegionData[] = [
         name: 'Langebaan Golf Club',
         region: 'Cape Town',
         location: 'Langebaan - Western Cape',
-        image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&h=600&fit=crop',
+        image: 'https://cdn.sanity.io/images/03mhssoh/production/cd91055797ed3decfdb0f2849b74052bbf451a8b-269x155.jpg?w=800&h=600&fit=crop',
         travelTime: '1.5 hours from Cape Town',
         highlights: [
           'West Coast links',
@@ -1438,7 +1438,7 @@ export const golfCourses: RegionData[] = [
         name: 'Steenberg Golf Club',
         region: 'Cape Town',
         location: 'Constantia - Western Cape',
-        image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&h=600&fit=crop',
+        image: 'https://cdn.sanity.io/images/03mhssoh/production/4d2c7c683c0cb9d54cb4c28fac9b47f1a0c360dd-5906x3937.jpg?w=800&h=600&fit=crop',
         travelTime: '20 minutes from Cape Town CBD',
         highlights: [
           'Historic wine estate',
@@ -1462,7 +1462,7 @@ export const golfCourses: RegionData[] = [
         name: 'King David Golf Club',
         region: 'Cape Town',
         location: 'Wynberg - Western Cape',
-        image: 'https://images.unsplash.com/photo-1592919505780-303950717480?w=800&h=600&fit=crop',
+        image: 'https://cdn.sanity.io/images/03mhssoh/production/6b0a1232f38e5c682f1393ea0da4dde96245ebc0-600x345.jpg?w=800&h=600&fit=crop',
         travelTime: '20 minutes from Cape Town CBD',
         highlights: [
           'Mowbray Ridge location',
@@ -1485,7 +1485,7 @@ export const golfCourses: RegionData[] = [
         name: 'Clovelly Golf Club',
         region: 'Cape Town',
         location: 'Fish Hoek - Western Cape',
-        image: 'https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?w=800&h=600&fit=crop',
+        image: 'https://cdn.sanity.io/images/03mhssoh/production/c51e7b705180acf16a8ef228f4e3c88276991582-5315x3541.jpg?w=800&h=600&fit=crop',
         travelTime: '35 minutes from Cape Town CBD',
         highlights: [
           'Clifftop course',
@@ -1509,7 +1509,7 @@ export const golfCourses: RegionData[] = [
         region: 'Cape Town',
         location: 'Paarl - Western Cape',
         nationalRanking: 3,
-        image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&h=600&fit=crop',
+        image: 'https://cdn.sanity.io/images/03mhssoh/production/b9b9557d0d5ffc3b134bc375f8e67ab453381543-1600x1056.jpg?w=800&h=600&fit=crop',
         travelTime: '1 hour from Cape Town',
         highlights: [
           'Ranked #3 in South Africa',
@@ -1533,7 +1533,7 @@ export const golfCourses: RegionData[] = [
         name: 'Devonvale Golf Estate',
         region: 'Cape Town',
         location: 'Stellenbosch - Western Cape',
-        image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&h=600&fit=crop',
+        image: 'https://cdn.sanity.io/images/03mhssoh/production/17a4fd590aa8bfb93ebbd808386428ac43e7c174-600x345.jpg?w=800&h=600&fit=crop',
         travelTime: '45 minutes from Cape Town CBD',
         highlights: [
           'Gary Player design',
@@ -1557,7 +1557,7 @@ export const golfCourses: RegionData[] = [
         name: 'Paarl Golf Club',
         region: 'Cape Town',
         location: 'Paarl - Western Cape',
-        image: 'https://images.unsplash.com/photo-1592919505780-303950717480?w=800&h=600&fit=crop',
+        image: 'https://cdn.sanity.io/images/03mhssoh/production/ee201f0bf21d9d67402d971e7f188cfef837be9c-269x155.jpg?w=800&h=600&fit=crop',
         travelTime: '1 hour from Cape Town',
         highlights: [
           'Historic Winelands club',
@@ -1581,7 +1581,7 @@ export const golfCourses: RegionData[] = [
         region: 'Cape Town',
         location: 'Milnerton - Western Cape',
         nationalRanking: 21,
-        image: 'https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?w=800&h=600&fit=crop',
+        image: 'https://cdn.sanity.io/images/03mhssoh/production/b82370cee249906af952a60c319c7a31dea654ca-306x176.jpg?w=800&h=600&fit=crop',
         travelTime: '20 minutes from Cape Town CBD',
         highlights: [
           'Links-style course',
@@ -1604,15 +1604,15 @@ export const golfCourses: RegionData[] = [
   {
     name: 'Durban',
     courses: [
-      { id: 'mount-edgecombe', name: 'Mount Edgecombe Golf Estate', region: 'Durban', image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&h=600&fit=crop', travelTime: '1 hour flight or 6 hours drive from OR Tambo', highlights: ['Premier estate course', 'Championship layout', 'Excellent facilities'] },
-      { id: 'durban-cc', name: 'Durban Country Club', region: 'Durban', image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&h=600&fit=crop', travelTime: '1 hour flight or 6 hours drive from OR Tambo', highlights: ['Recently upgraded by Golf Data', 'Ranked #8 nationally', 'Historic championship venue'] },
-      { id: 'beachwood', name: 'Durban Beachwood', region: 'Durban', image: 'https://images.unsplash.com/photo-1592919505780-303950717480?w=800&h=600&fit=crop', travelTime: '1 hour flight or 6 hours drive from OR Tambo', highlights: ['Coastal setting', 'Challenging layout', 'Great conditioning'] },
-      { id: 'zimbali', name: 'Zimbali', region: 'Durban', image: 'https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?w=800&h=600&fit=crop', travelTime: '1 hour flight or 6 hours drive from OR Tambo', highlights: ['Coastal forest setting', 'Tom Weiskopf design', 'Premier resort course'] },
-      { id: 'umhlali', name: 'Umhlali', region: 'Durban', image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&h=600&fit=crop', travelTime: '1 hour flight or 6 hours drive from OR Tambo', highlights: ['North Coast gem', 'Beautiful setting', 'Championship standard'] },
-      { id: 'princes-grant', name: 'Princes Grant', region: 'Durban', image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&h=600&fit=crop', travelTime: '1 hour flight or 6 hours drive from OR Tambo', highlights: ['Coastal estate course', 'Ocean views', 'Challenging design'] },
-      { id: 'umdoni', name: 'Umdoni', region: 'Durban', image: 'https://images.unsplash.com/photo-1592919505780-303950717480?w=800&h=600&fit=crop', travelTime: '1 hour flight or 6 hours drive from OR Tambo', highlights: ['South Coast favourite', 'Ocean backdrop', 'Traditional layout'] },
-      { id: 'san-lemeer', name: 'San Lemeer', region: 'Durban', image: 'https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?w=800&h=600&fit=crop', travelTime: '1 hour flight or 6 hours drive from OR Tambo', highlights: ['Gary Player design', 'South Coast location', 'Estate course'] },
-      { id: 'wild-coast', name: 'Wild Coast', region: 'Durban', image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&h=600&fit=crop', travelTime: '1 hour flight or 6 hours drive from OR Tambo', highlights: ['Coastal beauty', 'Resort setting', 'Spectacular views'] },
+      { id: 'mount-edgecombe', name: 'Mount Edgecombe Golf Estate', region: 'Durban', image: '/images/courses/mount-edgecombe.jpg', travelTime: '1 hour flight or 6 hours drive from OR Tambo', highlights: ['Premier estate course', 'Championship layout', 'Excellent facilities'] },
+      { id: 'durban-cc', name: 'Durban Country Club', region: 'Durban', image: '/images/courses/durban-cc.jpg', travelTime: '1 hour flight or 6 hours drive from OR Tambo', highlights: ['Recently upgraded by Golf Data', 'Ranked #8 nationally', 'Historic championship venue'] },
+      { id: 'beachwood', name: 'Durban Beachwood', region: 'Durban', image: '/images/courses/beachwood.jpg', travelTime: '1 hour flight or 6 hours drive from OR Tambo', highlights: ['Coastal setting', 'Challenging layout', 'Great conditioning'] },
+      { id: 'zimbali', name: 'Zimbali', region: 'Durban', image: '/images/courses/zimbali.jpg', travelTime: '1 hour flight or 6 hours drive from OR Tambo', highlights: ['Coastal forest setting', 'Tom Weiskopf design', 'Premier resort course'] },
+      { id: 'umhlali', name: 'Umhlali', region: 'Durban', image: '/images/courses/umhlali.jpg', travelTime: '1 hour flight or 6 hours drive from OR Tambo', highlights: ['North Coast gem', 'Beautiful setting', 'Championship standard'] },
+      { id: 'princes-grant', name: 'Princes Grant', region: 'Durban', image: '/images/courses/princes-grant.jpg', travelTime: '1 hour flight or 6 hours drive from OR Tambo', highlights: ['Coastal estate course', 'Ocean views', 'Challenging design'] },
+      { id: 'umdoni', name: 'Umdoni', region: 'Durban', image: '/images/courses/umdoni.jpg', travelTime: '1 hour flight or 6 hours drive from OR Tambo', highlights: ['South Coast favourite', 'Ocean backdrop', 'Traditional layout'] },
+      { id: 'san-lemeer', name: 'San Lemeer', region: 'Durban', image: '/images/courses/san-lemeer.jpg', travelTime: '1 hour flight or 6 hours drive from OR Tambo', highlights: ['Gary Player design', 'South Coast location', 'Estate course'] },
+      { id: 'wild-coast', name: 'Wild Coast', region: 'Durban', image: '/images/courses/wild-coast.jpg', travelTime: '1 hour flight or 6 hours drive from OR Tambo', highlights: ['Coastal beauty', 'Resort setting', 'Spectacular views'] },
     ]
   },
   {
@@ -1623,7 +1623,7 @@ export const golfCourses: RegionData[] = [
         name: 'Leopard Creek Country Club',
         region: 'Kruger',
         location: 'Malelane - Mpumalanga',
-        image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&h=600&fit=crop',
+        image: 'https://cdn.sanity.io/images/03mhssoh/production/db6708e9d5d60dfc8f90e76da465064b2d276fb7-1600x1067.jpg?w=1200&q=60&auto=format&fit=max',
         travelTime: '4.5 hours drive or 1 hour flight from OR Tambo',
         highlights: [
           'Prestigious championship course',
@@ -1646,7 +1646,7 @@ export const golfCourses: RegionData[] = [
         name: 'Skukuza Golf Course',
         region: 'Kruger',
         location: 'Skukuza - Kruger National Park',
-        image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&h=600&fit=crop',
+        image: 'https://skukuza-golf.co.za/wp-content/uploads/2022/03/Home-hero.jpg',
         travelTime: '5 hours drive from OR Tambo',
         highlights: [
           'Inside Kruger National Park',
@@ -1669,7 +1669,7 @@ export const golfCourses: RegionData[] = [
         name: 'White River Country Club',
         region: 'Kruger',
         location: 'White River - Mpumalanga',
-        image: 'https://images.unsplash.com/photo-1592919505780-303950717480?w=800&h=600&fit=crop',
+        image: 'https://www.mwg.co.za/wp-content/uploads/2020/04/MWG-White-River-Country-Club-Mpumulanga-www.mwg_.co_.za-3.jpg',
         travelTime: '4 hours drive from OR Tambo',
         highlights: [
           'Well-established parkland course',
@@ -1691,7 +1691,7 @@ export const golfCourses: RegionData[] = [
         name: 'Hans Merensky Golf Estate',
         region: 'Kruger',
         location: 'Phalaborwa - Limpopo',
-        image: 'https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?w=800&h=600&fit=crop',
+        image: 'https://www.golfball.co.za/images/hans-merensky-hotel-and-spa-giraffe-family-on-golf-course-590x390.jpg',
         travelTime: '5 hours drive or 1 hour flight from OR Tambo',
         highlights: [
           'Championship golf estate',
@@ -1715,7 +1715,7 @@ export const golfCourses: RegionData[] = [
         name: 'Oliver\'s',
         region: 'Kruger',
         location: 'Near Kruger - Mpumalanga',
-        image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&h=600&fit=crop',
+        image: 'https://olivers.co.za/wp-content/uploads/2023/06/Olivers-View-from-Golf-Course-4.jpg',
         travelTime: '4.5 hours drive from OR Tambo',
         highlights: [
           'Scenic bushveld course',
@@ -1736,7 +1736,7 @@ export const golfCourses: RegionData[] = [
         name: 'Kambaku Golf Course',
         region: 'Kruger',
         location: 'Komatipoort - Mpumalanga',
-        image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&h=600&fit=crop',
+        image: '/images/kambaku.jpg',
         travelTime: '4.5 hours drive from OR Tambo',
         highlights: [
           'Bushveld golf experience',

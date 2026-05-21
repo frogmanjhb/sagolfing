@@ -6,6 +6,7 @@ import ServicesSection from './components/ServicesSection';
 import CoursesSection from './components/CoursesSection';
 import ClientsSection from './components/ClientsSection';
 import ContactSection from './components/ContactSection';
+import BookGolfTourPromo from './components/BookGolfTourPromo';
 import HeroBento from './components/bento/HeroBento';
 import ServicesSectionBento from './components/bento/ServicesSectionBento';
 import CoursesSectionBento from './components/bento/CoursesSectionBento';
@@ -33,6 +34,7 @@ function HomePage() {
       {viewMode === 'bento' ? (
         <>
           <HeroBento />
+          <BookGolfTourPromo />
           <ServicesSectionBento />
           <CoursesSectionBento />
           <ClientsSectionBento />
@@ -41,6 +43,7 @@ function HomePage() {
       ) : (
         <>
           <Hero />
+          <BookGolfTourPromo />
           <ServicesSection />
           <CoursesSection />
           <ClientsSection />

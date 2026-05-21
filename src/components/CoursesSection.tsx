@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { golfCourses } from '../data/courses';
 import { Region } from '../types';
 import CourseCard from './CourseCard';
@@ -23,6 +23,15 @@ const CoursesSection = () => {
     ? (showAll ? activeRegionData.courses : activeRegionData.courses.slice(0, COURSES_PER_PAGE))
     : [];
   const hasMoreCourses = activeRegionData && activeRegionData.courses.length > COURSES_PER_PAGE;
+
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const region = (e as CustomEvent<Region>).detail;
+      if (region) handleRegionChange(region);
+    };
+    window.addEventListener('sagolfing:select-region', handler);
+    return () => window.removeEventListener('sagolfing:select-region', handler);
+  }, []);
 
   return (
     <section id="courses" className="section-padding bg-corporate-50">

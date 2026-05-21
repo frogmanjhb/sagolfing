@@ -22,6 +22,10 @@
   --color-corporate-700: #334155;
   --color-corporate-800: #1e293b;
   --color-corporate-900: #0f172a;
+
+  --color-tour-navy: #1a3557;
+  --color-tour-green: #1f5c42;
+  --color-tour-lime: #9ccc65;
 }
 
 html {
@@ -195,5 +199,25 @@ p {
 
 .focus-ring {
   @apply focus:outline-none focus:ring-4 focus:ring-primary-300/50;
+}
+
+/* Annual golf tour poster — curved hero image */
+.tour-hero-curve {
+  clip-path: ellipse(88% 105% at 100% 50%);
+  border-left: 5px solid var(--color-tour-green);
+}
+
+@media (max-width: 1023px) {
+  .tour-hero-curve {
+    clip-path: none;
+    border-left: none;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .tour-hero-curve {
+    border-top: 5px solid var(--color-tour-green);
+  }
 }
 

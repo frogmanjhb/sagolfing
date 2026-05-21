@@ -1,10 +1,20 @@
 import { useState, useEffect } from 'react';
 import EnquiryModal from './EnquiryModal';
+import BookingModal from './BookingModal';
+import GolfClubHireModal from './GolfClubHireModal';
+
+const headerOutlineBtn =
+  'inline-flex items-center justify-center px-3 py-2.5 lg:px-4 text-xs lg:text-sm font-bold leading-none rounded-xl border-2 border-primary-600 text-primary-700 bg-white hover:bg-primary-50 transition-all duration-300 shadow-md hover:shadow-lg whitespace-nowrap';
+
+const headerPrimaryBtn =
+  'inline-flex items-center justify-center px-4 py-2.5 lg:px-7 text-xs lg:text-sm font-bold leading-none rounded-xl bg-gradient-to-r from-primary-600 to-primary-700 text-white hover:from-primary-700 hover:to-primary-800 transition-all duration-300 shadow-lg hover:shadow-xl whitespace-nowrap';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isEnquiryModalOpen, setIsEnquiryModalOpen] = useState(false);
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+  const [isGolfClubHireModalOpen, setIsGolfClubHireModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,7 +36,6 @@ const Header = () => {
     { label: 'Home', id: 'home' },
     { label: 'Services', id: 'services' },
     { label: 'Courses', id: 'courses' },
-    { label: 'Contact', id: 'contact' },
   ];
 
   return (
@@ -38,9 +47,9 @@ const Header = () => {
       }`}
     >
       <nav className="container-custom">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between gap-3 md:grid md:grid-cols-[auto_minmax(0,1fr)_auto] md:items-center md:gap-4 min-h-[50px] md:min-h-[60px]">
           <div
-            className="cursor-pointer transition-transform duration-300 hover:scale-105"
+            className="shrink-0 cursor-pointer transition-transform duration-300 hover:scale-105"
             onClick={() => scrollToSection('home')}
           >
             <img 
@@ -50,39 +59,58 @@ const Header = () => {
             />
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-0.5 lg:space-x-1">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="relative px-4 py-2 text-corporate-800 font-semibold text-sm lg:text-base tracking-normal transition-all duration-300 group"
-              >
-                <span className="relative z-10">{item.label}</span>
-                <span className="absolute inset-0 bg-primary-50 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></span>
-                <span className="absolute bottom-1 left-4 right-4 h-0.5 bg-primary-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out"></span>
-              </button>
-            ))}
+          {/* Desktop nav — lives in the middle grid column only */}
+          <div className="hidden md:flex min-w-0 items-center justify-center">
+            <div className="flex flex-wrap items-center justify-center gap-x-0.5 lg:gap-x-1">
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className="relative px-3 py-2 text-corporate-800 font-semibold text-sm lg:px-4 lg:text-base tracking-normal transition-all duration-300 group"
+                >
+                  <span className="relative z-10">{item.label}</span>
+                  <span className="absolute inset-0 bg-primary-50 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></span>
+                  <span className="absolute bottom-1 left-3 right-3 lg:left-4 lg:right-4 h-0.5 bg-primary-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out"></span>
+                </button>
+              ))}
+            </div>
           </div>
 
-          {/* CTA Button for Desktop */}
-          <div className="hidden md:flex items-center gap-3">
+          {/* CTA group — right column; booking buttons from lg to avoid crowding nav */}
+          <div className="hidden md:flex shrink-0 items-center justify-end flex-nowrap gap-2 lg:gap-3">
             <button
+              type="button"
+              onClick={() => setIsBookingModalOpen(true)}
+              className={`${headerOutlineBtn} hidden lg:inline-flex`}
+            >
+              <span className="xl:hidden">Book Tee Time</span>
+              <span className="hidden xl:inline">Book Your Tee Off Time</span>
+            </button>
+            <button
+              type="button"
+              onClick={() => setIsGolfClubHireModalOpen(true)}
+              className={`${headerOutlineBtn} hidden lg:inline-flex`}
+            >
+              <span className="xl:hidden">Book Golf Clubs</span>
+              <span className="hidden xl:inline">Book your Golf Clubs</span>
+            </button>
+            <button
+              type="button"
               onClick={() => setIsEnquiryModalOpen(true)}
-              className="px-7 py-3 bg-gradient-to-r from-primary-600 to-primary-700 text-white font-bold text-sm rounded-xl hover:from-primary-700 hover:to-primary-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+              className={headerPrimaryBtn}
             >
               Enquire Now
             </button>
-            <img 
-              src="/images/CPG-Logo2.png" 
-              alt="CPG Logo" 
-              className="h-10 md:h-12 transition-all duration-300 ml-2"
+            <img
+              src="/images/CPG-Logo2.png"
+              alt="CPG Logo"
+              className="h-10 md:h-12 shrink-0 transition-all duration-300"
             />
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-corporate-800 hover:bg-primary-50 rounded-lg transition-all duration-300 focus:outline-none"
+            className="shrink-0 p-2 text-corporate-800 hover:bg-primary-50 rounded-lg transition-all duration-300 focus:outline-none md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -122,11 +150,32 @@ const Header = () => {
               </button>
             ))}
             <button
+              type="button"
+              onClick={() => {
+                setIsBookingModalOpen(true);
+                setIsMenuOpen(false);
+              }}
+              className={`w-full mt-3 ${headerOutlineBtn}`}
+            >
+              Book Your Tee Off Time
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setIsGolfClubHireModalOpen(true);
+                setIsMenuOpen(false);
+              }}
+              className={`w-full ${headerOutlineBtn}`}
+            >
+              Book your Golf Clubs
+            </button>
+            <button
+              type="button"
               onClick={() => {
                 setIsEnquiryModalOpen(true);
                 setIsMenuOpen(false);
               }}
-              className="w-full mt-3 px-4 py-3 bg-gradient-to-r from-primary-600 to-primary-700 text-white font-bold rounded-xl hover:from-primary-700 hover:to-primary-800 transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="w-full px-4 py-3 bg-gradient-to-r from-primary-600 to-primary-700 text-white font-bold rounded-xl hover:from-primary-700 hover:to-primary-800 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Enquire Now
             </button>
@@ -141,6 +190,8 @@ const Header = () => {
         </div>
       </nav>
       <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
+      <BookingModal isOpen={isBookingModalOpen} onClose={() => setIsBookingModalOpen(false)} />
+      <GolfClubHireModal isOpen={isGolfClubHireModalOpen} onClose={() => setIsGolfClubHireModalOpen(false)} />
     </header>
   );
 };
