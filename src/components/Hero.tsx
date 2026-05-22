@@ -28,7 +28,7 @@ const Hero = () => {
       
       <div className="container-custom text-center relative z-10">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-corporate-900 mb-6 leading-tight drop-shadow-sm">
-          <span className="inline-block bounce-text" style={{ animationDelay: '0s' }}>Discover</span>
+          <span className="inline-block bounce-text" style={{ animationDelay: '0s' }}>Play</span>
           {' '}
           <span className="inline-block bounce-text" style={{ animationDelay: '0.1s' }}>the</span>
           {' '}
@@ -54,14 +54,14 @@ const Hero = () => {
             onClick={() => setIsBookingModalOpen(true)}
             className="px-10 py-4 w-full sm:w-auto bg-primary-600 text-white font-bold rounded-xl hover:bg-primary-700 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105"
           >
-            Book Your Golf Day In Johannesburg
+            Book Your Tee Off in Johannesburg
           </button>
           <button
             type="button"
             onClick={() => setIsBookingModalOpen(true)}
             className="px-10 py-4 w-full sm:w-auto bg-white/95 text-primary-700 font-bold rounded-xl border-2 border-primary-600 hover:bg-primary-50 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105"
           >
-            Book Your Golf Day In Cape Town
+            Book Your Tee Off in Cape Town
           </button>
         </div>
       </div>

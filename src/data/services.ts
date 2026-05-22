@@ -4,7 +4,7 @@ export const services: Service[] = [
   {
     id: '1',
     slug: 'corporate-golf-days',
-    title: 'Corporate Transport and Events',
+    title: 'Corporate Transport',
     description: 'Organise memorable corporate golf events tailored to your business needs.',
     icon: '🏢',
     detailedDescription: 'SA Golfing offers a complete packaged day to suit the needs of your company and to ensure your guests enjoy a well organized and fun filled day. We handle everything from course booking to prize giving, ensuring a seamless experience for up to 144 golfers.',
@@ -39,7 +39,7 @@ export const services: Service[] = [
   {
     id: '2',
     slug: 'golf-tours',
-    title: 'Golf Tours',
+    title: 'Golf Tours and Safari',
     description: 'Discover South Africa\'s premier golf courses with our expertly curated tours.',
     icon: '🏌️',
     detailedDescription: 'SA Golfing organizes golf tours all over South Africa, tailored to your tour group\'s exact requirements. We\'ll help you put together an unforgettable tour of a lifetime. We are spoilt for choice in South Africa as far as golf courses are concerned - experience as many of our world-class courses as possible during your stay!',
@@ -72,7 +72,7 @@ export const services: Service[] = [
   {
     id: '3',
     slug: 'day-golf-excursions',
-    title: 'Day Golf Excursions',
+    title: 'Day Golf in Johannesburg',
     description: 'Experience world-class golf courses on convenient day trips.',
     icon: '⛳',
     detailedDescription: 'One phone call is all that is needed! SA Golfing offers a complete packaged day out to South Africa\'s top golf courses. The package includes return transport from your hotel/B&B to the golf course, confirmed tee-off times, and golf club hire if required.',
@@ -103,7 +103,7 @@ export const services: Service[] = [
   {
     id: '4',
     slug: 'golf-club-hire',
-    title: 'Golf Club Hire',
+    title: 'Club Hire',
     description: 'Premium golf club rentals for your perfect game.',
     icon: '/images/golf-club-sets.webp',
     detailedDescription: 'SA Golfing has 50 sets of 5-star golf clubs available to our clients. We provide clubs that best suit your game and handicap, with a wide selection of premium brands to choose from.',
@@ -170,7 +170,7 @@ export const services: Service[] = [
   {
     id: '6',
     slug: 'holidays',
-    title: 'Golf Holidays',
+    title: 'Day Golf in Cape Town',
     description: 'Complete golf holiday packages in South Africa\'s most beautiful destinations.',
     icon: '/images/holiday.png',
     detailedDescription: 'Immerse yourself in the ultimate golf holiday experience. SA Golfing creates comprehensive packages combining world-class golf courses with South Africa\'s incredible attractions, accommodations, and experiences.',

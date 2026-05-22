@@ -31,7 +31,7 @@ const HeroBento = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-transparent" />
             <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 text-white">
               <h1 className="text-3xl md:text-4xl font-bold mb-2 drop-shadow-lg">
-                Discover South Africa's Best Golf Courses
+                Play the Best Golf Courses in South Africa
               </h1>
               <p className="text-sm md:text-base opacity-90 mb-4">
                 Your preferred golfing partner away from home
