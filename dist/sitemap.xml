@@ -1,236 +1,579 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Homepage -->
   <url>
-    <loc>https://sagolfing-production.up.railway.app/</loc>
-    <lastmod>2025-11-16</lastmod>
+    <loc>https://www.sagolfing.com/</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  
-  <!-- Golf Courses -->
-  <!-- Johannesburg Courses -->
   <url>
-    <loc>https://sagolfing-production.up.railway.app/course/blair-atholl</loc>
-    <lastmod>2025-11-16</lastmod>
+    <loc>https://www.sagolfing.com/course/blair-atholl</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sagolfing-production.up.railway.app/course/glendower</loc>
-    <lastmod>2025-11-16</lastmod>
+    <loc>https://www.sagolfing.com/course/glendower</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sagolfing-production.up.railway.app/course/royal-johannesburg-east</loc>
-    <lastmod>2025-11-16</lastmod>
+    <loc>https://www.sagolfing.com/course/royal-johannesburg-east</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sagolfing-production.up.railway.app/course/steyn-city</loc>
-    <lastmod>2025-11-16</lastmod>
+    <loc>https://www.sagolfing.com/course/steyn-city</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sagolfing-production.up.railway.app/course/pretoria-cc</loc>
-    <lastmod>2025-11-16</lastmod>
+    <loc>https://www.sagolfing.com/course/pretoria-cc</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sagolfing-production.up.railway.app/course/ccj-woodmead</loc>
-    <lastmod>2025-11-16</lastmod>
+    <loc>https://www.sagolfing.com/course/ccj-woodmead</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sagolfing-production.up.railway.app/course/royal-johannesburg-west</loc>
-    <lastmod>2025-11-16</lastmod>
+    <loc>https://www.sagolfing.com/course/royal-johannesburg-west</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sagolfing-production.up.railway.app/course/houghton</loc>
-    <lastmod>2025-11-16</lastmod>
+    <loc>https://www.sagolfing.com/course/houghton</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sagolfing-production.up.railway.app/course/ccj-rocklands</loc>
-    <lastmod>2025-11-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Garden Route Courses -->
-  <url>
-    <loc>https://sagolfing-production.up.railway.app/course/fancourt</loc>
-    <lastmod>2025-11-16</lastmod>
+    <loc>https://www.sagolfing.com/course/ccj-rocklands</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sagolfing-production.up.railway.app/course/pezula</loc>
-    <lastmod>2025-11-16</lastmod>
+    <loc>https://www.sagolfing.com/course/johannesburg-cc</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sagolfing-production.up.railway.app/course/goose-valley</loc>
-    <lastmod>2025-11-16</lastmod>
+    <loc>https://www.sagolfing.com/course/randpark</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sagolfing-production.up.railway.app/course/simola</loc>
-    <lastmod>2025-11-16</lastmod>
+    <loc>https://www.sagolfing.com/course/wanderers</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sagolfing-production.up.railway.app/course/george</loc>
-    <lastmod>2025-11-16</lastmod>
+    <loc>https://www.sagolfing.com/course/gary-player-cc</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sagolfing-production.up.railway.app/course/kingswood</loc>
-    <lastmod>2025-11-16</lastmod>
+    <loc>https://www.sagolfing.com/course/lost-city</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sagolfing-production.up.railway.app/course/pinnacle-point</loc>
-    <lastmod>2025-11-16</lastmod>
+    <loc>https://www.sagolfing.com/course/pecanwood</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sagolfing-production.up.railway.app/course/oubaai</loc>
-    <lastmod>2025-11-16</lastmod>
+    <loc>https://www.sagolfing.com/course/ebotse</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sagolfing-production.up.railway.app/course/mossel-bay</loc>
-    <lastmod>2025-11-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Cape Town Courses -->
-  <url>
-    <loc>https://sagolfing-production.up.railway.app/course/hermanus</loc>
-    <lastmod>2025-11-16</lastmod>
+    <loc>https://www.sagolfing.com/course/eagle-canyon</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sagolfing-production.up.railway.app/course/durbanville</loc>
-    <lastmod>2025-11-16</lastmod>
+    <loc>https://www.sagolfing.com/course/blue-valley</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sagolfing-production.up.railway.app/course/westlake</loc>
-    <lastmod>2025-11-16</lastmod>
+    <loc>https://www.sagolfing.com/course/dainfern</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sagolfing-production.up.railway.app/course/atlantic-beach</loc>
-    <lastmod>2025-11-16</lastmod>
+    <loc>https://www.sagolfing.com/course/modderfontein</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sagolfing-production.up.railway.app/course/royal-cape</loc>
-    <lastmod>2025-11-16</lastmod>
+    <loc>https://www.sagolfing.com/course/bryanston-cc</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sagolfing-production.up.railway.app/course/strand</loc>
-    <lastmod>2025-11-16</lastmod>
+    <loc>https://www.sagolfing.com/course/serengeti</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sagolfing-production.up.railway.app/course/erinvale</loc>
-    <lastmod>2025-11-16</lastmod>
+    <loc>https://www.sagolfing.com/course/killarney</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sagolfing-production.up.railway.app/course/de-zalze</loc>
-    <lastmod>2025-11-16</lastmod>
+    <loc>https://www.sagolfing.com/course/parkview</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sagolfing-production.up.railway.app/course/mowbray</loc>
-    <lastmod>2025-11-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Durban Courses -->
-  <url>
-    <loc>https://sagolfing-production.up.railway.app/course/mount-edgecombe</loc>
-    <lastmod>2025-11-16</lastmod>
+    <loc>https://www.sagolfing.com/course/kyalami</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sagolfing-production.up.railway.app/course/durban-cc</loc>
-    <lastmod>2025-11-16</lastmod>
+    <loc>https://www.sagolfing.com/course/eye-of-africa</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sagolfing-production.up.railway.app/course/beachwood</loc>
-    <lastmod>2025-11-16</lastmod>
+    <loc>https://www.sagolfing.com/course/wingate-park</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sagolfing-production.up.railway.app/course/zimbali</loc>
-    <lastmod>2025-11-16</lastmod>
+    <loc>https://www.sagolfing.com/course/woodhill</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sagolfing-production.up.railway.app/course/umhlali</loc>
-    <lastmod>2025-11-16</lastmod>
+    <loc>https://www.sagolfing.com/course/els-club-copperleaf</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sagolfing-production.up.railway.app/course/princes-grant</loc>
-    <lastmod>2025-11-16</lastmod>
+    <loc>https://www.sagolfing.com/course/irene</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sagolfing-production.up.railway.app/course/umdoni</loc>
-    <lastmod>2025-11-16</lastmod>
+    <loc>https://www.sagolfing.com/course/reading-cc</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sagolfing-production.up.railway.app/course/san-lemeer</loc>
-    <lastmod>2025-11-16</lastmod>
+    <loc>https://www.sagolfing.com/course/waterkloof</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sagolfing-production.up.railway.app/course/wild-coast</loc>
-    <lastmod>2025-11-16</lastmod>
+    <loc>https://www.sagolfing.com/course/ruimsig</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/krugersdorp</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/glenvista</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/centurion</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/emfuleni</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/huddle-park</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/jackal-creek</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/randpark-bushwillow</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/benoni-cc</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/state-mines</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/erpm</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/soweto-cc</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/goldfields-west</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/fancourt</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/pezula</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/goose-valley</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/simola</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/george</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/kingswood</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/pinnacle-point</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/oubaai</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/mossel-bay</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/hermanus</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/durbanville</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/westlake</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/atlantic-beach</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/royal-cape</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/strand</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/erinvale</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/de-zalze</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/mowbray</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/stellenbosch</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/arabella</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/rondebosch</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/langebaan</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/steenberg</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/king-david</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/clovelly</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/pearl-valley</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/devonvale</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/paarl</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/milnerton</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/mount-edgecombe</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/durban-cc</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/beachwood</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/zimbali</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/umhlali</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/princes-grant</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/umdoni</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/san-lemeer</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/wild-coast</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/leopard-creek</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/skukuza</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/white-river</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/hans-merensky</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/olivers</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/course/kambaku</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/service/corporate-golf-days</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/service/golf-tours</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/service/day-golf-excursions</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/service/golf-club-hire</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/service/chauffeur-driver</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.sagolfing.com/service/holidays</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
-

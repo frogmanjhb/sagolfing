@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import { absoluteUrl } from './config/seo';
 import { ViewModeProvider, useViewMode } from './contexts/ViewModeContext';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -26,7 +27,7 @@ function HomePage() {
       <SEOHelmet
         title="SA Golfing - Discover South Africa's Best Golf Courses"
         description="Your preferred golfing partner away from home. Book tee times at South Africa's premier golf courses including Blair Atholl, Glendower, Fancourt, and more. Expert golf tours and experiences across Johannesburg, Cape Town, Garden Route, and Durban."
-        canonical="https://sagolfing-production.up.railway.app/"
+        canonical={absoluteUrl('/')}
         keywords="south africa golf courses, golf booking south africa, golf tours south africa, johannesburg golf, cape town golf, garden route golf, durban golf, blair atholl, glendower, fancourt, golf holidays south africa"
       />
       <StructuredData data={createOrganizationSchema()} />
@@ -57,19 +58,17 @@ function HomePage() {
 function App() {
   return (
     <ViewModeProvider>
-      <Router>
-        <div className="min-h-screen">
-          <Header />
-          <main>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/course/:courseId" element={<CourseDetailPage />} />
-              <Route path="/service/:serviceSlug" element={<ServiceDetailPage />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
-      </Router>
+      <div className="min-h-screen">
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/course/:courseId" element={<CourseDetailPage />} />
+            <Route path="/service/:serviceSlug" element={<ServiceDetailPage />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
     </ViewModeProvider>
   );
 }

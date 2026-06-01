@@ -2,6 +2,8 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { services } from '../data/services';
 import SEOHelmet from '../components/SEOHelmet';
+import StructuredData, { createBreadcrumbSchema, createServiceSchema } from '../components/StructuredData';
+import { absoluteUrl, serviceUrl } from '../config/seo';
 
 const ServiceDetailPage = () => {
   const { serviceSlug } = useParams<{ serviceSlug: string }>();
@@ -15,14 +17,22 @@ const ServiceDetailPage = () => {
 
   if (!service) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <>
+        <SEOHelmet
+          title="Service Not Found"
+          description="The requested service could not be found on SA Golfing."
+          canonical="/"
+          noIndex
+        />
+        <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-corporate-900 mb-4">Service Not Found</h1>
           <Link to="/#services" className="text-primary-600 hover:text-primary-700">
             Return to Services
           </Link>
         </div>
-      </div>
+        </div>
+      </>
     );
   }
 
@@ -41,8 +51,15 @@ const ServiceDetailPage = () => {
       <SEOHelmet
         title={`${service.title} - SA Golfing`}
         description={service.detailedDescription || service.description}
-        canonical={`https://sagolfing-production.up.railway.app/service/${service.slug}`}
+        canonical={serviceUrl(service.slug)}
+        keywords={`${service.title}, golf services south africa, ${service.slug.replace(/-/g, ' ')}, SA Golfing`}
       />
+      <StructuredData data={createServiceSchema(service)} />
+      <StructuredData data={createBreadcrumbSchema([
+        { name: 'Home', url: absoluteUrl('/') },
+        { name: 'Services', url: absoluteUrl('/#services') },
+        { name: service.title, url: serviceUrl(service.slug) },
+      ])} />
       
       <div className="min-h-screen bg-gradient-to-br from-corporate-50 to-white">
         {/* Hero Section */}

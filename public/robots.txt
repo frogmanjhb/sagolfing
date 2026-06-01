@@ -3,5 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://sagolfing-production.up.railway.app/sitemap.xml
-
+Sitemap: https://www.sagolfing.com/sitemap.xml

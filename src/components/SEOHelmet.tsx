@@ -1,4 +1,11 @@
 import { Helmet } from 'react-helmet-async';
+import {
+  DEFAULT_KEYWORDS,
+  DEFAULT_OG_IMAGE,
+  SITE_NAME,
+  SITE_URL,
+  absoluteUrl,
+} from '../config/seo';
 
 interface SEOHelmetProps {
   title: string;
@@ -7,44 +14,43 @@ interface SEOHelmetProps {
   image?: string;
   type?: 'website' | 'article';
   keywords?: string;
+  noIndex?: boolean;
 }
 
 const SEOHelmet = ({
   title,
   description,
-  canonical = 'https://sagolfing-production.up.railway.app',
-  image = 'https://cdn.sanity.io/images/03mhssoh/production/631d48fcccdb3e93c90944ebe50fc9e061038891-1832x1222.jpg',
+  canonical = SITE_URL,
+  image = DEFAULT_OG_IMAGE,
   type = 'website',
-  keywords = 'golf south africa, golf courses, johannesburg golf, cape town golf, garden route golf, durban golf, golf booking, golf tours',
+  keywords = DEFAULT_KEYWORDS,
+  noIndex = false,
 }: SEOHelmetProps) => {
   const fullTitle = title.includes('SA Golfing') ? title : `${title} | SA Golfing`;
+  const resolvedCanonical = canonical.startsWith('http') ? canonical : absoluteUrl(canonical);
 
   return (
     <Helmet>
-      {/* Primary Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="title" content={fullTitle} />
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <link rel="canonical" href={canonical} />
+      <link rel="canonical" href={resolvedCanonical} />
 
-      {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
-      <meta property="og:url" content={canonical} />
+      <meta property="og:url" content={resolvedCanonical} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
-      <meta property="og:site_name" content="SA Golfing" />
+      <meta property="og:site_name" content={SITE_NAME} />
 
-      {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:url" content={canonical} />
+      <meta name="twitter:url" content={resolvedCanonical} />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
 
-      {/* Additional Meta Tags */}
-      <meta name="robots" content="index, follow" />
+      <meta name="robots" content={noIndex ? 'noindex, nofollow' : 'index, follow'} />
       <meta name="language" content="English" />
       <meta name="geo.region" content="ZA" />
       <meta name="geo.placename" content="South Africa" />
@@ -53,4 +59,3 @@ const SEOHelmet = ({
 };
 
 export default SEOHelmet;
-

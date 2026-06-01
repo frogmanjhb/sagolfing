@@ -38,6 +38,7 @@
   },
   "devDependencies": {
     "ogl": "^1.0.11",
-    "terser": "^5.44.1"
+    "terser": "^5.44.1",
+    "vite-prerender-plugin": "^0.5.13"
   }
 }

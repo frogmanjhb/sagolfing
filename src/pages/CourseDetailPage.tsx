@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { golfCourses } from '../data/courses';
 import SEOHelmet from '../components/SEOHelmet';
 import StructuredData, { createGolfCourseSchema, createBreadcrumbSchema } from '../components/StructuredData';
+import { absoluteUrl, courseUrl } from '../config/seo';
 
 const CourseDetailPage = () => {
   const { courseId } = useParams<{ courseId: string }>();
@@ -20,7 +21,14 @@ const CourseDetailPage = () => {
 
   if (!course) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-corporate-50">
+      <>
+        <SEOHelmet
+          title="Course Not Found"
+          description="The requested golf course could not be found on SA Golfing."
+          canonical="/"
+          noIndex
+        />
+        <div className="min-h-screen flex items-center justify-center bg-corporate-50">
         <div className="text-center">
           <h2 className="text-2xl font-bold text-corporate-900 mb-4">Course Not Found</h2>
           <button
@@ -50,7 +58,8 @@ const CourseDetailPage = () => {
             Back to Courses
           </button>
         </div>
-      </div>
+        </div>
+      </>
     );
   }
 
@@ -67,16 +76,16 @@ const CourseDetailPage = () => {
       <SEOHelmet
         title={`${course.name} Golf Course - ${course.region}`}
         description={metaDescription}
-        canonical={`https://sagolfing-production.up.railway.app/course/${course.id}`}
+        canonical={courseUrl(course.id)}
         image={course.image || 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=1200&h=600&fit=crop'}
         keywords={courseKeywords}
         type="article"
       />
       <StructuredData data={createGolfCourseSchema(course)} />
       <StructuredData data={createBreadcrumbSchema([
-        { name: 'Home', url: 'https://sagolfing-production.up.railway.app/' },
-        { name: 'Golf Courses', url: 'https://sagolfing-production.up.railway.app/#courses' },
-        { name: course.name, url: `https://sagolfing-production.up.railway.app/course/${course.id}` },
+        { name: 'Home', url: absoluteUrl('/') },
+        { name: 'Golf Courses', url: absoluteUrl('/#courses') },
+        { name: course.name, url: courseUrl(course.id) },
       ])} />
       
       <div className="min-h-screen bg-corporate-50 pt-24 pb-16">

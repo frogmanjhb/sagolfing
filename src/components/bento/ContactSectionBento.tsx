@@ -1,9 +1,10 @@
+import { CONTACT_EMAIL, CONTACT_NAME, CONTACT_PHONE, CONTACT_PHONE_TEL } from '../config/seo';
+
 const ContactSectionBento = () => {
   return (
     <section id="contact" className="py-8 bg-gradient-to-br from-corporate-50 to-white">
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {/* Contact Info Card */}
           <div className="bg-white rounded-2xl p-6 shadow-lg border-2 border-primary-100">
             <div className="mb-4">
               <h2 className="text-2xl font-bold text-corporate-900 mb-2">
@@ -14,27 +15,47 @@ const ContactSectionBento = () => {
               </p>
             </div>
             
-            <div className="flex items-center gap-4 pt-4 border-t-2 border-corporate-100">
-              <div className="flex-shrink-0 w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center">
-                <svg className="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
+            <div className="space-y-4 pt-4 border-t-2 border-corporate-100">
+              <div className="flex items-center gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center">
+                  <svg className="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-xs font-semibold text-corporate-600 mb-1">
+                    Email Us
+                  </h3>
+                  <a
+                    href={`mailto:${CONTACT_EMAIL}`}
+                    className="text-primary-600 hover:text-primary-700 font-bold text-lg transition-colors duration-200"
+                  >
+                    {CONTACT_EMAIL}
+                  </a>
+                </div>
               </div>
-              <div>
-                <h3 className="text-xs font-semibold text-corporate-600 mb-1">
-                  Email Us
-                </h3>
-                <a
-                  href="mailto:info@sagolfing.com"
-                  className="text-primary-600 hover:text-primary-700 font-bold text-lg transition-colors duration-200"
-                >
-                  info@sagolfing.com
-                </a>
+
+              <div className="flex items-center gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center">
+                  <svg className="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-xs font-semibold text-corporate-600 mb-1">
+                    Call {CONTACT_NAME}
+                  </h3>
+                  <a
+                    href={`tel:${CONTACT_PHONE_TEL}`}
+                    className="text-primary-600 hover:text-primary-700 font-bold text-lg transition-colors duration-200"
+                  >
+                    {CONTACT_PHONE}
+                  </a>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Quick Info Card */}
           <div className="bg-gradient-to-br from-primary-600 to-primary-700 rounded-2xl p-6 text-white shadow-lg">
             <h3 className="text-xl font-bold mb-4">Why Choose Us?</h3>
             <ul className="space-y-3 text-sm">
@@ -68,4 +89,3 @@ const ContactSectionBento = () => {
 };
 
 export default ContactSectionBento;
-
