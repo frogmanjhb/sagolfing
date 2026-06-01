@@ -53,7 +53,7 @@ const Header = () => {
             onClick={() => scrollToSection('home')}
           >
             <img 
-              src="https://www.sagolfing.com/wp-content/uploads/2017/02/SAGolfing-Logo-2010.png" 
+              src="/images/SAGolfing-Logo-2010 (1).png" 
               alt="SAGolfing.com" 
               className="h-[50px] md:h-[60px] transition-all duration-300"
             />

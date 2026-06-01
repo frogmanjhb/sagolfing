@@ -21,7 +21,7 @@ export const createOrganizationSchema = () => ({
   name: 'SA Golfing',
   description: 'Your preferred golfing partner away from home. Discover the best golf courses in South Africa.',
   url: 'https://sagolfing-production.up.railway.app',
-  logo: 'https://sagolfing-production.up.railway.app/vite.svg',
+  logo: 'https://sagolfing-production.up.railway.app/images/SAGolfing-Logo-2010%20(1).png',
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'Customer Service',

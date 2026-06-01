@@ -3,8 +3,7 @@ import type { Region } from '../types';
 
 const HERO_IMAGE =
   'https://cdn.sanity.io/images/03mhssoh/production/631d48fcccdb3e93c90944ebe50fc9e061038891-1832x1222.jpg';
-const LOGO_URL =
-  'https://www.sagolfing.com/wp-content/uploads/2017/02/SAGolfing-Logo-2010.png';
+const LOGO_URL = '/images/SAGolfing-Logo-2010 (1).png';
 
 const REGION_FEATURED_COURSE: Partial<Record<Region, string>> = {
   'Garden Route': 'pezula',

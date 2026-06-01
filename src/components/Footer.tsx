@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
             <img 
-              src="https://www.sagolfing.com/wp-content/uploads/2017/02/SAGolfing-Logo-2010.png" 
+              src="/images/SAGolfing-Logo-2010 (1).png" 
               alt="SAGolfing.com" 
               className="h-12 mb-4"
             />
