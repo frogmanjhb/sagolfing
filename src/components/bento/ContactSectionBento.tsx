@@ -1,4 +1,4 @@
-import { CONTACT_EMAIL, CONTACT_NAME, CONTACT_PHONE, CONTACT_PHONE_TEL } from '../config/seo';
+import { CONTACT_EMAIL, CONTACT_NAME, CONTACT_PHONE, CONTACT_PHONE_TEL } from '../../config/seo';
 
 const ContactSectionBento = () => {
   return (

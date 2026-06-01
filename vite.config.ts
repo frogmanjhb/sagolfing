@@ -6,15 +6,19 @@ import { seoBuildPlugin } from './plugins/seoBuildPlugin'
 import { getPrerenderRoutes } from './src/config/seo'
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [
     react(),
     seoBuildPlugin(),
-    vitePrerenderPlugin({
-      renderTarget: '#root',
-      prerenderScript: resolve(__dirname, 'src/prerender.tsx'),
-      additionalPrerenderRoutes: getPrerenderRoutes().filter((route) => route !== '/'),
-    }),
+    ...(mode === 'prerender'
+      ? [
+          vitePrerenderPlugin({
+            renderTarget: '#root',
+            prerenderScript: resolve(__dirname, 'src/prerender.tsx'),
+            additionalPrerenderRoutes: getPrerenderRoutes().filter((route) => route !== '/'),
+          }),
+        ]
+      : []),
   ],
   server: {
     port: 3000,
@@ -42,4 +46,4 @@ export default defineConfig({
   optimizeDeps: {
     include: ['react', 'react-dom', 'react-router-dom', 'react-helmet-async'],
   },
-})
+}))

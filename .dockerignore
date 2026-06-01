@@ -1,0 +1,21 @@
+# Build output — regenerated inside the container via `npm run build`
+dist/
+
+# Dependencies — installed in the container via `npm ci`
+node_modules/
+
+# Git and local tooling
+.git/
+.gitignore
+.cursor/
+.vscode/
+
+# Environment and logs
+.env
+.env.*
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
