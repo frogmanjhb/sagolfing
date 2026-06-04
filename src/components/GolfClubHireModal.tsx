@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import FormFeedback from './FormFeedback';
+import FormSubmitSuccess from './FormSubmitSuccess';
+import ModalShell from './ModalShell';
 import { useFormSubmit } from '../hooks/useFormSubmit';
 
 interface GolfClubHireModalProps {
@@ -40,48 +42,51 @@ const GolfClubHireModal = ({ isOpen, onClose }: GolfClubHireModalProps) => {
     });
   };
 
+  const handleDone = () => {
+    reset();
+    setFormData(initialHireData);
+    onClose();
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     const fullName = `${formData.name} ${formData.surname}`.trim();
 
-    await send(
-      {
-        formType: 'golf-club-hire',
-        subject: `Golf club hire request from ${fullName}`,
-        fromName: fullName,
-        replyTo: formData.email,
-        fields: formData,
-      },
-      (method) => {
-        if (method === 'api') {
-          setFormData(initialHireData);
-          onClose();
-        }
-      }
-    );
+    await send({
+      formType: 'golf-club-hire',
+      subject: `Golf club hire request from ${fullName}`,
+      fromName: fullName,
+      replyTo: formData.email,
+      fields: formData,
+    });
   };
 
-  if (!isOpen) return null;
-
   const isSubmitting = status === 'submitting';
+  const isSuccess = status === 'success';
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
-      <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
-        <div className="sticky top-0 bg-white border-b border-corporate-200 px-6 py-4 flex items-center justify-between">
-          <h2 className="text-2xl font-bold text-corporate-900">Book Your Golf Clubs</h2>
-          <button
-            onClick={onClose}
-            className="text-corporate-500 hover:text-corporate-700 transition-colors duration-200 p-2 hover:bg-corporate-100 rounded-lg"
-            aria-label="Close modal"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-
+    <ModalShell
+      isOpen={isOpen}
+      onClose={isSuccess ? handleDone : onClose}
+      title={isSuccess ? 'Thank you' : 'Book Your Golf Clubs'}
+    >
+        {isSuccess ? (
+          <FormSubmitSuccess
+            title="Request submitted"
+            message={
+              usedMailtoFallback
+                ? 'Your email app should open with your rental request ready to send.'
+                : 'Your golf club hire request has been submitted successfully.'
+            }
+            detail={
+              usedMailtoFallback
+                ? 'Send the email to complete your request. We will contact you once we receive it.'
+                : 'We will contact you shortly to confirm availability and arrange delivery.'
+            }
+            onDone={handleDone}
+          />
+        ) : (
         <form onSubmit={handleSubmit} className="p-6 space-y-6">
           {/* Personal Information */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -303,12 +308,7 @@ const GolfClubHireModal = ({ isOpen, onClose }: GolfClubHireModalProps) => {
             />
           </div>
 
-          <FormFeedback
-            status={status}
-            errorMessage={errorMessage}
-            usedMailtoFallback={usedMailtoFallback}
-            successMessage="Thank you for your golf club hire request! We will contact you shortly to confirm availability."
-          />
+          <FormFeedback status={status} errorMessage={errorMessage} />
 
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <button
@@ -328,8 +328,8 @@ const GolfClubHireModal = ({ isOpen, onClose }: GolfClubHireModalProps) => {
             </button>
           </div>
         </form>
-      </div>
-    </div>
+        )}
+    </ModalShell>
   );
 };
 

@@ -201,63 +201,61 @@ const BookGolfTourPromo = () => {
             ))}
           </div>
 
-          {/* Footer */}
-          <footer className="flex flex-col gap-4 bg-tour-navy px-5 py-5 text-white sm:flex-row sm:flex-nowrap sm:items-center sm:justify-between sm:gap-4 sm:px-6 sm:py-5 lg:gap-6 lg:px-8">
-            <div className="flex shrink-0 flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
-              <a
-                href="mailto:tim@sagolfing.com"
-                className="flex items-center gap-3 transition-opacity hover:opacity-90"
-              >
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-tour-lime text-tour-navy shadow-md">
-                  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                </span>
-                <span className="text-sm">
-                  Email: <span className="font-semibold text-tour-lime">tim@sagolfing.com</span>
-                </span>
-              </a>
-              <a
-                href={`tel:${CONTACT_PHONE_TEL}`}
-                className="flex items-center gap-3 transition-opacity hover:opacity-90"
-              >
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-tour-lime text-tour-navy shadow-md">
-                  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
-                </span>
-                <span className="text-sm">
-                  {CONTACT_NAME}: <span className="font-semibold text-tour-lime">{CONTACT_PHONE}</span>
-                </span>
-              </a>
-            </div>
+          {/* Footer — wraps on smaller widths so content is not clipped by overflow-hidden on the card */}
+          <footer className="bg-tour-navy px-5 py-6 text-white sm:px-6 lg:px-8">
+            <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3 xl:items-center xl:gap-8">
+              <div className="flex min-w-0 flex-col gap-4 sm:flex-row sm:flex-wrap sm:gap-6 md:col-span-2 xl:col-span-1">
+                <a
+                  href="mailto:tim@sagolfing.com"
+                  className="flex min-w-0 items-center gap-3 transition-opacity hover:opacity-90"
+                >
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-tour-lime text-tour-navy shadow-md">
+                    <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </span>
+                  <span className="min-w-0 text-sm leading-snug">
+                    Email:{' '}
+                    <span className="font-semibold text-tour-lime break-all sm:break-normal">
+                      tim@sagolfing.com
+                    </span>
+                  </span>
+                </a>
+                <a
+                  href={`tel:${CONTACT_PHONE_TEL}`}
+                  className="flex min-w-0 items-center gap-3 transition-opacity hover:opacity-90"
+                >
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-tour-lime text-tour-navy shadow-md">
+                    <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                  </span>
+                  <span className="min-w-0 text-sm leading-snug">
+                    {CONTACT_NAME}:{' '}
+                    <span className="font-semibold text-tour-lime whitespace-nowrap">{CONTACT_PHONE}</span>
+                  </span>
+                </a>
+              </div>
 
-            <p className="m-0 text-center text-sm leading-normal sm:shrink-0 sm:whitespace-nowrap sm:px-1">
-              <span className="hidden text-white/30 sm:inline" aria-hidden>
-                |
-              </span>
-              <span className="sm:mx-2 lg:mx-3">
+              <p className="m-0 min-w-0 text-center text-sm leading-relaxed md:col-span-2 xl:col-span-1 xl:px-2">
                 We take care of everything, so you can{' '}
                 <span className="font-semibold text-tour-lime">enjoy the game.</span>
-              </span>
-              <span className="hidden text-white/30 sm:inline" aria-hidden>
-                |
-              </span>
-            </p>
+              </p>
 
-            <a
-              href="https://www.sagolfing.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex shrink-0 items-center gap-3 transition-opacity hover:opacity-90 sm:justify-end"
-            >
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-tour-lime text-tour-navy shadow-md">
-                <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                </svg>
-              </span>
-              <span className="text-sm font-semibold">www.sagolfing.com</span>
-            </a>
+              <a
+                href="https://www.sagolfing.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex min-w-0 items-center justify-center gap-3 transition-opacity hover:opacity-90 md:justify-end xl:justify-end"
+              >
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-tour-lime text-tour-navy shadow-md">
+                  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                  </svg>
+                </span>
+                <span className="text-sm font-semibold whitespace-nowrap">www.sagolfing.com</span>
+              </a>
+            </div>
           </footer>
         </article>
 

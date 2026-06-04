@@ -39,6 +39,7 @@ const Header = () => {
   ];
 
   return (
+    <>
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
@@ -189,10 +190,11 @@ const Header = () => {
           </div>
         </div>
       </nav>
-      <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
-      <BookingModal isOpen={isBookingModalOpen} onClose={() => setIsBookingModalOpen(false)} />
-      <GolfClubHireModal isOpen={isGolfClubHireModalOpen} onClose={() => setIsGolfClubHireModalOpen(false)} />
     </header>
+    <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
+    <BookingModal isOpen={isBookingModalOpen} onClose={() => setIsBookingModalOpen(false)} />
+    <GolfClubHireModal isOpen={isGolfClubHireModalOpen} onClose={() => setIsGolfClubHireModalOpen(false)} />
+    </>
   );
 };
 

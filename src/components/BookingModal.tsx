@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from 'react';
 import { golfCourses } from '../data/courses';
 import FormFeedback from './FormFeedback';
+import FormSubmitSuccess from './FormSubmitSuccess';
+import ModalShell from './ModalShell';
 import { useFormSubmit } from '../hooks/useFormSubmit';
 
 interface BookingModalProps {
@@ -52,52 +54,55 @@ const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
     });
   };
 
+  const handleDone = () => {
+    reset();
+    setFormData(initialBookingData);
+    setNeedsClubs(false);
+    onClose();
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     const fullName = `${formData.name} ${formData.surname}`.trim();
 
-    await send(
-      {
-        formType: 'booking',
-        subject: `Booking request from ${fullName}`,
-        fromName: fullName,
-        replyTo: formData.email,
-        fields: {
-          ...formData,
-          needsClubs,
-        },
+    await send({
+      formType: 'booking',
+      subject: `Booking request from ${fullName}`,
+      fromName: fullName,
+      replyTo: formData.email,
+      fields: {
+        ...formData,
+        needsClubs,
       },
-      (method) => {
-        if (method === 'api') {
-          setFormData(initialBookingData);
-          setNeedsClubs(false);
-          onClose();
-        }
-      }
-    );
+    });
   };
 
-  if (!isOpen) return null;
-
   const isSubmitting = status === 'submitting';
+  const isSuccess = status === 'success';
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
-      <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
-        <div className="sticky top-0 bg-white border-b border-corporate-200 px-6 py-4 flex items-center justify-between">
-          <h2 className="text-2xl font-bold text-corporate-900">Book Your Tee Off Time</h2>
-          <button
-            onClick={onClose}
-            className="text-corporate-500 hover:text-corporate-700 transition-colors duration-200 p-2 hover:bg-corporate-100 rounded-lg"
-            aria-label="Close modal"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-
+    <ModalShell
+      isOpen={isOpen}
+      onClose={isSuccess ? handleDone : onClose}
+      title={isSuccess ? 'Thank you' : 'Book Your Tee Off Time'}
+    >
+        {isSuccess ? (
+          <FormSubmitSuccess
+            title="Booking request submitted"
+            message={
+              usedMailtoFallback
+                ? 'Your email app should open with your booking request ready to send.'
+                : 'Your booking request has been submitted successfully.'
+            }
+            detail={
+              usedMailtoFallback
+                ? 'Send the email to complete your request. We will contact you once we receive it.'
+                : "We've received your details and will contact you shortly to confirm your tee time."
+            }
+            onDone={handleDone}
+          />
+        ) : (
         <form onSubmit={handleSubmit} className="p-6 space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
@@ -382,12 +387,7 @@ const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
             </div>
           )}
 
-          <FormFeedback
-            status={status}
-            errorMessage={errorMessage}
-            usedMailtoFallback={usedMailtoFallback}
-            successMessage="Thank you for your booking request! We will contact you shortly."
-          />
+          <FormFeedback status={status} errorMessage={errorMessage} />
 
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <button
@@ -407,8 +407,8 @@ const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
             </button>
           </div>
         </form>
-      </div>
-    </div>
+        )}
+    </ModalShell>
   );
 };
 

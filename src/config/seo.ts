@@ -16,6 +16,12 @@ export const CONTACT_EMAIL = 'info@sagolfing.com';
 export const CONTACT_NAME = 'Tim Steenhoff';
 export const CONTACT_PHONE = '+27 82 770 1733';
 export const CONTACT_PHONE_TEL = '+27827701733';
+export const CONTACT_WHATSAPP = CONTACT_PHONE_TEL.replace(/\D/g, '');
+
+export function whatsAppUrl(message?: string): string {
+  const base = `https://wa.me/${CONTACT_WHATSAPP}`;
+  return message ? `${base}?text=${encodeURIComponent(message)}` : base;
+}
 
 export function absoluteUrl(path: string): string {
   const normalized = path.startsWith('/') ? path : `/${path}`;

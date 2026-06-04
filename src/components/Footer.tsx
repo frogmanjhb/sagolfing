@@ -1,4 +1,4 @@
-import { CONTACT_EMAIL, CONTACT_NAME, CONTACT_PHONE, CONTACT_PHONE_TEL } from '../config/seo';
+import { CONTACT_EMAIL, CONTACT_NAME, CONTACT_PHONE, CONTACT_PHONE_TEL, whatsAppUrl } from '../config/seo';
 
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
@@ -68,6 +68,14 @@ const Footer = () => {
                 className="block text-corporate-300 hover:text-white transition-colors duration-200"
               >
                 {CONTACT_PHONE}
+              </a>
+              <a
+                href={whatsAppUrl("Hi Tim, I'd like to enquire about golf in South Africa.")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-corporate-300 hover:text-white transition-colors duration-200"
+              >
+                Chat to Tim on WhatsApp
               </a>
             </div>
           </div>
