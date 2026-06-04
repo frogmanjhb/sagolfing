@@ -16,6 +16,12 @@ COPY . .
 # Make binaries executable
 RUN chmod -R +x node_modules/.bin
 
+# Vite embeds VITE_* at build time — Railway passes service variables as build args
+ARG VITE_WEB3FORMS_ACCESS_KEY
+ARG VITE_SITE_URL
+ENV VITE_WEB3FORMS_ACCESS_KEY=$VITE_WEB3FORMS_ACCESS_KEY
+ENV VITE_SITE_URL=$VITE_SITE_URL
+
 # Build the application
 RUN npm run build
 

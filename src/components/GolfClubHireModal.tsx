@@ -1,25 +1,37 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import FormFeedback from './FormFeedback';
+import { useFormSubmit } from '../hooks/useFormSubmit';
 
 interface GolfClubHireModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
+const initialHireData = {
+  name: '',
+  surname: '',
+  email: '',
+  phoneNumber: '',
+  startDate: '',
+  endDate: '',
+  clubType: '',
+  handedness: '',
+  numberOfSets: '1',
+  preferredBrand: '',
+  deliveryLocation: '',
+  specialRequirements: '',
+};
+
 const GolfClubHireModal = ({ isOpen, onClose }: GolfClubHireModalProps) => {
-  const [formData, setFormData] = useState({
-    name: '',
-    surname: '',
-    email: '',
-    phoneNumber: '',
-    startDate: '',
-    endDate: '',
-    clubType: '',
-    handedness: '',
-    numberOfSets: '1',
-    preferredBrand: '',
-    deliveryLocation: '',
-    specialRequirements: '',
-  });
+  const [formData, setFormData] = useState(initialHireData);
+  const { status, errorMessage, usedMailtoFallback, send, reset } = useFormSubmit();
+
+  useEffect(() => {
+    if (!isOpen) {
+      reset();
+      setFormData(initialHireData);
+    }
+  }, [isOpen, reset]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -28,31 +40,31 @@ const GolfClubHireModal = ({ isOpen, onClose }: GolfClubHireModalProps) => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the data to your backend
-    console.log('Golf club hire request submitted:', formData);
-    // For now, just close the modal
-    alert('Thank you for your golf club hire request! We will contact you shortly to confirm availability.');
-    onClose();
-    // Reset form
-    setFormData({
-      name: '',
-      surname: '',
-      email: '',
-      phoneNumber: '',
-      startDate: '',
-      endDate: '',
-      clubType: '',
-      handedness: '',
-      numberOfSets: '1',
-      preferredBrand: '',
-      deliveryLocation: '',
-      specialRequirements: '',
-    });
+
+    const fullName = `${formData.name} ${formData.surname}`.trim();
+
+    await send(
+      {
+        formType: 'golf-club-hire',
+        subject: `Golf club hire request from ${fullName}`,
+        fromName: fullName,
+        replyTo: formData.email,
+        fields: formData,
+      },
+      (method) => {
+        if (method === 'api') {
+          setFormData(initialHireData);
+          onClose();
+        }
+      }
+    );
   };
 
   if (!isOpen) return null;
+
+  const isSubmitting = status === 'submitting';
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
@@ -291,18 +303,26 @@ const GolfClubHireModal = ({ isOpen, onClose }: GolfClubHireModalProps) => {
             />
           </div>
 
-          {/* Submit Buttons */}
+          <FormFeedback
+            status={status}
+            errorMessage={errorMessage}
+            usedMailtoFallback={usedMailtoFallback}
+            successMessage="Thank you for your golf club hire request! We will contact you shortly to confirm availability."
+          />
+
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <button
               type="submit"
-              className="flex-1 px-8 py-4 bg-primary-600 text-white font-bold rounded-xl hover:bg-primary-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+              disabled={isSubmitting}
+              className="flex-1 px-8 py-4 bg-primary-600 text-white font-bold rounded-xl hover:bg-primary-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 disabled:opacity-60 disabled:transform-none disabled:hover:scale-100"
             >
-              Submit Rental Request
+              {isSubmitting ? 'Sending…' : 'Submit Rental Request'}
             </button>
             <button
               type="button"
               onClick={onClose}
-              className="px-8 py-4 bg-corporate-200 text-corporate-700 font-semibold rounded-xl hover:bg-corporate-300 transition-all duration-300"
+              disabled={isSubmitting}
+              className="px-8 py-4 bg-corporate-200 text-corporate-700 font-semibold rounded-xl hover:bg-corporate-300 transition-all duration-300 disabled:opacity-60"
             >
               Cancel
             </button>

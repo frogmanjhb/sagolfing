@@ -1,18 +1,30 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
+import FormFeedback from './FormFeedback';
+import { useFormSubmit } from '../hooks/useFormSubmit';
 
 interface EnquiryModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
+const initialFormData = {
+  name: '',
+  email: '',
+  phoneNumber: '',
+  enquiry: '',
+};
+
 const EnquiryModal = ({ isOpen, onClose }: EnquiryModalProps) => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phoneNumber: '',
-    enquiry: '',
-  });
+  const [formData, setFormData] = useState(initialFormData);
+  const { status, errorMessage, usedMailtoFallback, send, reset } = useFormSubmit();
+
+  useEffect(() => {
+    if (!isOpen) {
+      reset();
+      setFormData(initialFormData);
+    }
+  }, [isOpen, reset]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -21,23 +33,34 @@ const EnquiryModal = ({ isOpen, onClose }: EnquiryModalProps) => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the data to your backend
-    console.log('Enquiry submitted:', formData);
-    // For now, just close the modal
-    alert('Thank you for your enquiry! We will contact you shortly.');
-    onClose();
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phoneNumber: '',
-      enquiry: '',
-    });
+
+    await send(
+      {
+        formType: 'enquiry',
+        subject: `Website enquiry from ${formData.name}`,
+        fromName: formData.name,
+        replyTo: formData.email,
+        fields: {
+          name: formData.name,
+          email: formData.email,
+          phoneNumber: formData.phoneNumber,
+          enquiry: formData.enquiry,
+        },
+      },
+      (method) => {
+        if (method === 'api') {
+          setFormData(initialFormData);
+          onClose();
+        }
+      }
+    );
   };
 
   if (!isOpen) return null;
+
+  const isSubmitting = status === 'submitting';
 
   return createPortal(
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
@@ -65,9 +88,10 @@ const EnquiryModal = ({ isOpen, onClose }: EnquiryModalProps) => {
               id="name"
               name="name"
               required
+              disabled={isSubmitting}
               value={formData.name}
               onChange={handleChange}
-              className="w-full px-4 py-3 border-2 border-corporate-300 rounded-lg focus:outline-none focus:border-primary-500 transition-colors duration-200"
+              className="w-full px-4 py-3 border-2 border-corporate-300 rounded-lg focus:outline-none focus:border-primary-500 transition-colors duration-200 disabled:opacity-60"
               placeholder="Enter your name"
             />
           </div>
@@ -82,9 +106,10 @@ const EnquiryModal = ({ isOpen, onClose }: EnquiryModalProps) => {
                 id="email"
                 name="email"
                 required
+                disabled={isSubmitting}
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border-2 border-corporate-300 rounded-lg focus:outline-none focus:border-primary-500 transition-colors duration-200"
+                className="w-full px-4 py-3 border-2 border-corporate-300 rounded-lg focus:outline-none focus:border-primary-500 transition-colors duration-200 disabled:opacity-60"
                 placeholder="your.email@example.com"
               />
             </div>
@@ -98,9 +123,10 @@ const EnquiryModal = ({ isOpen, onClose }: EnquiryModalProps) => {
                 id="phoneNumber"
                 name="phoneNumber"
                 required
+                disabled={isSubmitting}
                 value={formData.phoneNumber}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border-2 border-corporate-300 rounded-lg focus:outline-none focus:border-primary-500 transition-colors duration-200"
+                className="w-full px-4 py-3 border-2 border-corporate-300 rounded-lg focus:outline-none focus:border-primary-500 transition-colors duration-200 disabled:opacity-60"
                 placeholder="+27 12 345 6789"
               />
             </div>
@@ -115,24 +141,33 @@ const EnquiryModal = ({ isOpen, onClose }: EnquiryModalProps) => {
               name="enquiry"
               rows={5}
               required
+              disabled={isSubmitting}
               value={formData.enquiry}
               onChange={handleChange}
-              className="w-full px-4 py-3 border-2 border-corporate-300 rounded-lg focus:outline-none focus:border-primary-500 transition-colors duration-200 resize-none"
+              className="w-full px-4 py-3 border-2 border-corporate-300 rounded-lg focus:outline-none focus:border-primary-500 transition-colors duration-200 resize-none disabled:opacity-60"
               placeholder="Tell us how we can help you..."
             />
           </div>
 
+          <FormFeedback
+            status={status}
+            errorMessage={errorMessage}
+            usedMailtoFallback={usedMailtoFallback}
+          />
+
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <button
               type="submit"
-              className="flex-1 px-8 py-4 bg-primary-600 text-white font-bold rounded-xl hover:bg-primary-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+              disabled={isSubmitting}
+              className="flex-1 px-8 py-4 bg-primary-600 text-white font-bold rounded-xl hover:bg-primary-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 disabled:opacity-60 disabled:transform-none disabled:hover:scale-100"
             >
-              Submit Enquiry
+              {isSubmitting ? 'Sending…' : 'Submit Enquiry'}
             </button>
             <button
               type="button"
               onClick={onClose}
-              className="px-8 py-4 bg-corporate-200 text-corporate-700 font-semibold rounded-xl hover:bg-corporate-300 transition-all duration-300"
+              disabled={isSubmitting}
+              className="px-8 py-4 bg-corporate-200 text-corporate-700 font-semibold rounded-xl hover:bg-corporate-300 transition-all duration-300 disabled:opacity-60"
             >
               Cancel
             </button>

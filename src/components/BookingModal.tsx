@@ -1,30 +1,42 @@
-import { useState, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { golfCourses } from '../data/courses';
+import FormFeedback from './FormFeedback';
+import { useFormSubmit } from '../hooks/useFormSubmit';
 
 interface BookingModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
+const initialBookingData = {
+  name: '',
+  surname: '',
+  teeOffTime: '',
+  golfCourse: '',
+  phoneNumber: '',
+  email: '',
+  startDate: '',
+  endDate: '',
+  clubType: '',
+  handedness: '',
+  numberOfSets: '1',
+  preferredBrand: '',
+  deliveryLocation: '',
+  specialRequirements: '',
+};
+
 const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
   const [needsClubs, setNeedsClubs] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    surname: '',
-    teeOffTime: '',
-    golfCourse: '',
-    phoneNumber: '',
-    email: '',
-    // Golf club hire fields
-    startDate: '',
-    endDate: '',
-    clubType: '',
-    handedness: '',
-    numberOfSets: '1',
-    preferredBrand: '',
-    deliveryLocation: '',
-    specialRequirements: '',
-  });
+  const [formData, setFormData] = useState(initialBookingData);
+  const { status, errorMessage, usedMailtoFallback, send, reset } = useFormSubmit();
+
+  useEffect(() => {
+    if (!isOpen) {
+      reset();
+      setFormData(initialBookingData);
+      setNeedsClubs(false);
+    }
+  }, [isOpen, reset]);
 
   // Get all unique course names from the data
   const courseNames = useMemo(() => {
@@ -40,34 +52,35 @@ const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the data to your backend
-    console.log('Booking submitted:', formData);
-    // For now, just close the modal
-    alert('Thank you for your booking request! We will contact you shortly.');
-    onClose();
-    // Reset form
-    setFormData({
-      name: '',
-      surname: '',
-      teeOffTime: '',
-      golfCourse: '',
-      phoneNumber: '',
-      email: '',
-      startDate: '',
-      endDate: '',
-      clubType: '',
-      handedness: '',
-      numberOfSets: '1',
-      preferredBrand: '',
-      deliveryLocation: '',
-      specialRequirements: '',
-    });
-    setNeedsClubs(false);
+
+    const fullName = `${formData.name} ${formData.surname}`.trim();
+
+    await send(
+      {
+        formType: 'booking',
+        subject: `Booking request from ${fullName}`,
+        fromName: fullName,
+        replyTo: formData.email,
+        fields: {
+          ...formData,
+          needsClubs,
+        },
+      },
+      (method) => {
+        if (method === 'api') {
+          setFormData(initialBookingData);
+          setNeedsClubs(false);
+          onClose();
+        }
+      }
+    );
   };
 
   if (!isOpen) return null;
+
+  const isSubmitting = status === 'submitting';
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
@@ -369,17 +382,26 @@ const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
             </div>
           )}
 
+          <FormFeedback
+            status={status}
+            errorMessage={errorMessage}
+            usedMailtoFallback={usedMailtoFallback}
+            successMessage="Thank you for your booking request! We will contact you shortly."
+          />
+
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <button
               type="submit"
-              className="flex-1 px-8 py-4 bg-primary-600 text-white font-bold rounded-xl hover:bg-primary-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+              disabled={isSubmitting}
+              className="flex-1 px-8 py-4 bg-primary-600 text-white font-bold rounded-xl hover:bg-primary-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 disabled:opacity-60 disabled:transform-none disabled:hover:scale-100"
             >
-              Submit Booking Request
+              {isSubmitting ? 'Sending…' : 'Submit Booking Request'}
             </button>
             <button
               type="button"
               onClick={onClose}
-              className="px-8 py-4 bg-corporate-200 text-corporate-700 font-semibold rounded-xl hover:bg-corporate-300 transition-all duration-300"
+              disabled={isSubmitting}
+              className="px-8 py-4 bg-corporate-200 text-corporate-700 font-semibold rounded-xl hover:bg-corporate-300 transition-all duration-300 disabled:opacity-60"
             >
               Cancel
             </button>
