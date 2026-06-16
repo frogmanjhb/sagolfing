@@ -45,12 +45,12 @@ const ServicesSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:[grid-auto-rows:320px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 [grid-auto-rows:minmax(280px,auto)] md:[grid-auto-rows:320px]">
           {orderedServices.map((service, index) => (
             <Link
               key={service.id}
               to={`/service/${service.slug}`}
-              className={`flex h-full flex-col rounded-xl border-2 hover:border-primary-400 hover:shadow-2xl transition-all duration-300 group cursor-pointer transform hover:scale-105 bg-white [perspective:1000px] ${
+              className={`flex min-h-[280px] md:min-h-0 h-full flex-col rounded-xl border-2 hover:border-primary-400 hover:shadow-2xl transition-all duration-300 group cursor-pointer transform hover:scale-105 bg-white [perspective:1000px] ${
                 index === 0 ? 'border-primary-300 shadow-lg' : 'border-corporate-200 shadow-md'
               }`}
               aria-label={`${service.title} - Learn more`}

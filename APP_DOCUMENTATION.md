@@ -8,12 +8,13 @@ SA Golfing is a comprehensive golf booking and tour management web application f
 ## Table of Contents
 1. [Application Overview](#application-overview)
 2. [Core Features](#core-features)
-3. [Technical Architecture](#technical-architecture)
-4. [User Flows](#user-flows)
-5. [Data Structure](#data-structure)
-6. [SEO & Performance](#seo--performance)
-7. [Current Capabilities](#current-capabilities)
-8. [Future Enhancements](#future-enhancements)
+3. [Modal Forms & Lead Capture](#modal-forms--lead-capture)
+4. [Technical Architecture](#technical-architecture)
+5. [User Flows](#user-flows)
+6. [Data Structure](#data-structure)
+7. [SEO & Performance](#seo--performance)
+8. [Current Capabilities](#current-capabilities)
+9. [Future Enhancements](#future-enhancements)
 
 ---
 
@@ -22,10 +23,11 @@ SA Golfing is a comprehensive golf booking and tour management web application f
 ### Purpose
 The SA Golfing application is designed to:
 - Showcase South Africa's top 100 golf courses
-- Provide comprehensive golf tour and booking services
+- Provide comprehensive golf tour and booking services via modal forms
 - Offer corporate golf event management
 - Facilitate golf equipment rental and transportation services
 - Connect international and local golfers with premium golf experiences
+- Enable direct contact via WhatsApp, phone, and email
 
 ### Target Audience
 - International golf tourists
@@ -39,9 +41,20 @@ The SA Golfing application is designed to:
 - **Routing:** React Router DOM 7.9.6
 - **Styling:** TailwindCSS 4.1.17
 - **Build Tool:** Vite 7.2.2
-- **SEO:** React Helmet Async 2.0.5
+- **Prerendering:** vite-prerender-plugin 0.5.13 (optional `build:prerender`)
+- **SEO:** React Helmet Async 2.0.5 + build-time sitemap plugin
+- **Forms:** Web3Forms API with mailto fallback
 - **Deployment:** Railway (Production) / Docker ready
 - **Node Version:** 20.0.0+
+
+### Build Scripts
+| Script | Description |
+|--------|-------------|
+| `npm run dev` | Local development server (port 3000) |
+| `npm run build` | Standard Vite production build |
+| `npm run build:prerender` | Production build with static HTML prerendering |
+| `npm run preview` | Preview production build locally |
+| `npm start` | Serve `dist/` for production (Railway/Docker) |
 
 ---
 
@@ -50,22 +63,37 @@ The SA Golfing application is designed to:
 ### 1. Homepage (Landing Page)
 **Location:** `/` (root route)
 
+The homepage supports two layout modes via `ViewModeContext` (`standard` | `bento`). The default is **standard**; bento components swap in alternative card-based layouts for Hero, Services, Courses, Clients, and Contact. Both layouts share `BookGolfTourPromo` and the global Header/Footer.
+
 #### Components:
 1. **Header Navigation**
-   - Logo and branding
-   - Navigation links to all sections
-   - Sticky navigation on scroll
+   - Local SA Golfing logo (`/images/SAGolfing-Logo-2010 (1).png`)
+   - CPG partnership logo displayed alongside CTAs
+   - Sticky navigation with scroll-aware styling
    - Mobile-responsive hamburger menu
-   - Links: Home, Services, Courses, Clients, Contact
+   - Section links: Home, Services, Courses
+   - Persistent modal CTAs:
+     - **Book Your Tee Off Time** → `BookingModal`
+     - **Book your Golf Clubs** → `GolfClubHireModal`
+     - **Enquire Now** → `EnquiryModal`
 
 2. **Hero Section**
-   - Full-width banner with compelling headline
-   - Call-to-action button
-   - Background imagery of South African golf courses
+   - Full-width banner with Ken Burns animated background
+   - Headline: "Play the Best Golf Courses in South Africa"
    - Tagline: "Your preferred golfing partner away from home"
-   - Primary CTA: "Explore Our Courses"
+   - Dual CTAs opening the booking modal:
+     - "Book Your Tee Off in Johannesburg"
+     - "Book Your Tee Off in Cape Town"
+   - **HeroBento** variant: card-based hero layout for bento mode
 
-3. **Services Section**
+3. **Book Golf Tour Promo**
+   - Featured section between Hero and Services on both layout modes
+   - Regional tour cards (Garden Route, Cape Town, Durban, Johannesburg)
+   - Clicking a region dispatches `sagolfing:select-region` and scrolls to Courses
+   - Highlights: nationwide coverage, safari/coastal routes, booking support, 24-hour chauffeur
+   - Direct phone contact for Tim Steenhoff
+
+4. **Services Section**
    - Grid display of 6 core services
    - Each service card includes:
      - Icon/image
@@ -73,45 +101,53 @@ The SA Golfing application is designed to:
      - Brief description
      - "Learn More" button linking to detail page
    
-   **Services Offered:**
-   - Corporate Golf Days (up to 144 players)
-   - Golf Tours (customized across SA)
+   **Services Offered (display order):**
    - Day Golf Excursions (single-day packages)
    - Golf Club Hire (50 sets of 5-star clubs)
-   - Chauffeur Driver (24/7 service, 4-14 seater vehicles)
    - Golf Holidays (complete vacation packages)
+   - Golf Tours (customized across SA)
+   - Chauffeur Driver (24/7 service, 4-14 seater vehicles)
+   - Corporate Golf Days (up to 144 players)
 
-4. **Courses Section**
+   Each card uses local imagery, bullet-point highlights, and links to service detail pages. **ServicesSectionBento** provides the bento layout variant.
+
+5. **Courses Section**
    - Regional tabs/filters for 5 regions:
      - Johannesburg (60+ courses)
      - Garden Route (9 courses)
      - Cape Town (27 courses)
      - Durban (9 courses)
      - Kruger (6 courses)
+   - Pagination: 9 courses shown initially per region, with "Show All" toggle
+   - Loading skeleton during region switches
+   - Listens for `sagolfing:select-region` events from BookGolfTourPromo
    - Course cards displaying:
-     - Course image
+     - Course image (local assets where available)
      - Course name
      - National ranking (if applicable)
      - Region
      - Key highlights
      - Travel time from airport
      - "View Details" button
+   - **CoursesSectionBento** provides the bento layout variant
 
-5. **Clients Section**
-   - Testimonials and client feedback
-   - Social proof
-   - Success stories
+6. **Clients Section**
+   - Infinite-scroll logo banner of airline and corporate clients
+   - Local airline logos (British Airways, Emirates, Qantas, Delta, Air France, Lufthansa, KLM, Iberia, Cathay Pacific)
+   - Corporate logos (Toyota, IBM, LG, NEC, Nedbank, Samsung, Toshiba)
+   - **ClientsSectionBento** provides the bento layout variant
 
-6. **Contact Section**
-   - Contact form
-   - Business information
-   - Location details
-   - Call-to-action for bookings
+7. **Contact Section**
+   - Contact details (no inline form — enquiries use header modals)
+   - Email: info@sagolfing.com
+   - Phone: Tim Steenhoff, +27 82 770 1733
+   - WhatsApp chat link with pre-filled message
+   - **ContactSectionBento** provides the bento layout variant
 
-7. **Footer**
-   - Company information
-   - Social media links
-   - Additional navigation
+8. **Footer**
+   - SA Golfing logo and tagline
+   - Quick links: Home, Services, Courses
+   - Contact block with email, phone, and WhatsApp
    - Copyright information
 
 ### 2. Course Detail Pages
@@ -278,37 +314,129 @@ The SA Golfing application is designed to:
 
 ---
 
+## Modal Forms & Lead Capture
+
+All primary lead-generation flows use modal dialogs accessible from the Header (and Hero booking CTAs). Forms share a common submission pipeline via `useFormSubmit` and `submitForm`.
+
+### Shared Form Infrastructure
+- **`ModalShell`** — reusable accessible modal wrapper
+- **`FormFeedback`** — inline error display during submission
+- **`FormSubmitSuccess`** — success state with contextual messaging
+- **`useFormSubmit`** — manages idle / submitting / success / error states
+- **`submitForm`** — sends to Web3Forms API when configured, otherwise opens a `mailto:` fallback
+
+### Submission Backend
+- **Production:** Web3Forms (`VITE_WEB3FORMS_ACCESS_KEY`) emails submissions to info@sagolfing.com
+- **Local dev fallback:** Opens the visitor's email client via `mailto:` when no access key is set
+- **Form types:** `enquiry`, `booking`, `golf-club-hire`
+
+### 1. Enquiry Modal
+**Trigger:** Header "Enquire Now" button
+
+**Fields:**
+- Name
+- Email
+- Phone number
+- Enquiry message
+
+**Behavior:** Resets form state on close; shows success or error feedback inline.
+
+### 2. Booking Modal
+**Trigger:** Header "Book Your Tee Off Time", Hero CTAs
+
+**Fields:**
+- Name and surname
+- Email and phone
+- Golf course (dropdown of all courses)
+- Tee-off time preference
+- Start and end dates
+- Optional golf club hire (toggle):
+  - Club type, handedness, number of sets
+  - Preferred brand, delivery location
+  - Special requirements
+
+**Behavior:** Integrated club-hire fields when "needs clubs" is checked; form resets on modal close.
+
+### 3. Golf Club Hire Modal
+**Trigger:** Header "Book your Golf Clubs"
+
+**Fields:**
+- Name and surname
+- Email and phone
+- Rental start and end dates
+- Club type and handedness
+- Number of sets and preferred brand
+- Delivery location and special requirements
+
+**Behavior:** Dedicated hire workflow separate from tee-time booking.
+
+### WhatsApp Integration
+Contact details and WhatsApp chat links are centralized in `src/config/seo.ts`:
+- **Contact:** Tim Steenhoff — info@sagolfing.com — +27 82 770 1733
+- **WhatsApp:** `wa.me` link with optional pre-filled enquiry message
+- Used in ContactSection, ContactSectionBento, and Footer
+
+---
+
 ## Technical Architecture
 
 ### Frontend Structure
 
 ```
 src/
-├── App.tsx                 # Main app component with routing
-├── main.tsx               # App entry point with providers
-├── components/            # Reusable UI components
-│   ├── Header.tsx         # Navigation header
-│   ├── Hero.tsx           # Landing page hero
+├── App.tsx                      # Routing + dual homepage layouts
+├── main.tsx                     # App entry point with providers
+├── prerender.tsx                # SSR prerender entry for static HTML generation
+├── components/
+│   ├── Header.tsx               # Nav + modal triggers + CPG logo
+│   ├── Hero.tsx                 # Standard hero with booking CTAs
+│   ├── BookGolfTourPromo.tsx    # Regional tour promo section
 │   ├── ServicesSection.tsx
-│   ├── CoursesSection.tsx
-│   ├── ClientsSection.tsx
-│   ├── ContactSection.tsx
+│   ├── CoursesSection.tsx       # Region tabs, pagination, loading state
+│   ├── ClientsSection.tsx       # Infinite-scroll client logos
+│   ├── ContactSection.tsx       # Email, phone, WhatsApp contact block
 │   ├── Footer.tsx
-│   ├── SEOHelmet.tsx      # Dynamic SEO meta tags
-│   ├── StructuredData.tsx # JSON-LD schema
-│   └── CourseCard.tsx     # Course card component
-├── pages/                 # Page components
+│   ├── BookingModal.tsx         # Tee-time + optional club hire
+│   ├── EnquiryModal.tsx
+│   ├── GolfClubHireModal.tsx
+│   ├── ModalShell.tsx
+│   ├── FormFeedback.tsx
+│   ├── FormSubmitSuccess.tsx
+│   ├── SEOHelmet.tsx            # Dynamic SEO meta tags
+│   ├── StructuredData.tsx       # JSON-LD schema
+│   ├── CourseCard.tsx
+│   └── bento/                   # Alternate bento layout components
+│       ├── HeroBento.tsx
+│       ├── ServicesSectionBento.tsx
+│       ├── CoursesSectionBento.tsx
+│       ├── ClientsSectionBento.tsx
+│       └── ContactSectionBento.tsx
+├── pages/
 │   ├── CourseDetailPage.tsx
 │   └── ServiceDetailPage.tsx
-├── data/                  # Static data
-│   ├── courses.ts         # 111 golf courses
-│   └── services.ts        # 6 service offerings
-├── types/                 # TypeScript interfaces
+├── contexts/
+│   └── ViewModeContext.tsx      # standard | bento layout toggle
+├── hooks/
+│   └── useFormSubmit.ts
+├── config/
+│   └── seo.ts                   # Site URL, contact info, sitemap, prerender routes
+├── data/
+│   ├── courses.ts               # 111 golf courses
+│   └── services.ts              # 6 service offerings
+├── lib/
+│   ├── submitForm.ts            # Web3Forms + mailto submission
+│   └── utils.ts
+├── utils/
+│   ├── helmetToHeadElements.ts  # Prerender head extraction
+│   └── mailto.ts
+├── types/
 │   └── index.ts
-├── styles/
-│   └── index.css          # Tailwind CSS
-└── lib/
-    └── utils.ts           # Utility functions
+└── styles/
+    └── index.css                # Tailwind CSS
+plugins/
+└── seoBuildPlugin.ts            # Generates sitemap.xml at build time
+public/
+└── images/                      # Local logos, airline logos, course/service images
 ```
 
 ### Routing System
@@ -321,7 +449,9 @@ src/
 ### State Management
 - React component state (useState)
 - URL-based state (useParams)
-- No global state management (intentionally simple)
+- View mode context (`ViewModeContext`) for standard/bento homepage layouts
+- Form submission state via `useFormSubmit` hook
+- No global state management library (intentionally simple)
 
 ### Styling Approach
 - **TailwindCSS** utility-first framework
@@ -337,18 +467,24 @@ src/
 
 ## User Flows
 
-### Flow 1: Discover and Book a Golf Course
+### Flow 1: Book a Tee Time via Modal
+1. User clicks "Book Your Tee Off Time" in Header or Hero CTA
+2. Booking modal opens with course dropdown and date fields
+3. Optionally enables golf club hire fields
+4. Submits via Web3Forms (or mailto fallback)
+5. Success screen confirms submission; form resets on close
+
+### Flow 2: Discover and Book a Golf Course
 1. User lands on homepage
-2. Scrolls to "Courses" section or clicks navigation
+2. Scrolls to "Courses" section, uses BookGolfTourPromo region cards, or clicks navigation
 3. Filters by region (Johannesburg, Cape Town, etc.)
-4. Views course cards with images and highlights
+4. Views up to 9 course cards initially; expands with "Show All"
 5. Clicks "View Details" on interested course
 6. Reviews comprehensive course information
-7. Clicks "Book Now" button
-8. Navigates to contact form
-9. Submits booking inquiry
+7. Clicks "Book Now" button or uses Header booking modal
+8. Submits booking inquiry via modal form
 
-### Flow 2: Learn About Services and Request Quote
+### Flow 3: Learn About Services and Request Quote
 1. User lands on homepage
 2. Views "Services" section
 3. Clicks "Learn More" on specific service
@@ -356,18 +492,29 @@ src/
 5. Reviews features, benefits, pricing
 6. Reads testimonial for social proof
 7. Clicks "Get a Quote" or "Contact Us"
-8. Navigates to contact form
-9. Submits inquiry with service preference
+8. Opens Enquiry modal from Header or scrolls to Contact section
+9. Submits inquiry via modal or contacts via WhatsApp/phone/email
 
-### Flow 3: Browse Courses by Region
+### Flow 4: Browse Courses by Region
 1. User lands on homepage
 2. Scrolls to "Courses" section
 3. Clicks regional tab (e.g., "Johannesburg")
 4. Views filtered list of courses in that region
 5. Can switch between regions using tabs
-6. Each tab updates course display dynamically
+6. Each tab updates course display dynamically with loading skeleton
 
-### Flow 4: Return from Detail Page
+### Flow 5: Golf Club Hire
+1. User clicks "Book your Golf Clubs" in Header
+2. Golf Club Hire modal opens
+3. User enters rental dates, club specs, and delivery details
+4. Submits via Web3Forms; receives success confirmation
+
+### Flow 6: WhatsApp Contact
+1. User scrolls to Contact section or Footer
+2. Clicks "Chat to Tim on WhatsApp"
+3. Opens WhatsApp with pre-filled enquiry message
+
+### Flow 7: Return from Detail Page
 1. User is on course/service detail page
 2. Clicks "Back" button
 3. Returns to homepage
@@ -456,18 +603,28 @@ type Region = 'Johannesburg' | 'Garden Route' |
 
 ## SEO & Performance
 
+### Site Configuration
+Centralized in `src/config/seo.ts`:
+- **Production domain:** `https://www.sagolfing.com` (via `VITE_SITE_URL`)
+- **Contact constants:** email, phone, WhatsApp URL builder
+- **Canonical URLs:** `absoluteUrl()`, `courseUrl()`, `serviceUrl()` helpers
+- **Prerender routes:** all course and service pages auto-enumerated
+
 ### Search Engine Optimization
 
 #### 1. Dynamic Meta Tags
-Every page has unique, optimized meta tags:
-- **Title tags:** Course/service specific
+Every page has unique, optimized meta tags via `SEOHelmet`:
+- **Title tags:** Route-specific titles
 - **Description tags:** Compelling, keyword-rich
 - **Keywords:** Targeted golf tourism keywords
-- **Canonical URLs:** Prevent duplicate content
+- **Canonical URLs:** Point to `www.sagolfing.com`
 - **Open Graph:** Facebook/LinkedIn sharing
 - **Twitter Cards:** Twitter sharing optimization
 
-#### 2. Structured Data (JSON-LD)
+#### 2. Google Search Console
+- Google site verification meta tag in `index.html`
+
+#### 3. Structured Data (JSON-LD)
 **Homepage:**
 - Organization schema
 - LocalBusiness schema
@@ -478,23 +635,26 @@ Every page has unique, optimized meta tags:
 - Breadcrumb schema
 - ImageObject schema
 
-#### 3. Sitemap & Robots
-- **sitemap.xml:** All 111+ pages indexed
-- **robots.txt:** Search engine instructions
-- **Priority levels:** Homepage (1.0), Courses (0.8)
+#### 4. Sitemap & Robots
+- **sitemap.xml:** Auto-generated at build time by `seoBuildPlugin` from live course/service data
+- Regenerated in both `public/` and `dist/` on each build
+- **robots.txt:** Search engine instructions in `public/robots.txt`
+- **Priority levels:** Homepage (1.0), Courses (0.8), Services (0.7)
 
-#### 4. Performance Optimizations
-- **Code splitting:** Vendor chunks separated
-- **Minification:** Terser for production
+#### 5. Static Prerendering
+Optional prerender build for improved crawlability:
+- **Script:** `npm run build:prerender` (Vite mode `prerender`)
+- **Plugin:** `vite-prerender-plugin` with entry at `src/prerender.tsx`
+- **Scope:** All course and service detail routes (homepage handled separately)
+- **Output:** Pre-rendered HTML with extracted Helmet meta tags for each route
+
+#### 6. Performance Optimizations
+- **Code splitting:** Vendor chunks separated (react-vendor, helmet-vendor)
+- **Minification:** Terser for production (console/debugger stripped)
 - **Tree shaking:** Unused code removed
 - **Preconnect:** DNS prefetch for fonts and CDN
 - **Lazy loading:** Images loaded on demand
-- **Gzip compression:** Reduced bundle sizes
-
-#### 5. Build Output
-- Main bundle: ~224 KB (68 KB gzipped)
-- React vendor: ~42 KB (15 KB gzipped)
-- Helmet vendor: ~13 KB (5 KB gzipped)
+- **Local assets:** Airline logos, course images, and branding served from `/public/images`
 
 ### Accessibility
 - Semantic HTML5 elements
@@ -519,19 +679,29 @@ Every page has unique, optimized meta tags:
 
 #### User Interface
 - Responsive design (mobile, tablet, desktop)
+- Dual homepage layouts (standard + bento via ViewModeContext)
 - Smooth scrolling navigation
-- Interactive hover states
-- Loading animations
+- Interactive hover states and Ken Burns hero animation
+- Loading skeletons for course region switching
+- Course pagination (9 per region, expandable)
+- Modal-based booking, enquiry, and club hire forms
+- Form submission feedback (success, error, mailto fallback)
+- Infinite-scroll client logo banner
+- WhatsApp chat integration
 - Error handling (404 pages)
 - Back navigation with context preservation
 
 #### Technical Features
 - Client-side routing (SPA)
 - Dynamic page generation
-- SEO optimization
+- Optional static prerendering (`build:prerender`)
+- Build-time sitemap generation
+- Web3Forms email submission with mailto fallback
+- Environment-driven site URL and API keys
+- SEO optimization with Google Search Console verification
 - Social media sharing optimization
 - Production-ready build
-- Docker containerization
+- Docker containerization with Vite env build args
 - Railway deployment configuration
 
 #### Information Architecture
@@ -543,11 +713,14 @@ Every page has unique, optimized meta tags:
 - Contact integration
 
 #### Business Features
-- Lead generation through contact form
-- Service showcasing
-- Course discovery
-- Social proof (testimonials)
-- Clear calls-to-action
+- Lead generation through modal forms (booking, enquiry, club hire)
+- WhatsApp direct messaging to Tim Steenhoff
+- Phone and email contact options
+- Book Golf Tour regional promo with course deep-linking
+- Service showcasing with local imagery
+- Course discovery with pagination
+- Social proof (airline and corporate client logos)
+- Clear calls-to-action throughout Header and Hero
 - Multiple conversion points
 
 ---
@@ -555,6 +728,7 @@ Every page has unique, optimized meta tags:
 ## Future Enhancements
 
 ### Phase 2: Backend & Booking System
+- ~~Email form delivery~~ (Web3Forms integration complete)
 - Real-time tee time availability
 - Online booking and payment
 - User accounts and profiles
@@ -580,7 +754,7 @@ Every page has unique, optimized meta tags:
 - Referral system
 
 ### Phase 5: Advanced Features
-- Live chat support
+- ~~Live chat support~~ (partial: WhatsApp integration added)
 - Multi-language support (Afrikaans, German, French)
 - Currency converter
 - Weather integration
@@ -604,11 +778,19 @@ Every page has unique, optimized meta tags:
 
 ### Current Setup
 - **Platform:** Railway.app
-- **Domain:** sagolfing-production.up.railway.app
+- **Domain:** https://www.sagolfing.com (`VITE_SITE_URL`)
 - **Container:** Docker ready
-- **Build:** Vite production build
+- **Build:** Vite production build (`npm run build`) or prerender build (`npm run build:prerender`)
 - **Serve:** Static file serving via `serve` package
 - **Port:** Dynamic ($PORT environment variable)
+
+### Environment Variables
+| Variable | Purpose |
+|----------|---------|
+| `VITE_SITE_URL` | Canonical site URL for SEO, sitemap, and Open Graph |
+| `VITE_WEB3FORMS_ACCESS_KEY` | Web3Forms API key for modal form email delivery |
+
+See `.env.example` for local setup. Docker/Railway pass `VITE_*` variables as build args so they are embedded at build time.
 
 ### Environment Configuration
 - Node.js 20.0.0+
@@ -658,11 +840,15 @@ Every page has unique, optimized meta tags:
 ## Contact Information
 
 The application facilitates contact through:
-- Contact form on homepage
-- "Book Now" buttons on course pages
-- "Get a Quote" buttons on service pages
-- Multiple CTAs throughout the site
-- All lead to contact section
+- **Enquiry modal** — general questions from Header "Enquire Now"
+- **Booking modal** — tee-time requests with optional club hire
+- **Golf Club Hire modal** — dedicated equipment rental requests
+- **WhatsApp** — direct chat link to Tim Steenhoff
+- **Phone** — +27 82 770 1733
+- **Email** — info@sagolfing.com
+- **Contact section & Footer** — email, phone, and WhatsApp links
+- **Book Now** buttons on course pages
+- **Get a Quote** buttons on service pages
 
 ---
 
@@ -722,9 +908,10 @@ The application facilitates contact through:
 - No sensitive data stored client-side
 - HTTPS enforced
 - No authentication system yet
-- Contact form (needs backend validation)
+- Form submissions via Web3Forms API (server-side email delivery)
+- Mailto fallback for local development only
 - XSS protection via React
-- CSRF protection (when backend added)
+- Bot check field included in Web3Forms payload
 
 ---
 
@@ -737,12 +924,13 @@ The application facilitates contact through:
 - No database required for content changes
 
 ### Deployment Process
-1. Update code locally
-2. Test with `npm run dev`
-3. Build with `npm run build`
-4. Push to git repository
-5. Railway auto-deploys
-6. Verify production site
+1. Set `VITE_SITE_URL` and `VITE_WEB3FORMS_ACCESS_KEY` in Railway/host environment
+2. Update code locally
+3. Test with `npm run dev`
+4. Build with `npm run build` (or `npm run build:prerender` for static HTML)
+5. Push to git repository
+6. Railway auto-deploys via Docker
+7. Verify production site and form submissions
 
 ---
 
@@ -763,8 +951,20 @@ The application successfully balances aesthetic appeal, functionality, performan
 ---
 
 ## Document Version
-- **Version:** 1.0
-- **Last Updated:** November 16, 2025
+- **Version:** 2.0
+- **Last Updated:** June 14, 2026
 - **Author:** Development Team
 - **Status:** Production Active
+
+### Changelog (v2.0)
+- Modal forms: Booking, Enquiry, Golf Club Hire with Web3Forms integration
+- WhatsApp contact links across Contact and Footer
+- Book Golf Tour promo section with regional course deep-linking
+- Dual homepage layouts (standard + bento components)
+- Course pagination, loading skeletons, and local image assets
+- Build-time sitemap generation and optional prerender build
+- Google Search Console verification
+- Domain updated to www.sagolfing.com
+- Header CTAs, CPG partnership logo, and updated Hero copy
+- Docker build args for Vite environment variables
 
